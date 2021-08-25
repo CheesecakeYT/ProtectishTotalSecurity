@@ -175,6 +175,7 @@
   if "%filemd5%" == "3f 76 a6 9e 1f d9 bb 3f a2 52 a3 ce d1 5e ba 72" set threat=VBS-Melissa.C
   if "%filemd5%" == "9d 7f 91 6d f5 05 16 ac 67 05 eb 0c 00 78 38 20" set threat=VBS-Melissa.Z
   if "%filemd5%" == "65 25 9c 11 e1 ff 8d 04 0f 9e c5 85 24 a4 7f 02" set threat=Win32-Adware.Bonzi
+  if "%filemd5%" == "06 d8 7d 4c 89 c7 6c b1 bc b2 f5 a5 fc 40 97 d1" set threat=Win32-Adware.Bonzi
   if "%filemd5%" == "9f 8c 96 41 5f bf d3 d1 84 83 d1 df ad 62 26 38" set threat=Win32-Adware.BrowserAssistant
   if "%filemd5%" == "18 26 0d 74 0e 62 31 6f 68 2a 8c db e4 e9 4a 48" set threat=Win32-Adware.BrowserAssistant
   if "%filemd5%" == "88 f5 81 c1 cb 1d 63 4a 5b d3 a5 38 c8 47 e8 0f" set threat=Win32-Adware.ClientConnect
@@ -188,11 +189,13 @@
   if "%filemd5%" == "e0 69 fd bd 26 84 a8 fa ef 23 a6 96 05 09 d9 93" set threat=Win32-Adware.DownloadAssistant
   if "%filemd5%" == "79 e1 67 48 cc 1c 72 58 25 d5 c5 99 1a 82 fd 89" set threat=Win32-Adware.Machaer
   if "%filemd5%" == "0e be b3 ed a3 e2 aa f5 02 4a a6 7b 7f 49 4c f1" set threat=Win32-Adware.OpenCandy
+  if "%filemd5%" == "98 2e 03 ae 76 af 8d f3 ed ef 04 43 d4 e4 81 f8" set threat=Win32-Adware.Rugo
   if "%filemd5%" == "0a f5 b9 ca 01 e4 9e 09 fd be 43 8c 7a 50 42 db" set threat=Win32-Adware.Swizzor
   if "%filemd5%" == "73 c3 46 6b 67 79 34 46 52 ef 97 20 9a b4 db 1a" set threat=Win32-Anywork
   if "%filemd5%" == "28 65 6c 94 b4 80 ec 5f fa 40 40 68 25 96 52 c3" set threat=Win32-AutoRun
   if "%filemd5%" == "df ae 62 b7 f1 1e eb 45 a6 90 99 eb 85 59 2d 92" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "1e d9 8f 81 1f 3e 13 93 ad 17 1c 70 a7 5c c4 27" set threat=Win32-Backdoor.Clampi
+  if "%filemd5%" == "63 c0 76 ed 73 97 2a 21 c3 54 63 3d 43 b9 38 65" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "db c2 bd 34 6f f8 1a 0c 5f c1 6f a6 83 b2 6a 36" set threat=Win32-Backdoor.FedEx
   if "%filemd5%" == "64 87 6d 5d e7 06 1e 92 5e 29 f6 a0 c8 7c ea 9b" set threat=Win32-Backdoor.Konus
   if "%filemd5%" == "d4 07 55 9e 9d f5 43 20 e4 14 ff 6d 6c 5d cc b6" set threat=Win32-Backdoor.Prorat
@@ -213,6 +216,9 @@
   if "%filemd5%" == "3a fe b8 e9 af 02 a3 3f f7 1b f2 f6 75 1c ae 3a" set threat=Win32-CPUMiner
   if "%filemd5%" == "3a f2 98 63 3c c2 f3 c3 f3 5a f9 6e 93 0c 98 44" set threat=Win32-Dabber
   if "%filemd5%" == "bc 5e 27 7b 6d 94 36 3d dc 11 19 7f 71 43 e9 4b" set threat=Win32-ICLoader
+  if "%filemd5%" == "01 29 da b7 29 15 cc 20 bf 10 4c 09 08 85 47 c4" set threat=Win32-Ipamor
+  if "%filemd5%" == "41 dd 2b f0 50 ce 71 95 ad 59 4a eb d3 f3 af c4" set threat=Win32-Ipamor
+  if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor 
   if "%filemd5%" == "4e 33 66 78 55 87 2e cd a9 5a 11 71 b4 0a ae 9a" set threat=Win32-Klez.A
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.A
   if "%filemd5%" == "03 ba eb a6 b4 22 43 71 cc a7 fa 6f 95 ae 61 c0" set threat=Win32-Krap
@@ -350,6 +356,10 @@
   if "%filemd5%" == "62 05 27 ce 57 7a f7 8e 34 cb e9 c4 a0 7c 9f 97" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "7a ab e4 1a e2 77 ab f2 9e df 0c 3d d2 06 69 b6" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "78 2a 7e 6a a7 07 d9 8c 7c df 9e 41 8e 4a 7f ae" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "47 ed ec c9 f8 30 c2 29 f1 75 22 02 87 bf 91 f0" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "a1 a7 6c 17 03 03 0b 3b 3b cd 1d 15 e3 2f b7 a6" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "b5 52 c5 4b f0 04 7a 43 0a 28 54 58 cf a6 0a 43" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "00 8a 0b 7f cf bc 65 f0 14 fa 85 ec 01 33 2a 76" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "f5 97 17 fb 8f 2a 9a d3 e5 f7 16 40 94 0f 1c 08" set threat=Win32-Trojan.Emotet
