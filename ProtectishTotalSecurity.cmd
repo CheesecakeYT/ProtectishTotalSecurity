@@ -174,6 +174,7 @@
   if "%filemd5%" == "82 3d b9 b3 27 57 a7 fa 05 45 2c b9 58 e9 6e 50" set threat=VBS-Melissa.C
   if "%filemd5%" == "3f 76 a6 9e 1f d9 bb 3f a2 52 a3 ce d1 5e ba 72" set threat=VBS-Melissa.C
   if "%filemd5%" == "9d 7f 91 6d f5 05 16 ac 67 05 eb 0c 00 78 38 20" set threat=VBS-Melissa.Z
+  if "%filemd5%" == "65 25 9c 11 e1 ff 8d 04 0f 9e c5 85 24 a4 7f 02" set threat=Win32-Adware.Bonzi
   if "%filemd5%" == "9f 8c 96 41 5f bf d3 d1 84 83 d1 df ad 62 26 38" set threat=Win32-Adware.BrowserAssistant
   if "%filemd5%" == "18 26 0d 74 0e 62 31 6f 68 2a 8c db e4 e9 4a 48" set threat=Win32-Adware.BrowserAssistant
   if "%filemd5%" == "88 f5 81 c1 cb 1d 63 4a 5b d3 a5 38 c8 47 e8 0f" set threat=Win32-Adware.ClientConnect
