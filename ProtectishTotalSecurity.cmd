@@ -249,6 +249,7 @@
   if "%filemd5%" == "2f 9a f2 30 d0 36 ba 31 09 49 94 5a e4 b1 a2 f4" set threat=Win32-Parite.B
   if "%filemd5%" == "68 5f 1c bd 4a f3 0a 1d 0c 25 f2 52 d3 99 a6 66" set threat=Win32-Parite.B
   if "%filemd5%" == "3e c0 23 c1 37 6f 3b 59 ec 56 ff 41 db 98 51 ec" set threat=Win32-Parite.B
+  if "%filemd5%" == "53 66 c2 a6 62 cd dd 60 0d 93 e3 99 2b 8e d1 cd" set threat=Win32-Parite.B
   if "%filemd5%" == "73 d3 54 51 db fb ba 5a c0 51 d3 6f 09 5a 62 9f" set threat=Win32-Parrot.A
   if "%filemd5%" == "6c 1c fe 55 c4 c2 6f cf b8 3e 2d cb b9 a4 2e 89" set threat=Win32-Parrot.B
   if "%filemd5%" == "1e ad 86 42 7f c0 76 f7 7f 21 cc b7 51 2d c8 b2" set threat=Win32-Picsys.C
