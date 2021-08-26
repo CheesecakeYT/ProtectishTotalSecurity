@@ -193,6 +193,9 @@
   if "%filemd5%" == "0a f5 b9 ca 01 e4 9e 09 fd be 43 8c 7a 50 42 db" set threat=Win32-Adware.Swizzor
   if "%filemd5%" == "73 c3 46 6b 67 79 34 46 52 ef 97 20 9a b4 db 1a" set threat=Win32-Anywork
   if "%filemd5%" == "28 65 6c 94 b4 80 ec 5f fa 40 40 68 25 96 52 c3" set threat=Win32-AutoRun
+  if "%filemd5%" == "55 01 cf 20 42 08 a9 5e 3f 15 e8 a6 1b ec bc a7" set threat=Win32-Backdoor.Agent
+  if "%filemd5%" == "55 01 cf 20 42 08 a9 5e 3f 15 e8 a6 1b ec bc a7" set threat=Win32-Backdoor.Agent
+  if "%filemd5%" == "ee 4f fa 36 10 0a 0f da 05 af 88 9c 3a 83 8f 01" set threat=Win32-Backdoor.Agent
   if "%filemd5%" == "df ae 62 b7 f1 1e eb 45 a6 90 99 eb 85 59 2d 92" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "1e d9 8f 81 1f 3e 13 93 ad 17 1c 70 a7 5c c4 27" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "63 c0 76 ed 73 97 2a 21 c3 54 63 3d 43 b9 38 65" set threat=Win32-Backdoor.Clampi
