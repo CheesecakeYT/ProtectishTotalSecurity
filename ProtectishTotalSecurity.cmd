@@ -290,6 +290,7 @@
   if "%filemd5%" == "c1 3d 28 dd 3d 19 f5 e0 1e f7 08 fc db b5 e3 b2" set threat=Win32-Ransom.Kraken
   if "%filemd5%" == "0a 74 35 67 c9 fa 72 e0 8c a6 c1 0a d6 20 01 76" set threat=Win32-Ransom.KRider
   if "%filemd5%" == "78 9d dc a4 99 7c 12 65 9f 23 93 6c 4f 91 e0 e5" set threat=Win32-Ransom.Kryptonite
+  if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
   if "%filemd5%" == "59 7d ea cb e8 a1 d7 cf 84 1e 1f 41 e9 10 89 8f" set threat=Win32-Ransom.Petya.A
   if "%filemd5%" == "af 23 79 cc 4d 60 7a 45 ac 44 d6 21 35 fb 70 15" set threat=Win32-Ransom.Petya.A
   if "%filemd5%" == "fa 5d 96 64 4f e5 89 77 b4 97 65 f2 3b 3a 7e e5" set threat=Win32-Ransom.Phobos
@@ -306,12 +307,14 @@
   if "%filemd5%" == "2b e6 38 5e 51 59 21 07 16 68 1f 59 b6 4a ef 1e" set threat=Win32-Ransom.ShellLocker
   if "%filemd5%" == "be d6 fc 04 ae b7 85 81 57 44 70 62 39 a1 f2 43" set threat=Win32-Ransom.Sodinokibi
   if "%filemd5%" == "56 1c ff ba ba 71 a6 e8 cc 1c dc ed a9 90 ea d4" set threat=Win32-Ransom.Sodinokibi
+  if "%filemd5%" == "61 c0 03 ba c2 28 85 7c b0 db 62 07 eb 5a 7f 3e" set threat=Win32-Ransom.StalinLocker
   if "%filemd5%" == "2d e1 f1 4d 07 37 0b 98 67 f2 52 c0 76 37 ab 40" set threat=Win32-Ransom.Stolich
   if "%filemd5%" == "60 db b9 23 24 25 b9 dd c3 5c 9c d0 65 3a c5 cd" set threat=Win32-Ransom.STOP
   if "%filemd5%" == "58 6d 9e 5d 8a 90 30 1b 49 4e 83 3d 36 30 23 83" set threat=Win32-Ransom.STOP
   if "%filemd5%" == "be 42 07 0f d1 68 10 7d d2 ac 6e d9 12 72 35 72" set threat=Win32-Ransom.SuchSecurity
   if "%filemd5%" == "63 d4 e4 da c5 7b d7 d2 05 95 87 eb a4 16 26 52" set threat=Win32-Ransom.SureRansom.A
   if "%filemd5%" == "6c aa f5 00 c2 48 de 17 b1 90 72 93 70 00 7d da" set threat=Win32-Ransom.Tyrant
+  if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
   if "%filemd5%" == "68 2f 91 e3 ce 76 9a 68 65 ec d9 f2 b2 36 e8 3a" set threat=Win32-Ransom.VindowsLocker
   if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor.A
   if "%filemd5%" == "c8 87 22 ef 42 a6 ee 08 cb ed 91 40 6e a5 c0 e5" set threat=Win32-Ransom.WannaCryptor.A
@@ -380,6 +383,7 @@
   if "%filemd5%" == "e5 e7 96 89 db e8 3e 59 ee 5b 6a 22 5d e9 be d8" set threat=Win32-Virlock
   if "%filemd5%" == "cf de f9 29 1b e8 bf e8 42 3e c5 2d 6f b3 b8 cb" set threat=Win32-Virlock
   if "%filemd5%" == "89 0f 9b d0 04 6e ef 19 ed 81 32 2d 19 65 f6 42" set threat=Win32-Virlock
+  if "%filemd5%" == "a6 60 c8 17 17 65 9f 5b 2d d4 fe 7a 8a fb 54 2d" set threat=Win32-Virlock
   if "%filemd5%" == "a8 51 a9 68 f7 17 ed 30 a9 da ea 4d 88 fd d8 df" set threat=Win32-Virut
   if "%filemd5%" == "84 b9 6a 3d 44 c0 8a 22 1d 13 93 1c e8 e3 fd 4e" set threat=Win32-Virut
   if "%filemd5%" == "53 29 50 cd 94 48 93 c7 36 71 9f de 46 3a 10 31" set threat=Win32-Vtflooder
