@@ -1,6 +1,7 @@
 @echo off
 
 :start
+jjj
   cls
   color 0f
   title Protectish Total Security
