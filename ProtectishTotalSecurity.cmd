@@ -221,6 +221,7 @@
   if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor 
   if "%filemd5%" == "4e 33 66 78 55 87 2e cd a9 5a 11 71 b4 0a ae 9a" set threat=Win32-Klez.A
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.A
+  if "%filemd5%" == "a5 a4 8f bc 21 18 03 db 3d cc 9b 91 7d 5d 32 0f" set threat=Win32-Kolabc
   if "%filemd5%" == "03 ba eb a6 b4 22 43 71 cc a7 fa 6f 95 ae 61 c0" set threat=Win32-Krap
   if "%filemd5%" == "cc a7 de f7 19 45 4d d2 2e c3 51 99 12 97 88 5b" set threat=Win32-Lmir
   if "%filemd5%" == "98 90 34 9f e3 c6 8f 59 23 b2 93 47 bb a0 21 a4" set threat=Win32-Magistr.A
