@@ -329,6 +329,8 @@
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.N
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
+  if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
+  if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "6b e6 53 cd 2f 91 72 54 37 36 e3 f5 3a ef cd 54" set threat=Win32-Ransom.Ziggy
   if "%filemd5%" == "85 2c f7 6a b9 2c 6a a9 03 c5 fc 9a 78 b6 0d 9c" set threat=Win32-RAT.DarkKomet
   if "%filemd5%" == "96 30 5f 55 42 86 f7 84 d9 92 8c 49 90 45 c3 d6" set threat=Win32-RAT.NanoCore
