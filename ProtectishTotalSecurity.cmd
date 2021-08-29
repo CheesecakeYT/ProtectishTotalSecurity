@@ -244,6 +244,7 @@
   if "%filemd5%" == "94 ec 47 42 8d ab b4 92 af 96 75 6e 7c 95 c6 44" set threat=Win32-MyPics.A
   if "%filemd5%" == "0e 8f 2e 37 c1 66 e3 c4 01 7e 7a eb 1b 5b f1 9f" set threat=Win32-Necurs
   if "%filemd5%" == "c9 67 9e 89 c8 2e 02 5b 98 55 18 98 76 f9 27 61" set threat=Win32-Neshta.A
+  if "%filemd5%" == "bf bc 3b 53 3d 55 ae 5a 53 ad 27 78 5a 95 3a 53" set threat=Win32-Neshta.A
   if "%filemd5%" == "64 2a 39 3a 5c 65 d2 02 18 0d f5 af 06 f2 9c 5a" set threat=Win32-Nimda.A
   if "%filemd5%" == "08 3d 59 7f 4b 8d e7 c2 a7 88 8d f0 e5 e3 9a 8a" set threat=Win32-Nimda.A
   if "%filemd5%" == "aa 9e ca 49 c7 22 ec 1b ab bc 21 55 f1 a9 10 39" set threat=Win32-Nimda.T
