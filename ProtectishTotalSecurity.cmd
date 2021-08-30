@@ -271,6 +271,7 @@
   if "%filemd5%" == "2f e3 2d 2a 6b fc 72 d2 15 49 6b 05 5e 5a 53 ad" set threat=Win32-Ransom.BadRabbit
   if "%filemd5%" == "50 a7 db 13 62 f5 53 4a 1b 6a db f9 cc be 9d 5b" set threat=Win32-Ransom.Bisquilla
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
+  if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
   if "%filemd5%" == "16 ad a5 1d c0 a0 62 f8 60 8d a8 92 2b 0f c9 f8" set threat=Win32-Ransom.Blooper
   if "%filemd5%" == "27 14 58 8f b8 93 30 40 93 88 5c 23 f5 41 69 ee" set threat=Win32-Ransom.BrainLag
   if "%filemd5%" == "cf d2 d6 f1 89 b0 4d 42 61 80 07 fc 9c 54 03 52" set threat=Win32-Ransom.Cerber
@@ -354,6 +355,7 @@
   if "%filemd5%" == "9d ec 49 c9 ca f3 6f 68 f2 2b 39 77 8e c9 3f 18" set threat=Win32-Sality
   if "%filemd5%" == "25 aa 9b b5 49 ec c7 bb 61 00 f8 d1 79 45 25 08" set threat=Win32-Sality
   if "%filemd5%" == "14 50 d3 b0 6b 90 85 6d db a1 fc 58 a7 bf bb fc" set threat=Win32-Sality
+  if "%filemd5%" == "ab e4 33 21 24 b4 37 00 a0 9d d8 68 ac 4d 11 a1" set threat=Win32-Sality
   if "%filemd5%" == "a7 3c 16 cc d0 b9 c4 f2 0b c7 84 2e dd 90 fc 20" set threat=Win32-Sasser.A
   if "%filemd5%" == "1a 2c 0e 61 30 85 0f 8f d9 b9 b5 30 94 13 cd 00" set threat=Win32-Sasser.B
   if "%filemd5%" == "0e 97 3c ba 35 97 e3 39 d1 d8 48 1d 9a 35 8b 87" set threat=Win32-Sasser.B
