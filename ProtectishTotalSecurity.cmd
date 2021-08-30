@@ -1,7 +1,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 @echo off
-if not exist ptsconfig.txt (
+if not exist pts_configversion1.txt (
   cls
   color 0f
   title Configuring - Protectish Total Security
@@ -20,7 +20,9 @@ if not exist ptsconfig.txt (
   if /i "%first_time%" == "y" (
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key not used >> pts_lkused.txt
-  )
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction.txt
+    echo Automatic Action none >> pts_autoaction.txt
+  ) 
 
   echo Configuration complete. You can now continue.
   pause
@@ -74,6 +76,7 @@ if "%license_key%" == "License Key not used" goto license_key
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
+  rem echo (SETTINGS) - show Protectish settings
   echo (EXIT) - exit
   echo (QUIT) - exit
   echo (END) - exit
@@ -88,6 +91,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
+  rem if /i "%choice%" == "settings" goto settings
   echo.
   echo %choice% is not a valid choice.
   pause
