@@ -1,4 +1,64 @@
+rem License key is PTS_PJF5G4DAZ5R3
+
 @echo off
+if not exist ptsconfig.txt (
+  cls
+  color 0f
+  title Configuring - Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Thank you for downloading Protectish Total Security!
+  echo It was detected that you either:
+  echo - have outdated configuration files or
+  echo - installed Protectish Total Security for the first time.
+  set /p first_time="Is this your new antivirus? (Y/N): "
+  echo Please wait until we finish configuring your Protectish.
+
+  if /i "%first_time%" == "y" (
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
+    echo License Key not used >> pts_lkused.txt
+  )
+
+  echo Configuration complete. You can now continue.
+  pause
+)
+for /f "tokens=1*delims=:" %%G in ('findstr /n "^" ptsconfig.txt') do if %%G equ 2 set license_key=%%H
+if "%license_key%" == "License Key not used" goto license_key
+
+:license_key
+  cls
+  color 0f
+  title Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo It's time to insert your license key!
+  echo.
+  echo If you don't have a license key, close this window, contact Protectish 
+  echo staff and pay 10 CZK to acquire a life-time license key to Protectish 
+  echo Total Security.
+  echo.
+  set /p check_key="If you do, insert it here: "
+  echo %check_key% > check_license_key.txt
+  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
+  echo %check_key% > check_license_key.txt
+  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
+  del check_license_key.txt
+  if "%check_key%" == "23 d1 40 77 15 af 94 80 b5 1f f7 9d 87 e1 c5 51" (
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
+    echo License Key used >> pts_lkused.txt
+    echo License key accepted. Thank you!
+    pause
+    goto start
+  )
+  echo This is not a valid license key.
+  pause
+  goto license_key
 
 :start
   cls
@@ -295,6 +355,7 @@
   if "%filemd5%" == "a4 bb 3a 5c b6 83 5c 08 9d 76 91 00 d5 46 16 62" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "f5 4c 9a fc 52 02 9f d4 3b fb e6 dd 3c a2 f6 16" set threat=Win32-Ransom.JSterling
   if "%filemd5%" == "7f 87 db 33 98 0c 00 99 73 9d e4 0d 1b 72 55 00" set threat=Win32-Ransom.Katyusha
+  if "%filemd5%" == "12 e2 ef f0 9c 11 4c 18 46 28 94 a4 89 11 ce 8a" set threat=Win32-Ransom.KesLan
   if "%filemd5%" == "b2 14 a9 cd 3c 2f c0 cc ec c8 d1 e5 2b 4f 50 20" set threat=Win32-Ransom.Kraken
   if "%filemd5%" == "c1 3d 28 dd 3d 19 f5 e0 1e f7 08 fc db b5 e3 b2" set threat=Win32-Ransom.Kraken
   if "%filemd5%" == "0a 74 35 67 c9 fa 72 e0 8c a6 c1 0a d6 20 01 76" set threat=Win32-Ransom.KRider
