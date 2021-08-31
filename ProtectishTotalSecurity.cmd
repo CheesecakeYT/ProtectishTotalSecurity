@@ -458,6 +458,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "b5 52 c5 4b f0 04 7a 43 0a 28 54 58 cf a6 0a 43" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "00 8a 0b 7f cf bc 65 f0 14 fa 85 ec 01 33 2a 76" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "c0 9c f4 31 21 67 fa 96 83 d8 e8 73 30 04 b7 e6" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "03 f6 9c 46 00 2a e2 77 22 2c 0c 32 b9 28 c4 c0" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "d5 40 ca 29 e9 ea 33 f1 31 e4 ce 46 74 d1 08 5f" set threat=Win32-Trojan.Denes
@@ -466,6 +467,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "d3 ff 42 73 09 6c 13 af a8 8c 71 31 c4 14 f9 3b" set threat=Win32-Trojan.Emotet
   if "%filemd5%" == "8d 7e a5 5f f7 f8 74 c0 98 b2 3c a2 ad f4 0b 71" set threat=Win32-Trojan.Emotet
   if "%filemd5%" == "ac 54 76 ae 5a 15 a0 98 1e 7e 56 f9 51 60 1c 82" set threat=Win32-Trojan.Icefog
+  if "%filemd5%" == "07 18 75 df 86 3f 4a ea 3c 89 fb e4 1b 52 d1 9c" set threat=Win32-Trojan.Klone
   if "%filemd5%" == "a7 bc f7 ea 8e 9f 3f 36 eb fb 85 b8 23 e3 9d 91" set threat=Win32-Trojan.MEMZ
   if "%filemd5%" == "19 db ec 50 73 5b 5f 2a 72 d4 19 9c 4e 18 49 60" set threat=Win32-Trojan.MEMZ
   if "%filemd5%" == "38 ff 71 c1 de e2 a9 ad d6 7f 1e db 1a 30 ff 8c" set threat=Win32-Trojan.MrsMajor
@@ -487,6 +489,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "53 29 50 cd 94 48 93 c7 36 71 9f de 46 3a 10 31" set threat=Win32-Vtflooder
   if "%filemd5%" == "25 27 29 b2 30 4c dc 2e 91 24 8c ea 56 72 41 eb" set threat=Win32-Wallpaper
   if "%filemd5%" == "e7 9d 0b 1a 34 27 12 ea 9b 96 10 40 86 14 9d 65" set threat=Win32-Winevar
+  if "%filemd5%" == "02 73 ed 44 d5 87 4d c3 03 90 15 16 3b c8 91 32" set threat=Win32-Worm.Agent
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "0b ba 28 8e 55 ed 34 b5 eb c7 6f 86 5a 53 2c bf" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "a8 9c 0e d6 ef 75 17 9a db 6f 52 24 01 02 b9 b2" set threat=Win32-Worm.Fizzer.A
