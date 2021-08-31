@@ -282,11 +282,12 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "2e 8d a5 a5 58 65 a0 91 86 4a 43 38 ef 4d 2e 44" set threat=Win32-Conficker
   if "%filemd5%" == "3a fe b8 e9 af 02 a3 3f f7 1b f2 f6 75 1c ae 3a" set threat=Win32-CPUMiner
   if "%filemd5%" == "3a f2 98 63 3c c2 f3 c3 f3 5a f9 6e 93 0c 98 44" set threat=Win32-Dabber
+  if "%filemd5%" == "44 51 20 7a a3 fe 02 1d c2 bf c6 83 d5 7b a5 a1" set threat=Win32-Gogo
   if "%filemd5%" == "e2 55 12 40 5a cd fa 4e 2d 71 7a 56 69 d3 0d 54" set threat=Win32-Gullible
   if "%filemd5%" == "bc 5e 27 7b 6d 94 36 3d dc 11 19 7f 71 43 e9 4b" set threat=Win32-ICLoader
   if "%filemd5%" == "01 29 da b7 29 15 cc 20 bf 10 4c 09 08 85 47 c4" set threat=Win32-Ipamor
   if "%filemd5%" == "41 dd 2b f0 50 ce 71 95 ad 59 4a eb d3 f3 af c4" set threat=Win32-Ipamor
-  if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor 
+  if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor
   if "%filemd5%" == "4e 33 66 78 55 87 2e cd a9 5a 11 71 b4 0a ae 9a" set threat=Win32-Klez.A
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.A
   if "%filemd5%" == "a5 a4 8f bc 21 18 03 db 3d cc 9b 91 7d 5d 32 0f" set threat=Win32-Kolabc
@@ -369,6 +370,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "c1 3d 28 dd 3d 19 f5 e0 1e f7 08 fc db b5 e3 b2" set threat=Win32-Ransom.Kraken
   if "%filemd5%" == "0a 74 35 67 c9 fa 72 e0 8c a6 c1 0a d6 20 01 76" set threat=Win32-Ransom.KRider
   if "%filemd5%" == "78 9d dc a4 99 7c 12 65 9f 23 93 6c 4f 91 e0 e5" set threat=Win32-Ransom.Kryptonite
+  if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
@@ -585,6 +587,8 @@ if "%license_key%" == "License Key not used" goto license_key
   echo MD5 Scan: Successful
   echo Behavior Scan: Pending
 
+  find /i /c "X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*" %file% > NUL
+  if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
   find /i /c "BrowserAssistant.Init-3-5" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Adware.BrowserAssistant
   find /i /c "Init7.dll" %file% > NUL
