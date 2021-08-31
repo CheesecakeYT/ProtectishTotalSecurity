@@ -18,6 +18,8 @@ if not exist pts_configversion1.txt (
   echo Please wait until we finish configuring your Protectish.
 
   if /i "%first_time%" == "y" (
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion1.txt
+    echo Version Of Configuration Files 1 >> pts_configversion1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key not used >> pts_lkused.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction.txt
