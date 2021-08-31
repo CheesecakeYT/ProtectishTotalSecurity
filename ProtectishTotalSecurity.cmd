@@ -35,7 +35,7 @@ if "%license_key%" == "License Key not used" goto license_key
 :license_key
   cls
   color 0f
-  title Protectish Total Security
+  title License Key - Protectish Total Security
   echo Protectish Total Security
   echo.
   echo Making you safe
@@ -49,8 +49,10 @@ if "%license_key%" == "License Key not used" goto license_key
   echo.
   set /p check_key="If you do, insert it here: "
   echo %check_key% > check_license_key.txt
+  @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
   echo %check_key% > check_license_key.txt
+  @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
   del check_license_key.txt
   if "%check_key%" == "23 d1 40 77 15 af 94 80 b5 1f f7 9d 87 e1 c5 51" (
