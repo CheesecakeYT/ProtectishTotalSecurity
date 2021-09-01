@@ -255,6 +255,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "2c 1a d7 84 12 69 40 d1 54 84 1d 33 45 a2 d0 6b" set threat=Win32-Adware.DealPly
   if "%filemd5%" == "57 f2 51 09 b2 55 d0 4c 05 fb 7f da d1 62 b5 ee" set threat=Win32-Adware.DealPly
   if "%filemd5%" == "e0 69 fd bd 26 84 a8 fa ef 23 a6 96 05 09 d9 93" set threat=Win32-Adware.DownloadAssistant
+  if "%filemd5%" == "07 16 8b d3 7f 9c 1c 19 c9 61 65 b9 eb d5 c6 9c" set threat=Win32-Adware.DownloadHelper
   if "%filemd5%" == "79 e1 67 48 cc 1c 72 58 25 d5 c5 99 1a 82 fd 89" set threat=Win32-Adware.Machaer
   if "%filemd5%" == "0e be b3 ed a3 e2 aa f5 02 4a a6 7b 7f 49 4c f1" set threat=Win32-Adware.OpenCandy
   if "%filemd5%" == "14 64 da b8 53 df ac 75 09 7e 6f 81 fa 06 0c 9a" set threat=Win32-Adware.OpenCandy
@@ -326,6 +327,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "53 66 c2 a6 62 cd dd 60 0d 93 e3 99 2b 8e d1 cd" set threat=Win32-Parite.B
   if "%filemd5%" == "73 d3 54 51 db fb ba 5a c0 51 d3 6f 09 5a 62 9f" set threat=Win32-Parrot.A
   if "%filemd5%" == "6c 1c fe 55 c4 c2 6f cf b8 3e 2d cb b9 a4 2e 89" set threat=Win32-Parrot.B
+  if "%filemd5%" == "96 5e df d8 ee 48 b6 f7 40 4e 28 5c 36 4a 3b 76" set threat=Win32-Phishing.FedX
   if "%filemd5%" == "1e ad 86 42 7f c0 76 f7 7f 21 cc b7 51 2d c8 b2" set threat=Win32-Picsys.C
   if "%filemd5%" == "71 56 14 e0 92 61 b3 9d fa 43 9f a1 32 6c 0c ec" set threat=Win32-Pikachu
   if "%filemd5%" == "68 30 88 4f b2 9c b5 12 d2 5a cb 4c 82 b5 cd af" set threat=Win32-PoisonIvy
@@ -412,6 +414,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor.H
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.N
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
+  if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus
@@ -476,6 +479,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "45 0f 49 42 6b 45 19 ec aa c8 cd 04 81 4c 03 a4" set threat=Win32-Trojan.MrsMajor
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
   if "%filemd5%" == "8e 90 ad 82 52 86 72 49 cc 5c be e3 19 9d ef 2f" set threat=Win32-Trojan.SpyAnyTime.D
+  if "%filemd5%" == "b9 70 9a 07 05 9b b0 80 57 34 39 80 e9 79 de 2f" set threat=Win32-Trojan.Tremp
   if "%filemd5%" == "3d 3e 08 ad 3a 8f 3b 35 b9 a1 0a a6 c5 7b 29 0f" set threat=Win32-Trojan.Trickbot
   if "%filemd5%" == "40 22 84 58 ca 45 5d 28 e3 39 51 a2 f3 84 42 09" set threat=Win32-Trojan.Zika
   if "%filemd5%" == "13 23 8b f4 b2 8c a4 f1 31 dd 4a 53 23 69 9f 68" set threat=Win32-Unruy
@@ -512,7 +516,7 @@ if "%license_key%" == "License Key not used" goto license_key
   echo Making you safe
   echo.
   echo.
-  echo This is not looking good.
+  echo Warning! Malware was found inside this file.
   echo.
   echo Reported by: MD5 Scan
   echo.
@@ -668,7 +672,7 @@ if "%license_key%" == "License Key not used" goto license_key
   echo Making you safe
   echo.
   echo.
-  echo This is not looking good.
+  echo Warning! Malware was found inside this file.
   echo.
   echo Reported by: Behavior Scan
   echo Note: Behavior Scan doesn't always have to be accurate.
