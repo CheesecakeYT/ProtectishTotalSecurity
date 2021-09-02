@@ -267,6 +267,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "df ae 62 b7 f1 1e eb 45 a6 90 99 eb 85 59 2d 92" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "1e d9 8f 81 1f 3e 13 93 ad 17 1c 70 a7 5c c4 27" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "63 c0 76 ed 73 97 2a 21 c3 54 63 3d 43 b9 38 65" set threat=Win32-Backdoor.Clampi
+  if "%filemd5%" == "ef 69 4b 89 ad 7a dd b9 a1 6b b6 f2 6f 1e fa f7" set threat=Win32-Backdoor.FakeCCleaner
   if "%filemd5%" == "db c2 bd 34 6f f8 1a 0c 5f c1 6f a6 83 b2 6a 36" set threat=Win32-Backdoor.FedEx
   if "%filemd5%" == "64 87 6d 5d e7 06 1e 92 5e 29 f6 a0 c8 7c ea 9b" set threat=Win32-Backdoor.Konus
   if "%filemd5%" == "d4 07 55 9e 9d f5 43 20 e4 14 ff 6d 6c 5d cc b6" set threat=Win32-Backdoor.Prorat
@@ -384,6 +385,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "af 23 79 cc 4d 60 7a 45 ac 44 d6 21 35 fb 70 15" set threat=Win32-Ransom.Petya.A
   if "%filemd5%" == "fa 5d 96 64 4f e5 89 77 b4 97 65 f2 3b 3a 7e e5" set threat=Win32-Ransom.Phobos
   if "%filemd5%" == "91 98 29 30 fe 63 1d 3f cc b2 96 4a 7b 56 36 06" set threat=Win32-Ransom.PhobosImposter
+  if "%filemd5%" == "39 19 ab d7 0a 26 63 82 1b 08 55 83 92 0c ad 54" set threat=Win32-Ransom.PoliceNationale
   if "%filemd5%" == "91 a0 75 50 e5 ca 2c 97 7f 50 40 6f 07 12 6a c8" set threat=Win32-Ransom.Polski
   if "%filemd5%" == "38 3c 36 8a e3 3c 53 0d a3 6f fa e0 bc ee c8 0e" set threat=Win32-Ransom.PopcornTime
   if "%filemd5%" == "e0 34 0f 45 6f 76 99 3f c0 47 bc 71 5d fd ae 6a" set threat=Win32-Ransom.RedBoot
@@ -452,6 +454,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spy.Zbot
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
   if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet.A
+  if "%filemd5%" == "70 b5 a2 41 74 c9 2e 90 33 a6 11 c4 6d 03 de a8" set threat=Win32-Supern0va
   if "%filemd5%" == "06 8e 06 ae 07 fd 6f 5d e1 b7 fa a4 61 fd f3 f7" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "9d 0d e6 7a 5c 84 1f fc 67 ef a7 a1 72 3f 41 dd" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "7f ae ac 65 e9 cb 2f df 40 d1 70 bb 50 8e fd 83" set threat=Win32-Trojan.Agent
