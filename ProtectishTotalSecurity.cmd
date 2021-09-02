@@ -1,6 +1,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 @echo off
+goto start
 if not exist pts_configversion1.txt (
   cls
   color 0f
