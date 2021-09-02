@@ -450,6 +450,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "d3 a8 b3 dc de 44 b8 1c 0e 69 cc 2a 8a 36 e8 44" set threat=Win32-Sobig.E
   if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spy.Zbot
   if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spy.Zbot
+  if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
   if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet.A
   if "%filemd5%" == "06 8e 06 ae 07 fd 6f 5d e1 b7 fa a4 61 fd f3 f7" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "9d 0d e6 7a 5c 84 1f fc 67 ef a7 a1 72 3f 41 dd" set threat=Win32-Trojan.Agent
@@ -479,6 +480,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "83 c5 20 4b ac b4 9b 83 af ec ea 31 be af 1f 63" set threat=Win32-Trojan.MrsMajor
   if "%filemd5%" == "45 0f 49 42 6b 45 19 ec aa c8 cd 04 81 4c 03 a4" set threat=Win32-Trojan.MrsMajor
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
+  if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
   if "%filemd5%" == "8e 90 ad 82 52 86 72 49 cc 5c be e3 19 9d ef 2f" set threat=Win32-Trojan.SpyAnyTime.D
   if "%filemd5%" == "b9 70 9a 07 05 9b b0 80 57 34 39 80 e9 79 de 2f" set threat=Win32-Trojan.Tremp
   if "%filemd5%" == "3d 3e 08 ad 3a 8f 3b 35 b9 a1 0a a6 c5 7b 29 0f" set threat=Win32-Trojan.Trickbot
