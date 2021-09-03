@@ -354,6 +354,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "db 9e ef 8a d5 41 98 59 c6 76 ac b4 ef 4a 5b 13" set threat=Win32-Ransom.Cerber
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker
   if "%filemd5%" == "12 7b 80 31 1e 32 0f ff a2 44 61 f7 35 66 d4 80" set threat=Win32-Ransom.Cryptolocker
+  if "%filemd5%" == "b1 8c 5a f6 96 e8 84 72 41 e4 c1 72 30 db 36 c9" set threat=Win32-Ransom.CryptoSpider
   if "%filemd5%" == "41 d4 ab 0d e7 f5 6c 1d 4b 38 fc 10 c2 55 18 f9" set threat=Win32-Ransom.CryptoWire
   if "%filemd5%" == "0a aa d9 fd 6d 9d e6 a1 89 e8 97 09 e0 52 f0 6b" set threat=Win32-Ransom.CrySiS
   if "%filemd5%" == "d5 f1 64 9c dd df 19 2d 4e d3 c2 89 bc 1e 95 f0" set threat=Win32-Ransom.Dangerous
@@ -382,6 +383,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
+  if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
   if "%filemd5%" == "59 7d ea cb e8 a1 d7 cf 84 1e 1f 41 e9 10 89 8f" set threat=Win32-Ransom.Petya.A
   if "%filemd5%" == "af 23 79 cc 4d 60 7a 45 ac 44 d6 21 35 fb 70 15" set threat=Win32-Ransom.Petya.A
@@ -437,6 +439,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "04 86 6e cb 33 e4 49 6a 8c fd cd ad 6c 80 10 81" set threat=Win32-Rogue.SystemSecurity
   if "%filemd5%" == "8a fa d0 4b bd 53 80 d6 67 45 e2 5e 30 c0 a8 9f" set threat=Win32-Rogue.VirBytes
   if "%filemd5%" == "ab 27 c3 cc 0a b7 6a d0 6f 5c 02 b0 88 01 4c c8" set threat=Win32-Rogue.VirBytes
+  if "%filemd5%" == "db c9 d1 c4 75 e3 a4 1f fc b8 e7 ac 78 02 af 21" set threat=Win32-Rogue.VirusProtectPro
   if "%filemd5%" == "e0 33 88 af 3a 89 9c 09 32 23 0d 06 1e 31 af 16" set threat=Win32-Rogue.WindowsPolicePro
   if "%filemd5%" == "49 69 3f a1 51 55 b8 b0 b4 ee 5b b8 13 5f d0 b9" set threat=Win32-Rogue.Winhound
   if "%filemd5%" == "ba 37 11 89 ab 70 09 0c 29 8d 92 d5 02 e1 30 e5" set threat=Win32-Rogue.WolframAntivirus
