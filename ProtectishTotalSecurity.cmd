@@ -361,6 +361,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "fc 3d 3e 54 3a ef 4b 09 79 9c f7 8d 12 04 50 06" set threat=Win32-Ransom.Delphimorix
   if "%filemd5%" == "d3 2e 4d 8b 42 38 cf cc 79 3e c3 b3 7c c9 a8 75" set threat=Win32-Ransom.Dharma
   if "%filemd5%" == "2f fc d2 d6 2a 57 32 93 c8 67 9b fd 60 66 77 b5" set threat=Win32-Ransom.DiscordNitro
+  if "%filemd5%" == "8f 03 15 e9 0a 70 73 f1 5f 1d 56 3e 9b 16 44 80" set threat=Win32-Ransom.Dogge
   if "%filemd5%" == "14 41 b0 70 4b 07 d6 e8 f7 98 f6 68 4f af 0f 79" set threat=Win32-Ransom.EDA2
   if "%filemd5%" == "a7 4b 25 0b 40 28 d5 39 7c c0 9f 62 7b b5 89 ab" set threat=Win32-Ransom.Explorer
   if "%filemd5%" == "24 f3 2d a2 58 b8 c4 2c 71 ab fb 75 77 fb 35 a8" set threat=Win32-Ransom.FakeWannaCryptor
