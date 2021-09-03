@@ -339,6 +339,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "1c 12 64 41 d4 63 5b af 74 e6 fd 62 8b aa 67 14" set threat=Win32-Ransom.1337Locker
   if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
+  if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit
@@ -428,7 +429,11 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "96 30 5f 55 42 86 f7 84 d9 92 8c 49 90 45 c3 d6" set threat=Win32-RAT.NanoCore
   if "%filemd5%" == "c1 7c ad 86 80 51 b0 7e 56 1f 08 d9 de 11 b6 70" set threat=Win32-RAT.Quasar
   if "%filemd5%" == "e9 50 81 4f 0a 29 f9 59 37 50 f7 ea 42 06 e2 dd" set threat=Win32-RBot
+  if "%filemd5%" == "51 b3 30 e6 b3 04 76 5f 3a b6 17 8a 99 ea 87 f4" set threat=Win32-Rogue.AntivirusBEST
+  if "%filemd5%" == "a8 f0 1f df 7b 09 78 11 f7 c6 40 55 cb 04 1b 88" set threat=Win32-Rogue.AntiVirusGold
   if "%filemd5%" == "1f 13 39 6f a5 9d 38 eb e7 6c cc 58 7c cb 11 bb" set threat=Win32-Rogue.NavaShield
+  if "%filemd5%" == "3c 05 5b ec e3 a6 d7 14 5b 51 bb a9 3b 05 ec 8c" set threat=Win32-Rogue.SpyAxe
+  if "%filemd5%" == "c8 99 f9 3e 8b 75 3f ed d0 68 ef 3f e2 ed b0 fd" set threat=Win32-Rogue.SpySheriff
   if "%filemd5%" == "04 86 6e cb 33 e4 49 6a 8c fd cd ad 6c 80 10 81" set threat=Win32-Rogue.SystemSecurity
   if "%filemd5%" == "8a fa d0 4b bd 53 80 d6 67 45 e2 5e 30 c0 a8 9f" set threat=Win32-Rogue.VirBytes
   if "%filemd5%" == "ab 27 c3 cc 0a b7 6a d0 6f 5c 02 b0 88 01 4c c8" set threat=Win32-Rogue.VirBytes
@@ -485,6 +490,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "83 c5 20 4b ac b4 9b 83 af ec ea 31 be af 1f 63" set threat=Win32-Trojan.MrsMajor
   if "%filemd5%" == "45 0f 49 42 6b 45 19 ec aa c8 cd 04 81 4c 03 a4" set threat=Win32-Trojan.MrsMajor
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
+  if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
   if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
   if "%filemd5%" == "8e 90 ad 82 52 86 72 49 cc 5c be e3 19 9d ef 2f" set threat=Win32-Trojan.SpyAnyTime.D
   if "%filemd5%" == "b9 70 9a 07 05 9b b0 80 57 34 39 80 e9 79 de 2f" set threat=Win32-Trojan.Tremp
