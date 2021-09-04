@@ -340,6 +340,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
   if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
+  if "%filemd5%" == "7a b9 1e 57 a1 e2 75 2c d8 ab ee 3d b1 08 53 c5" set threat=Win32-Ransom.AngryDuck
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit
