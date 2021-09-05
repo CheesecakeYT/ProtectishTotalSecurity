@@ -386,6 +386,7 @@ if "%license_key%" == "License Key not used" goto license_key
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
+  if "%filemd5%" == "17 c2 5c 8a 7c 14 11 95 ee 88 7d e9 05 f3 3d 7b" set threat=Win32-Ransom.NotPetya
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
   if "%filemd5%" == "40 1c 7d ef d9 81 57 01 93 17 65 c4 e8 b8 d8 f9" set threat=Win32-Ransom.Paradise
   if "%filemd5%" == "59 7d ea cb e8 a1 d7 cf 84 1e 1f 41 e9 10 89 8f" set threat=Win32-Ransom.Petya.A
