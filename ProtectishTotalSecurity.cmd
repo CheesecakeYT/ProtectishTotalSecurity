@@ -14,26 +14,40 @@ if not exist pts_configversion1.txt (
   echo It was detected that you either:
   echo - have outdated configuration files or
   echo - installed Protectish Total Security for the first time.
-  set /p first_time="Is this your new antivirus? (Y/N): "
   echo Please wait until we finish configuring your Protectish.
 
-  if /i "%first_time%" == "y" (
+  if not exist pts_configversion1.txt (
     aaaa > pts_configversion1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion1.txt
     echo Version Of Configuration Files 1 >> pts_configversion1.txt
+  )
+  if not exist pts_lkused.txt (
     aaaa > pts_lkused.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key not used >> pts_lkused.txt
+  )
+  if not exist pts_autoaction (
     aaaa > pts_autoaction.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction.txt
     echo Automatic Action none >> pts_autoaction.txt
   ) 
-
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Thank you for downloading Protectish Total Security!
+  echo It was detected that you either:
+  echo - have outdated configuration files or
+  echo - installed Protectish Total Security for the first time.
+  echo Please wait until we finish configuring your Protectish.
   echo Configuration complete. You can now continue.
   pause
 )
-for /f "tokens=1*delims=:" %%G in ('findstr /n "^" ptsconfig.txt') do if %%G equ 2 set license_key=%%H
-if "%license_key%" == "License Key not used" goto license_key
+
+find /i /c "License Key not used" pts_lkused.txt >NUL
+if %errorlevel% equ 1 goto start
 
 :license_key
   cls
@@ -57,19 +71,28 @@ if "%license_key%" == "License Key not used" goto license_key
     goto start
   )
   aaaa > check_license_key.txt
-  pause
   echo %check_key% > check_license_key.txt
-  pause
-  @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
-  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
+  @CertUtil -hashfile check_license_key.txt MD5 > md5.txt
+  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.txt') do if %%G equ 2 set check_key=%%H
   echo %check_key% > check_license_key.txt
-  pause
-  @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
-  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
-  pause
+  @CertUtil -hashfile check_license_key.txt MD5 > md5.txt
+  for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.txt') do if %%G equ 2 set check_key=%%H
+  echo.%check_key%
+  del md5.txt
   del check_license_key.txt
-  if "%check_key%" == "23 d1 40 77 15 af 94 80 b5 1f f7 9d 87 e1 c5 51" (
-    del pts_lkused.txt
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo It's time to insert your license key!
+  echo.
+  echo If you don't have a license key, close this window, contact Protectish 
+  echo staff and pay 10 CZK to acquire a life-time license key to Protectish 
+  echo Total Security.
+  echo.
+  if "%check_key%" == "ca 2f a9 74 9b 7c 75 3d c0 cb a9 30 05 2d 13 da" (
     aaaa > pts_lkused.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key used >> pts_lkused.txt
