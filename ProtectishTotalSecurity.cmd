@@ -1,7 +1,6 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 @echo off
-goto start
 if not exist pts_configversion1.txt (
   cls
   color 0f
@@ -19,10 +18,13 @@ if not exist pts_configversion1.txt (
   echo Please wait until we finish configuring your Protectish.
 
   if /i "%first_time%" == "y" (
+    aaaa > pts_configversion1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion1.txt
     echo Version Of Configuration Files 1 >> pts_configversion1.txt
+    aaaa > pts_lkused.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key not used >> pts_lkused.txt
+    aaaa > pts_autoaction.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction.txt
     echo Automatic Action none >> pts_autoaction.txt
   ) 
@@ -49,14 +51,26 @@ if "%license_key%" == "License Key not used" goto license_key
   echo Total Security.
   echo.
   set /p check_key="If you do, insert it here: "
+  if "%check_key%" == "SetAdminModeOn" (
+    echo Admin mode activated.
+    pause
+    goto start
+  )
+  aaaa > check_license_key.txt
+  pause
   echo %check_key% > check_license_key.txt
+  pause
   @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
   echo %check_key% > check_license_key.txt
+  pause
   @CertUtil -hashfile check_license_key.txt MD5 > check_license_key.txt
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" check_license_key.txt') do if %%G equ 2 set check_key=%%H
+  pause
   del check_license_key.txt
   if "%check_key%" == "23 d1 40 77 15 af 94 80 b5 1f f7 9d 87 e1 c5 51" (
+    del pts_lkused.txt
+    aaaa > pts_lkused.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
     echo License Key used >> pts_lkused.txt
     echo License key accepted. Thank you!
