@@ -1,7 +1,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 @echo off
-if not exist pts_configversion1.txt (
+if not exist pts_configversion2.txt (
   cls
   color 0f
   title Configuring - Protectish Total Security
@@ -16,20 +16,21 @@ if not exist pts_configversion1.txt (
   echo - installed Protectish Total Security for the first time.
   echo Please wait until we finish configuring your Protectish.
 
-  if not exist pts_configversion1.txt (
+  if not exist pts_configversion2.txt (
     aaaa > pts_configversion1.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion1.txt
-    echo Version Of Configuration Files 1 >> pts_configversion1.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion2.txt
+    echo Version Of Configuration Files 2 >> pts_configversion2.txt
   )
-  if not exist pts_lkused.txt (
+  if not exist pts_lkused1.txt (
     aaaa > pts_lkused.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
-    echo License Key not used >> pts_lkused.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused1.txt
+    echo License Key not used >> pts_lkused1.txt
   )
-  if not exist pts_autoaction (
+  if not exist pts_autoaction2.txt (
     aaaa > pts_autoaction.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction.txt
-    echo Automatic Action none >> pts_autoaction.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
+    echo Automatic Action >> pts_autoaction2.txt
+    echo None >> pts_autoaction2.txt
   ) 
   cls
   echo Protectish Total Security
@@ -93,9 +94,9 @@ if %errorlevel% equ 1 goto start
   echo Total Security.
   echo.
   if "%check_key%" == "ca 2f a9 74 9b 7c 75 3d c0 cb a9 30 05 2d 13 da" (
-    aaaa > pts_lkused.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused.txt
-    echo License Key used >> pts_lkused.txt
+    aaaa > pts_lkused1.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused1.txt
+    echo License Key used >> pts_lkused1.txt
     echo License key accepted. Thank you!
     pause
     goto start
@@ -138,6 +139,73 @@ if %errorlevel% equ 1 goto start
   echo %choice% is not a valid choice.
   pause
   goto start
+  
+:settings
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo (ACTION) - Automatic actions done when a specific condition is true
+  echo (BACK) - back
+  echo.
+  set /p choice="Enter your choice: "
+  
+  if /i "%choice%" == "action" goto settings_action
+  if /i "%choice%" == "back" goto start
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto settings
+  
+:settings_action
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Automatic action is an action done when a specific condition is true,
+  echo for example "delete a file when detected by MD5 scan".
+  echo.
+  echo What to do?
+  echo.
+  echo (DELETE) - delete the file
+  echo (QUARANTINE) - quarantine the file
+  echo (NONE) - disable automatic action
+  echo (BACK) - back
+  echo.
+  set /p choice="Enter your choice: "
+
+  if /i "%choice%" == "delete" (
+    aaaa > pts_autoaction.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
+    echo Automatic action >> pts_autoaction2.txt
+    echo Delete >> pts_autoaction2.txt
+    goto settings_action_when
+  )
+  if /i "%choice%" == "quarantine" (
+    aaaa > pts_autoaction.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
+    echo Automatic action >> pts_autoaction2.txt
+    echo Quarantine >> pts_autoaction2.txt
+    goto settings_action_when
+  )
+  if /i "%choice%" == "none" (
+    aaaa > pts_autoaction.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
+    echo Automatic action >> pts_autoaction2.txt
+    echo None >> pts_autoaction2.txt
+    echo Successfully setted.
+    pause
+    goto settings_action
+  )
+  if /i "%choice%" == "back" goto settings
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto settings_action
 
 :quarantine_menu
   cls
