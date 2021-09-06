@@ -47,7 +47,7 @@ if not exist pts_configversion2.txt (
   pause
 )
 
-find /i /c "License Key not used" pts_lkused.txt >NUL
+find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
 
 :license_key
@@ -694,15 +694,30 @@ if %errorlevel% equ 1 goto start
   echo (TERMINATE) - forcibly terminates all tasks provided by the threat, then returns to this point
   echo (IGNORE) - ignores the threat
   echo.
-  set /p choice="Enter your choice: "
-  if /i "%choice%" == "delete" goto delete
-  if /i "%choice%" == "ignore" goto ignore
-  if /i "%choice%" == "quarantine" goto quarantine
-  if /i "%choice%" == "terminate" goto terminate
-  echo.
-  echo %choice% is not a valid choice.
-  pause
-  goto md5_threat
+  find /i /c "Behavior" pts_autoaction2.txt >NUL
+  if %errorlevel% equ 0 (
+    set /p choice="Enter your choice: "
+    if /i "%choice%" == "delete" goto delete
+    if /i "%choice%" == "ignore" goto ignore
+    if /i "%choice%" == "quarantine" goto quarantine
+    if /i "%choice%" == "terminate" goto terminate
+    echo.
+    echo %choice% is not a valid choice.
+    pause
+    goto md5_threat
+  )
+  find /i /c "None" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    set /p choice="Enter your choice: "
+    if /i "%choice%" == "delete" goto delete
+    if /i "%choice%" == "ignore" goto ignore
+    if /i "%choice%" == "quarantine" goto quarantine
+    if /i "%choice%" == "terminate" goto terminate
+    echo.
+    echo %choice% is not a valid choice.
+    pause
+    goto md5_threat
+  )
 
 :delete
   echo.
