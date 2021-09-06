@@ -207,6 +207,44 @@ if %errorlevel% equ 1 goto start
   pause
   goto settings_action
 
+:settings_action_when
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo When to do?
+  echo.
+  echo (MD5) - when detected by MD5 scan
+  echo (BEHAVIOR) - when detected by behavior scan
+  echo (ALL) - when detected by any scan
+  echo.
+  set /p choice="Enter your choice: "
+
+  if /i "%choice%" == "md5" (
+    echo MD5 >> pts_autoaction2.txt
+    echo Successfully setted.
+    pause
+    goto settings_action
+  )
+  if /i "%choice%" == "behavior" (
+    echo Behavior >> pts_autoaction2.txt
+    echo Successfully setted.
+    pause
+    goto settings_action
+  )
+  if /i "%choice%" == "all" (
+    echo All >> pts_autoaction2.txt
+    echo Successfully setted.
+    pause
+    goto settings_action
+  )
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto settings_action
+
 :quarantine_menu
   cls
   echo Protectish Total Security
@@ -454,6 +492,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
   if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
   if "%filemd5%" == "16 ad a5 1d c0 a0 62 f8 60 8d a8 92 2b 0f c9 f8" set threat=Win32-Ransom.Blooper
+  if "%filemd5%" == "92 66 05 0f 3c e5 ba 99 53 35 31 68 9e ae 7e 2f" set threat=Win32-Ransom.Bluerose
   if "%filemd5%" == "ab 07 5e b2 ad 67 2b fa 36 99 62 c1 be 15 66 9a" set threat=Win32-Ransom.Braincrypt
   if "%filemd5%" == "27 14 58 8f b8 93 30 40 93 88 5c 23 f5 41 69 ee" set threat=Win32-Ransom.BrainLag
   if "%filemd5%" == "cf d2 d6 f1 89 b0 4d 42 61 80 07 fc 9c 54 03 52" set threat=Win32-Ransom.Cerber
