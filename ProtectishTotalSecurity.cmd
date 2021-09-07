@@ -718,6 +718,37 @@ if %errorlevel% equ 1 goto start
     pause
     goto md5_threat
   )
+  find /i /c "Delete" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    del %file%
+    echo Threat deleted. (Automatic action)
+    pause
+    if "%dirscan%" == "true" (
+      set threat=""""
+      set /a filenumber=%filenumber%+1
+      goto scan
+    )
+    goto start
+  )
+  find /i /c "Quarantine" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    cd %ptsdir%
+    if not exist quarant\ mkdir quarant
+    move /Y %file% quarant\%threat%.protquarant
+    cipher /e quarant\%threat%.protquarant
+    echo Threat quarantined. (Automatic action)
+    pause
+    if "%dirscan%" == "true" (
+      set threat=""""
+      set /a filenumber=%filenumber%+1
+      goto scan
+    )
+    goto start
+  )
+  echo An error occured at pts_autoaction2.txt.
+  echo Contact Protectish support.
+  pause
+  exit
 
 :delete
   echo.
