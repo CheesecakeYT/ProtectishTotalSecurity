@@ -892,20 +892,61 @@ if %errorlevel% equ 1 goto start
   echo.
   echo Path: %file%
   echo.
-  echo (DELETE) - deletes the file
-  echo (QUARANTINE) - quarantines the file
-  echo (TERMINATE) - forcibly terminates all tasks provided by the threat, then returns to this point
-  echo (IGNORE) - ignores the threat
-  echo.
-  set /p choice="Enter your choice: "
-  if /i "%choice%" == "delete" goto delete
-  if /i "%choice%" == "ignore" goto ignore
-  if /i "%choice%" == "quarantine" goto quarantine
-  if /i "%choice%" == "terminate" goto terminate_behavior
-  echo.
-  echo %choice% is not a valid choice.
+  find /i /c "MD5" pts_autoaction2.txt >NUL
+  if %errorlevel% equ 0 (
+    set /p choice="Enter your choice: "
+    if /i "%choice%" == "delete" goto delete
+    if /i "%choice%" == "ignore" goto ignore
+    if /i "%choice%" == "quarantine" goto quarantine
+    if /i "%choice%" == "terminate" goto terminate
+    echo.
+    echo %choice% is not a valid choice.
+    pause
+    goto md5_threat
+  )
+  find /i /c "None" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    set /p choice="Enter your choice: "
+    if /i "%choice%" == "delete" goto delete
+    if /i "%choice%" == "ignore" goto ignore
+    if /i "%choice%" == "quarantine" goto quarantine
+    if /i "%choice%" == "terminate" goto terminate
+    echo.
+    echo %choice% is not a valid choice.
+    pause
+    goto md5_threat
+  )
+  find /i /c "Delete" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    del %file%
+    echo Threat deleted. (Automatic action)
+    pause
+    if "%dirscan%" == "true" (
+      set threat=""""
+      set /a filenumber=%filenumber%+1
+      goto scan
+    )
+    goto start
+  )
+  find /i /c "Quarantine" pts_autoaction2.txt
+  if %errorlevel% equ 0 (
+    cd %ptsdir%
+    if not exist quarant\ mkdir quarant
+    move /Y %file% quarant\%threat%.protquarant
+    cipher /e quarant\%threat%.protquarant
+    echo Threat quarantined. (Automatic action)
+    pause
+    if "%dirscan%" == "true" (
+      set threat=""""
+      set /a filenumber=%filenumber%+1
+      goto scan
+    )
+    goto start
+  )
+  echo An error occured at pts_autoaction2.txt.
+  echo Contact Protectish support.
   pause
-  goto behavior_threat
+  exit
 
 :terminate_behavior
   echo.
