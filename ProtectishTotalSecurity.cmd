@@ -705,7 +705,7 @@ if %errorlevel% equ 1 goto start
     pause
     goto md5_threat
   )
-  find /i /c "None" pts_autoaction2.txt
+  find /i /c "None" pts_autoaction2.txt >NUL
   if %errorlevel% equ 0 (
     set /p choice="Enter your choice: "
     if /i "%choice%" == "delete" goto delete
@@ -717,7 +717,7 @@ if %errorlevel% equ 1 goto start
     pause
     goto md5_threat
   )
-  find /i /c "Delete" pts_autoaction2.txt
+  find /i /c "Delete" pts_autoaction2.txt >NUL
   if %errorlevel% equ 0 (
     del %file%
     echo Threat deleted. (Automatic action)
@@ -729,7 +729,7 @@ if %errorlevel% equ 1 goto start
     )
     goto start
   )
-  find /i /c "Quarantine" pts_autoaction2.txt
+  find /i /c "Quarantine" pts_autoaction2.txt >NUL
   if %errorlevel% equ 0 (
     cd %ptsdir%
     if not exist quarant\ mkdir quarant
