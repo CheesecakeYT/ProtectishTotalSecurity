@@ -484,6 +484,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
   if "%filemd5%" == "7a b9 1e 57 a1 e2 75 2c d8 ab ee 3d b1 08 53 c5" set threat=Win32-Ransom.AngryDuck
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
+  if "%filemd5%" == "bb ac d7 e5 e7 be 9d e0 18 1e 41 8d e9 c2 6c 5a" set threat=Win32-Ransom.Armage
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit
   if "%filemd5%" == "2f e3 2d 2a 6b fc 72 d2 15 49 6b 05 5e 5a 53 ad" set threat=Win32-Ransom.BadRabbit
@@ -519,6 +520,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "4e 89 0b a5 a4 f6 fd 63 72 7c 00 05 da a6 54 dd" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "a4 bb 3a 5c b6 83 5c 08 9d 76 91 00 d5 46 16 62" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "f5 4c 9a fc 52 02 9f d4 3b fb e6 dd 3c a2 f6 16" set threat=Win32-Ransom.JSterling
+  if "%filemd5%" == "56 f3 d3 d6 82 d6 11 2e 4d 6f 9f 31 6b e5 8d f4" set threat=Win32-Ransom.Karma
   if "%filemd5%" == "7f 87 db 33 98 0c 00 99 73 9d e4 0d 1b 72 55 00" set threat=Win32-Ransom.Katyusha
   if "%filemd5%" == "12 e2 ef f0 9c 11 4c 18 46 28 94 a4 89 11 ce 8a" set threat=Win32-Ransom.KesLan
   if "%filemd5%" == "b2 14 a9 cd 3c 2f c0 cc ec c8 d1 e5 2b 4f 50 20" set threat=Win32-Ransom.Kraken
@@ -528,6 +530,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
+  if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
   if "%filemd5%" == "17 c2 5c 8a 7c 14 11 95 ee 88 7d e9 05 f3 3d 7b" set threat=Win32-Ransom.NotPetya
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
@@ -538,7 +541,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "91 98 29 30 fe 63 1d 3f cc b2 96 4a 7b 56 36 06" set threat=Win32-Ransom.PhobosImposter
   if "%filemd5%" == "39 19 ab d7 0a 26 63 82 1b 08 55 83 92 0c ad 54" set threat=Win32-Ransom.PoliceNationale
   if "%filemd5%" == "91 a0 75 50 e5 ca 2c 97 7f 50 40 6f 07 12 6a c8" set threat=Win32-Ransom.Polski
+  if "%filemd5%" == "9c ce 98 a7 0c 25 36 06 33 ce 79 1e af 9f ba 18" set threat=Win32-Ransom.PolyRansom
   if "%filemd5%" == "38 3c 36 8a e3 3c 53 0d a3 6f fa e0 bc ee c8 0e" set threat=Win32-Ransom.PopcornTime
+  if "%filemd5%" == "40 d2 9a ce 41 27 9f 3d f8 db f7 a0 96 09 b2 44" set threat=Win32-Ransom.PUBG
   if "%filemd5%" == "e0 34 0f 45 6f 76 99 3f c0 47 bc 71 5d fd ae 6a" set threat=Win32-Ransom.RedBoot
   if "%filemd5%" == "3c 76 75 48 d8 a7 4b 96 e8 51 a5 8b cc 4c 44 bc" set threat=Win32-Ransom.Rogue
   if "%filemd5%" == "db 63 b9 73 12 15 79 bc ad 7c 99 52 80 ca 4d 03" set threat=Win32-Ransom.RollSafe
