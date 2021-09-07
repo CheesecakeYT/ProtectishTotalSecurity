@@ -179,21 +179,20 @@ if %errorlevel% equ 1 goto start
   set /p choice="Enter your choice: "
 
   if /i "%choice%" == "delete" (
-    aaaa > pts_autoaction.txt
+    aaaa > pts_autoaction2.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
     echo Automatic action >> pts_autoaction2.txt
     echo Delete >> pts_autoaction2.txt
     goto settings_action_when
   )
   if /i "%choice%" == "quarantine" (
-    aaaa > pts_autoaction.txt
+    aaaa > pts_autoaction2.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
     echo Automatic action >> pts_autoaction2.txt
     echo Quarantine >> pts_autoaction2.txt
     goto settings_action_when
   )
   if /i "%choice%" == "none" (
-    aaaa > pts_autoaction.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
     echo Automatic action >> pts_autoaction2.txt
     echo None >> pts_autoaction2.txt
