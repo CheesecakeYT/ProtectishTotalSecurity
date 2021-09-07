@@ -17,17 +17,17 @@ if not exist pts_configversion2.txt (
   echo Please wait until we finish configuring your Protectish.
 
   if not exist pts_configversion2.txt (
-    aaaa > pts_configversion1.txt
+    aaaa > pts_configversion2.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion2.txt
     echo Version Of Configuration Files 2 >> pts_configversion2.txt
   )
   if not exist pts_lkused1.txt (
-    aaaa > pts_lkused.txt
+    aaaa > pts_lkused1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused1.txt
     echo License Key not used >> pts_lkused1.txt
   )
   if not exist pts_autoaction2.txt (
-    aaaa > pts_autoaction.txt
+    aaaa > pts_autoaction2.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_autoaction2.txt
     echo Automatic Action >> pts_autoaction2.txt
     echo None >> pts_autoaction2.txt
@@ -119,7 +119,7 @@ if %errorlevel% equ 1 goto start
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
-  rem echo (SETTINGS) - show Protectish settings
+  echo (SETTINGS) - show Protectish settings
   echo (EXIT) - exit
   echo (QUIT) - exit
   echo (END) - exit
@@ -134,7 +134,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
-  rem if /i "%choice%" == "settings" goto settings
+  if /i "%choice%" == "settings" goto settings
   echo.
   echo %choice% is not a valid choice.
   pause
