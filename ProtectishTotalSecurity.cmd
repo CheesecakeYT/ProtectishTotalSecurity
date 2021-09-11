@@ -32,6 +32,16 @@ if not exist pts_configversion2.txt (
     echo Automatic Action >> pts_autoaction2.txt
     echo None >> pts_autoaction2.txt
   ) 
+  if not exist pts_lkinserted1.txt (
+    aaaa > pts_lkinserted1.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkinserted1.txt
+    echo License Key not inserted >> pts_lkinserted1.txt
+  )
+  if not exist pts_gendetect1.txt (
+    aaaa > pts_gendetect1.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_gendetect1.txt
+    echo Piracy not detected >> pts_gendetect1.txt  
+  )
   cls
   echo Protectish Total Security
   echo.
@@ -97,6 +107,9 @@ if %errorlevel% equ 1 goto start
     aaaa > pts_lkused1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkused1.txt
     echo License Key used >> pts_lkused1.txt
+    aaaa > pts_lkinserted1.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkinserted1.txt
+    echo License Key inserted >> pts_lkinserted1.txt
     echo License key accepted. Thank you!
     pause
     goto start
@@ -106,6 +119,13 @@ if %errorlevel% equ 1 goto start
   goto license_key
 
 :start
+  find /i /c "Piracy detected" pts_gendetect1.txt >NUL
+  if %errorlevel% equ 0 goto antipiracy
+  find /i /c "License Key used" pts_lkused1.txt >NUL
+  if %errorlevel% equ 0 (
+    find /i /c "License Key not inserted" pts_lkinserted1.txt >NUL
+    if %errorlevel% equ 0 goto antipiracy
+  )
   cls
   color 0f
   title Protectish Total Security
@@ -289,6 +309,35 @@ if %errorlevel% equ 1 goto start
   echo %choice% is not a valid choice.
   pause
   goto quarantine_menu
+  
+:antipiracy
+  aaaa > pts_gendetect1.txt
+  echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_gendetect1.txt
+  echo Piracy detected >> pts_gendetect1.txt 
+  cls
+  color cf
+  echo.
+  echo __      __
+  echo \ \  _ / /
+  echo  \ \(_) | 
+  echo   > > | | 
+  echo  / / _| | 
+  echo /_/ (_) | 
+  echo        \_\
+  echo.
+  echo PIRACY IS A CRIME.
+  echo.
+  echo Software piracy was detected.
+  echo Copying software without permission is illegal and the consequences
+  echo can result in a fine or even imprisoning. If you are not the author
+  echo of this pirated copy of Protectish Total Security, report this copy
+  echo to Protectish.
+  echo.
+  echo If you think this is an error, ask Protectish support.
+  echo.
+  echo CLOSE THE PROGRAM OR PRESS ANY KEY TO CLOSE IT.
+  pause >NUL
+  exit
 
 :dir
   cls
