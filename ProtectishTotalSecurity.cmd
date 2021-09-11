@@ -317,13 +317,9 @@ if %errorlevel% equ 1 goto start
   cls
   color cf
   echo.
-  echo __      __
-  echo \ \  _ / /
-  echo  \ \(_) | 
-  echo   > > | | 
-  echo  / / _| | 
-  echo /_/ (_) | 
-  echo        \_\
+  echo WAIT A MINUTE...
+  echo.
+  echo :(
   echo.
   echo PIRACY IS A CRIME.
   echo.
