@@ -1,7 +1,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 @echo off
-if not exist pts_configversion2.txt (
+if not exist pts_configversion3.txt (
   cls
   color 0f
   title Configuring - Protectish Total Security
@@ -16,10 +16,10 @@ if not exist pts_configversion2.txt (
   echo - installed Protectish Total Security for the first time.
   echo Please wait until we finish configuring your Protectish.
 
-  if not exist pts_configversion2.txt (
-    aaaa > pts_configversion2.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion2.txt
-    echo Version Of Configuration Files 2 >> pts_configversion2.txt
+  if not exist pts_configversion3.txt (
+    aaaa > pts_configversion3.txt
+    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_configversion3.txt
+    echo Version Of Configuration Files 3 >> pts_configversion3.txt
   )
   if not exist pts_lkused1.txt (
     aaaa > pts_lkused1.txt
@@ -139,7 +139,7 @@ if %errorlevel% equ 1 goto start
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
-  echo (SETTINGS) - show Protectish settings
+  rem echo (SETTINGS) - show Protectish settings
   echo (EXIT) - exit
   echo (QUIT) - exit
   echo (END) - exit
@@ -154,7 +154,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
-  if /i "%choice%" == "settings" goto settings
+  rem if /i "%choice%" == "settings" goto settings
   echo.
   echo %choice% is not a valid choice.
   pause
