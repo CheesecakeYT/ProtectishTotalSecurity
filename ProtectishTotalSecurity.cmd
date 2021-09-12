@@ -573,6 +573,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
   if "%filemd5%" == "17 c2 5c 8a 7c 14 11 95 ee 88 7d e9 05 f3 3d 7b" set threat=Win32-Ransom.NotPetya
+  if "%filemd5%" == "09 f2 c2 f3 81 e6 19 89 47 cb 1b 9b c1 22 8a a8" set threat=Win32-Ransom.NTKCryptolocker
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
   if "%filemd5%" == "40 1c 7d ef d9 81 57 01 93 17 65 c4 e8 b8 d8 f9" set threat=Win32-Ransom.Paradise
   if "%filemd5%" == "59 7d ea cb e8 a1 d7 cf 84 1e 1f 41 e9 10 89 8f" set threat=Win32-Ransom.Petya.A
@@ -707,6 +708,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "02 73 ed 44 d5 87 4d c3 03 90 15 16 3b c8 91 32" set threat=Win32-Worm.Agent
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "0b ba 28 8e 55 ed 34 b5 eb c7 6f 86 5a 53 2c bf" set threat=Win32-Worm.CodeRed.A
+  if "%filemd5%" == "fd cd a5 5b 16 42 6a 6f ed 53 d9 19 e3 1b 3d 23" set threat=Win32-Worm.Dumaru.A
   if "%filemd5%" == "a8 9c 0e d6 ef 75 17 9a db 6f 52 24 01 02 b9 b2" set threat=Win32-Worm.Fizzer.A
   if "%filemd5%" == "02 dd 0e aa 96 49 a1 1e 55 fa 54 67 fa 4b 8e f8" set threat=Win32-Worm.Happy99
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
