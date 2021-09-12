@@ -120,11 +120,11 @@ if %errorlevel% equ 1 goto start
 
 :start
   find /i /c "Piracy not detected" pts_gendetect1.txt >NUL
-  if "%errorlevel%" equ 1 goto antipiracy
+  if "%errorlevel%" == 1 goto antipiracy
   find /i /c "License Key used" pts_lkused1.txt >NUL
-  if "%errorlevel%" equ 0 (
+  if "%errorlevel%" == 0 (
     find /i /c "License Key not inserted" pts_lkinserted1.txt >NUL
-    if "%errorlevel%" equ 0 goto antipiracy
+    if "%errorlevel%" == 0 goto antipiracy
   )
   cls
   color 0f
