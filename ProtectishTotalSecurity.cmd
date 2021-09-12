@@ -32,11 +32,6 @@ if not exist pts_configversion3.txt (
     echo Automatic Action >> pts_autoaction2.txt
     echo None >> pts_autoaction2.txt
   ) 
-  if not exist pts_lkinserted1.txt (
-    aaaa > pts_lkinserted1.txt
-    echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_lkinserted1.txt
-    echo License Key not inserted >> pts_lkinserted1.txt
-  )
   if not exist pts_gendetect1.txt (
     aaaa > pts_gendetect1.txt
     echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_gendetect1.txt
@@ -123,8 +118,7 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% equ 1 goto antipiracy
   find /i /c "License Key used" pts_lkused1.txt > NUL
   if %errorlevel% equ 0 (
-    findstr /r /i /n "License Key not inserted" pts_lkinserted1.txt > NUL
-    if %errorlevel% equ 0 goto antipiracy
+    if not exist pts_lkinserted1.txt goto antipiracy
   )
   cls
   color 0f
