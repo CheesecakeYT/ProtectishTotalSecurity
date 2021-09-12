@@ -305,6 +305,7 @@ if %errorlevel% equ 1 goto start
   goto quarantine_menu
   
 :antipiracy
+  title BEING A CRIMINAL IS NO GOOD
   aaaa > pts_gendetect1.txt
   echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_gendetect1.txt
   echo Piracy detected >> pts_gendetect1.txt 
