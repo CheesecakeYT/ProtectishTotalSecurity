@@ -123,7 +123,7 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% equ 1 goto antipiracy
   find /i /c "License Key used" pts_lkused1.txt > NUL
   if %errorlevel% equ 0 (
-    find /i /c "License Key not inserted" pts_lkinserted1.txt > NUL
+    findstr /r /i /n "License Key not inserted" pts_lkinserted1.txt > NUL
     if %errorlevel% equ 0 goto antipiracy
   )
   cls
