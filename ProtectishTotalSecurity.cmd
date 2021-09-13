@@ -477,6 +477,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "01 29 da b7 29 15 cc 20 bf 10 4c 09 08 85 47 c4" set threat=Win32-Ipamor
   if "%filemd5%" == "41 dd 2b f0 50 ce 71 95 ad 59 4a eb d3 f3 af c4" set threat=Win32-Ipamor
   if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor
+  if "%filemd5%" == "df d1 74 1b 9d 4c 16 a5 4f 3d 61 04 d4 66 3f c8" set threat=Win32-Joke.Disco
   if "%filemd5%" == "4e 33 66 78 55 87 2e cd a9 5a 11 71 b4 0a ae 9a" set threat=Win32-Klez.A
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.A
   if "%filemd5%" == "a5 a4 8f bc 21 18 03 db 3d cc 9b 91 7d 5d 32 0f" set threat=Win32-Kolabc
