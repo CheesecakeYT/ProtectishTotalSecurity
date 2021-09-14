@@ -1,6 +1,8 @@
+@echo off
 rem License key is PTS_PJF5G4DAZ5R3
 
-@echo off
+set msg_noanalytics=0
+
 if not exist pts_configversion3.txt (
   cls
   color 0f
@@ -54,6 +56,10 @@ if not exist pts_configversion3.txt (
 
 find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
+if not exist pts_analytics1.txt (
+  set msg_noanalytics=1
+  set /a msgcount=msgcount+1
+)
 
 :license_key
   cls
@@ -130,10 +136,13 @@ if %errorlevel% equ 1 goto start
   echo Making you safe
   echo.
   echo.
+  echo You have %msgcount% messages.
+  echo.
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
   rem echo (SETTINGS) - show Protectish settings
+  echo (MESSAGES) - show messages
   echo (EXIT) - exit
   echo (QUIT) - exit
   echo (END) - exit
@@ -149,10 +158,37 @@ if %errorlevel% equ 1 goto start
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
   rem if /i "%choice%" == "settings" goto settings
+  if /i "%choice%" == "messages" goto messages
   echo.
   echo %choice% is not a valid choice.
   pause
   goto start
+  
+:messages
+  cls
+  title Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Messages: %msgcount%
+  echo.
+  if /i "%msg_noanalytics%" == "1" (
+    echo Detection information sharing is turned off. Sharing
+    echo some detection information helps us to develop our
+    echo scans. To turn it on, navigate to Settings - Analytics.
+    echo.
+  )
+  echo (BACK) - back
+  echo.
+  set /p choice="Enter your choice: "
+
+  if /i "%choice%" == "back" goto start
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto messages
   
 :settings
   cls
@@ -161,12 +197,14 @@ if %errorlevel% equ 1 goto start
   echo Making you safe
   echo.
   echo.
-  echo (ACTION) - Automatic actions done when a specific condition is true
+  echo (ACTION) - automatic actions done when a specific condition is true
+  echo (ANALYTICS) - share information about some detections with Protectish
   echo (BACK) - back
   echo.
   set /p choice="Enter your choice: "
   
   if /i "%choice%" == "action" goto settings_action
+  if /i "%choice%" == "analytics" goto settings_analytics
   if /i "%choice%" == "back" goto start
   echo.
   echo %choice% is not a valid choice.
@@ -256,7 +294,71 @@ if %errorlevel% equ 1 goto start
   echo.
   echo %choice% is not a valid choice.
   pause
-  goto settings_action
+  goto settings_action_when
+  
+:settings_analytics
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Notice: Detection information sharing uses your email address.
+  if not exist pts_analytics1.txt (
+    echo.
+    echo (ON) - turn detection information sharing on
+    echo (BACK) - back
+    echo.
+    set /p choice="Enter your choice: "
+
+    if /i "%choice%" == "on" goto settings_analytics_on
+    if /i "%choice%" == "back" goto settings
+      echo.
+      echo %choice% is not a valid choice.
+      pause
+      goto settings_analytics  
+  )
+  if exist pts_analytics1.txt (
+    echo.
+    echo (OFF) - turn detection information sharing off
+    echo (BACK) - back
+    echo.
+    set /p choice="Enter your choice: "
+
+    if /i "%choice%" == "off" (
+      del pts_analytics1.txt
+      set /a msgcount=msgcount+1
+      set msg_noanalytics=1
+      echo Detection information sharing was turned off.
+      pause
+      goto settings_analytics
+    )
+    if /i "%choice%" == "back" goto settings
+      echo.
+      echo %choice% is not a valid choice.
+      pause
+      goto settings_analytics  
+  )
+  
+:settings_analytics_on
+  cls
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo To turn on detection information sharing, please insert your email address
+  echo to send emails from.
+  echo.
+  set /p email="Email address: "
+  echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_analytics1.txt
+  echo Analytics On >> pts_analytics1.txt
+  echo %email% >> pts_analytics1.txt
+  set msg_noanalytics=0
+  set /a msgcount=msgcount-1
+  echo Detection information sharing was turned on.
+  pause
+  goto settings_analytics
 
 :quarantine_menu
   cls
