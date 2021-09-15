@@ -140,7 +140,7 @@ if %errorlevel% equ 1 goto start
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
-  rem echo (SETTINGS) - show Protectish settings
+  echo (SETTINGS) - show Protectish settings
   echo (MESSAGES) - show messages
   echo (EXIT) - exit
   echo (QUIT) - exit
@@ -303,41 +303,27 @@ if %errorlevel% equ 1 goto start
   echo.
   echo.
   echo Notice: Detection information sharing uses your email address.
-  if not exist pts_analytics1.txt (
-    echo.
-    echo (ON) - turn detection information sharing on
-    echo (BACK) - back
-    echo.
-    set /p choice="Enter your choice: "
+  echo.
+  echo (ON) - turn detection information sharing on
+  echo (OFF) - turn detection information sharing off
+  echo (BACK) - back
+  echo.
+  set /p choice="Enter your choice: "
 
-    if /i "%choice%" == "on" goto settings_analytics_on
-    if /i "%choice%" == "back" goto settings
-      echo.
-      echo %choice% is not a valid choice.
-      pause
-      goto settings_analytics  
-  )
-  if exist pts_analytics1.txt (
-    echo.
-    echo (OFF) - turn detection information sharing off
-    echo (BACK) - back
-    echo.
-    set /p choice="Enter your choice: "
-
-    if /i "%choice%" == "off" (
-      del pts_analytics1.txt
-      set /a msgcount=msgcount+1
-      set msg_noanalytics=1
-      echo Detection information sharing was turned off.
-      pause
-      goto settings_analytics
-    )
-    if /i "%choice%" == "back" goto settings
-      echo.
-      echo %choice% is not a valid choice.
-      pause
-      goto settings_analytics  
-  )
+  if /i "%choice%" == "on" goto settings_analytics_on
+  if /i "%choice%" == "off" (
+    del pts_analytics1.txt
+    set /a msgcount=msgcount+1
+    set msg_noanalytics=1
+    echo Detection information sharing was turned off.
+    pause
+    goto settings_analytics
+  )  
+  if /i "%choice%" == "back" goto settings
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto settings_analytics  
   
 :settings_analytics_on
   cls
