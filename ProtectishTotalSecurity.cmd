@@ -55,10 +55,10 @@ if not exist pts_configversion3.txt (
 )
 
 find /i /c "License Key not used" pts_lkused1.txt >NUL
-if %errorlevel% equ 1 goto start
 if not exist pts_analytics1.txt (
   set /a msgcount=msgcount+1
 )
+if %errorlevel% equ 1 goto start
 
 :license_key
   cls
