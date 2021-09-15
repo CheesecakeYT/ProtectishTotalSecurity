@@ -2,6 +2,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 set msg_noanalytics=0
+set msgcount=0
 
 if not exist pts_configversion3.txt (
   cls
