@@ -1031,7 +1031,7 @@ if not exist pts_analytics1.txt (
     echo objEmail.From = "%email%" >> pts_analytics1.vbs
     echo objEmail.To = "martinekmatej@gmail.com" >> pts_analytics1.vbs
     echo objEmail.Subject = "Protectish Automated Message - New malware hash was found" >> pts_analytics1.vbs
-    echo objEmail.Textbody = "Hash %filemd5% was detected as malicious by behavior scan." >> pts_analytics1.vbs
+    echo objEmail.Textbody = "Hash %filemd5% was detected as %threat% by behavior scan." >> pts_analytics1.vbs
     echo objEmail.Send >> pts_analytics1.vbs
     pts_analytics1.vbs
     del pts_analytics1.vbs
