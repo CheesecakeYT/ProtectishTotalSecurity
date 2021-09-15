@@ -1,7 +1,6 @@
 @echo off
 rem License key is PTS_PJF5G4DAZ5R3
 
-set msg_noanalytics=0
 set msgcount=0
 
 if not exist pts_configversion3.txt (
@@ -58,7 +57,6 @@ if not exist pts_configversion3.txt (
 find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
 if not exist pts_analytics1.txt (
-  set msg_noanalytics=1
   set /a msgcount=msgcount+1
 )
 
@@ -175,7 +173,7 @@ if not exist pts_analytics1.txt (
   echo.
   echo Messages: %msgcount%
   echo.
-  if /i "%msg_noanalytics%" == "1" (
+  if not exist pts_analytics1.txt (
     echo Detection information sharing is turned off. Sharing
     echo some detection information helps us to develop our
     echo scans. To turn it on, navigate to Settings - Analytics.
