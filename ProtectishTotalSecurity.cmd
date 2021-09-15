@@ -54,10 +54,10 @@ if not exist pts_configversion3.txt (
   pause
 )
 
-find /i /c "License Key not used" pts_lkused1.txt >NUL
 if not exist pts_analytics1.txt (
   set /a msgcount=msgcount+1
 )
+find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
 
 :license_key
@@ -156,7 +156,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
-  rem if /i "%choice%" == "settings" goto settings
+  if /i "%choice%" == "settings" goto settings
   if /i "%choice%" == "messages" goto messages
   echo.
   echo %choice% is not a valid choice.
@@ -196,13 +196,13 @@ if %errorlevel% equ 1 goto start
   echo Making you safe
   echo.
   echo.
-  echo (ACTION) - automatic actions done when a specific condition is true
+  rem echo (ACTION) - automatic actions done when a specific condition is true
   echo (ANALYTICS) - share information about some detections with Protectish
   echo (BACK) - back
   echo.
   set /p choice="Enter your choice: "
   
-  if /i "%choice%" == "action" goto settings_action
+  rem if /i "%choice%" == "action" goto settings_action
   if /i "%choice%" == "analytics" goto settings_analytics
   if /i "%choice%" == "back" goto start
   echo.
