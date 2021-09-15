@@ -944,10 +944,10 @@ if %errorlevel% equ 1 goto start
   echo MD5 Scan: Successful
   echo Behavior Scan: Pending
 
-  find /i /c "X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*" %file% > NUL
+  find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
   find /i /c "PROTECTISH-TOTAL-SECURITY-TEST-FILE!-HOORAY!" %file% > NUL
-  if %errorlevel% == 0 set threat NotAVirus-PTS.Test.File
+  if %errorlevel% == 0 set threat=NotAVirus-PTS.Test.File
   find /i /c "BrowserAssistant.Init-3-5" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Adware.BrowserAssistant
   find /i /c "Init7.dll" %file% > NUL
@@ -1007,19 +1007,22 @@ if %errorlevel% equ 1 goto start
       set /a filenumber=filenumber+1
       goto scan
     ) else (
+      pause
       goto safe
     )
   )
 
 :behavior_threat
   if exist pts_analytics1.txt (
+    set vbs=")"
     for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
-    echo Set objEmail = CreateObject("CDO.Message") > pts_analytics1.vbs
+    echo Set objEmail = CreateObject("CDO.Message"%vbs% > pts_analytics1.vbs
     echo objEmail.From = "%email%" >> pts_analytics1.vbs
     echo objEmail.To = "martinekmatej@gmail.com" >> pts_analytics1.vbs
     echo objEmail.Subject = "Protectish Automated Message - New malware hash was found" >> pts_analytics1.vbs
     echo objEmail.Textbody = "Hash %filemd5% was detected as %threat% by behavior scan." >> pts_analytics1.vbs
     echo objEmail.Send >> pts_analytics1.vbs
+    pause
     pts_analytics1.vbs
     del pts_analytics1.vbs
   )
@@ -1040,61 +1043,75 @@ if %errorlevel% equ 1 goto start
   echo.
   echo Path: %file%
   echo.
-  find /i /c "MD5" pts_autoaction2.txt >NUL
-  if %errorlevel% equ 0 (
-    set /p choice="Enter your choice: "
-    if /i "%choice%" == "delete" goto delete
-    if /i "%choice%" == "ignore" goto ignore
-    if /i "%choice%" == "quarantine" goto quarantine
-    if /i "%choice%" == "terminate" goto terminate
-    echo.
-    echo %choice% is not a valid choice.
-    pause
-    goto md5_threat
-  )
-  find /i /c "None" pts_autoaction2.txt
-  if %errorlevel% equ 0 (
-    set /p choice="Enter your choice: "
-    if /i "%choice%" == "delete" goto delete
-    if /i "%choice%" == "ignore" goto ignore
-    if /i "%choice%" == "quarantine" goto quarantine
-    if /i "%choice%" == "terminate" goto terminate
-    echo.
-    echo %choice% is not a valid choice.
-    pause
-    goto md5_threat
-  )
-  find /i /c "Delete" pts_autoaction2.txt
-  if %errorlevel% equ 0 (
-    del %file%
-    echo Threat deleted. (Automatic action)
-    pause
-    if "%dirscan%" == "true" (
-      set threat=""""
-      set /a filenumber=%filenumber%+1
-      goto scan
-    )
-    goto start
-  )
-  find /i /c "Quarantine" pts_autoaction2.txt
-  if %errorlevel% equ 0 (
-    cd %ptsdir%
-    if not exist quarant\ mkdir quarant
-    move /Y %file% quarant\%threat%.protquarant
-    cipher /e quarant\%threat%.protquarant
-    echo Threat quarantined. (Automatic action)
-    pause
-    if "%dirscan%" == "true" (
-      set threat=""""
-      set /a filenumber=%filenumber%+1
-      goto scan
-    )
-    goto start
-  )
-  echo An error occured at pts_autoaction2.txt.
-  echo Contact Protectish support.
+  echo (DELETE) - deletes the file
+  echo (QUARANTINE) - quarantines the file
+  echo (TERMINATE) - forcibly terminates all tasks provided by the threat, then returns to this point
+  echo (IGNORE) - ignores the threat
+  echo.
+  set /p choice="Enter your choice: "
+  if /i "%choice%" == "delete" goto delete
+  if /i "%choice%" == "ignore" goto ignore
+  if /i "%choice%" == "quarantine" goto quarantine
+  if /i "%choice%" == "terminate" goto terminate_behavior
+  echo.
+  echo %choice% is not a valid choice.
   pause
-  exit
+  goto behavior_threat
+  rem find /i /c "MD5" pts_autoaction2.txt >NUL
+  rem if %errorlevel% equ 0 (
+  rem  set /p choice="Enter your choice: "
+  rem  if /i "%choice%" == "delete" goto delete
+  rem  if /i "%choice%" == "ignore" goto ignore
+  rem  if /i "%choice%" == "quarantine" goto quarantine
+  rem  if /i "%choice%" == "terminate" goto terminate
+  rem  echo.
+  rem  echo %choice% is not a valid choice.
+  rem  pause
+  rem  goto md5_threat
+  rem )
+  rem find /i /c "None" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem   set /p choice="Enter your choice: "
+  rem   if /i "%choice%" == "delete" goto delete
+  rem   if /i "%choice%" == "ignore" goto ignore
+  rem   if /i "%choice%" == "quarantine" goto quarantine
+  rem   if /i "%choice%" == "terminate" goto terminate
+  rem  echo.
+  rem  echo %choice% is not a valid choice.
+  rem  pause
+  rem  goto md5_threat
+  rem )
+  rem find /i /c "Delete" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem  del %file%
+  rem  echo Threat deleted. (Automatic action)
+  rem  pause
+  rem  if "%dirscan%" == "true" (
+  rem    set threat=""""
+  rem    set /a filenumber=%filenumber%+1
+  rem    goto scan
+  rem  )
+  rem  goto start
+  rem )
+  rem find /i /c "Quarantine" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem  cd %ptsdir%
+  rem  if not exist quarant\ mkdir quarant
+  rem  move /Y %file% quarant\%threat%.protquarant
+  rem  cipher /e quarant\%threat%.protquarant
+  rem  echo Threat quarantined. (Automatic action)
+  rem  pause
+  rem  if "%dirscan%" == "true" (
+  rem    set threat=""""
+  rem    set /a filenumber=%filenumber%+1
+  rem    goto scan
+  rem  )
+  rem  goto start
+  rem )
+  rem echo An error occured at pts_autoaction2.txt.
+  rem echo Contact Protectish support.
+  rem pause
+  rem exit
 
 :terminate_behavior
   echo.
