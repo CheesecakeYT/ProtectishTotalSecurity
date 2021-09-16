@@ -549,6 +549,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "86 76 21 0e 62 46 94 82 01 aa 01 4d b4 71 de 90" set threat=Win32-Blaster
   if "%filemd5%" == "f3 e4 fb 7f 22 3b ef 58 2c 63 e5 b8 7e 14 40 e7" set threat=Win32-Bloored
   if "%filemd5%" == "68 ab 07 e4 e7 79 ed 8b 5b 71 b7 c5 5f 33 b0 87" set threat=Win32-Blueballs
+  if "%filemd5%" == "6a 48 53 cd 05 84 dc 90 06 7e 15 af b4 3c 49 62" set threat=Win32-ChilledWindows
   if "%filemd5%" == "3a 70 25 17 61 a4 ac c0 53 d3 9f 2c 5f 61 3b 42" set threat=Win32-CodecPack
   if "%filemd5%" == "c1 49 2e f9 be 34 a8 74 3b 52 4b 1a 0a 3e 07 7c" set threat=Win32-CoinMiner.Agent
   if "%filemd5%" == "92 ed 22 d3 89 26 26 ce 4b c0 50 cb 5f a7 e5 2d" set threat=Win32-CoinMiner.Agent
@@ -801,6 +802,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "a8 9c 0e d6 ef 75 17 9a db 6f 52 24 01 02 b9 b2" set threat=Win32-Worm.Fizzer.A
   if "%filemd5%" == "02 dd 0e aa 96 49 a1 1e 55 fa 54 67 fa 4b 8e f8" set threat=Win32-Worm.Happy99
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
+  if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail
   if "%filemd5%" == "7b c3 22 d9 59 51 df e1 6e 8c f4 7e e5 86 e9 09" set threat=Win95-CIH
   if "%filemd5%" == "dc 40 29 6f 43 5a 8b 3a c6 c0 24 d6 dc ee cd df" set threat=Win95-CIH
   if "%filemd5%" == "99 d3 fd 29 85 01 2d 43 c3 d5 32 cf 1f 70 b3 42" set threat=Win95-CIH
