@@ -1013,7 +1013,7 @@ if %errorlevel% equ 1 goto start
   )
 
 :behavior_threat
-  if exist pts_analytics1.txt (
+  rem if exist pts_analytics1.txt (
     rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
     rem echo Set objEmail = CreateObject("CDO.Message") > pts_analytics1.vbs
     rem echo objEmail.From = "%email%" >> pts_analytics1.vbs
@@ -1021,10 +1021,10 @@ if %errorlevel% equ 1 goto start
     rem echo objEmail.Subject = "Protectish Automated Message - New malware hash was found" >> pts_analytics1.vbs
     rem echo objEmail.Textbody = "Hash %filemd5% was detected as %threat% by behavior scan." >> pts_analytics1.vbs
     rem echo objEmail.Send >> pts_analytics1.vbs
-    pause
-    pts_analytics1.vbs
+    rem pause
+    rem pts_analytics1.vbs
     rem del pts_analytics1.vbs
-  )
+  rem )
   cls
   color cf
   title Threat detected: %threat% - Protectish Total Security
