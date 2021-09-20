@@ -570,6 +570,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.A
   if "%filemd5%" == "a5 a4 8f bc 21 18 03 db 3d cc 9b 91 7d 5d 32 0f" set threat=Win32-Kolabc
   if "%filemd5%" == "03 ba eb a6 b4 22 43 71 cc a7 fa 6f 95 ae 61 c0" set threat=Win32-Krap
+  if "%filemd5%" == "f2 cc 60 64 3a cd 7c 5b 2b ef a8 62 94 5c 99 cb" set threat=Win32-Kriz
+  if "%filemd5%" == "fb 23 aa e4 12 65 0b 84 f6 a3 70 81 e3 9c 68 79" set threat=Win32-Kriz
   if "%filemd5%" == "cc a7 de f7 19 45 4d d2 2e c3 51 99 12 97 88 5b" set threat=Win32-Lmir
   if "%filemd5%" == "98 90 34 9f e3 c6 8f 59 23 b2 93 47 bb a0 21 a4" set threat=Win32-Magistr.A
   if "%filemd5%" == "47 84 e4 2c 3b 15 d1 a1 41 a5 e0 c8 ab c1 20 5c" set threat=Win32-Melting
