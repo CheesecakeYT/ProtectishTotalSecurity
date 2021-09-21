@@ -500,6 +500,7 @@ if %errorlevel% equ 1 goto start
 
   set threat=""
 
+  if "%filemd5%" == "88 5d 47 2c 1f 1f fc 43 e8 b6 ce 28 51 9a 10 84" set threat=Android-Dendroid
   if "%filemd5%" == "44 d8 86 12 fe a8 a8 f3 6d e8 2e 12 78 ab b0 2f" set threat=NotAVirus-EICAR.Test.File
   if "%filemd5%" == "94 11 b1 68 b9 10 1c 7b 48 52 a3 c7 94 9a 09 84" set threat=NotAVirus-PTS.Test.File
   if "%filemd5%" == "c9 d7 17 2a 90 bf 56 74 eb df bc 44 7e 4c d7 cf" set threat=VBS-AnnaKournikova
@@ -629,6 +630,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "27 14 58 8f b8 93 30 40 93 88 5c 23 f5 41 69 ee" set threat=Win32-Ransom.BrainLag
   if "%filemd5%" == "cf d2 d6 f1 89 b0 4d 42 61 80 07 fc 9c 54 03 52" set threat=Win32-Ransom.Cerber
   if "%filemd5%" == "db 9e ef 8a d5 41 98 59 c6 76 ac b4 ef 4a 5b 13" set threat=Win32-Ransom.Cerber
+  if "%filemd5%" == "63 cc 40 d1 2e 49 ff b5 07 d9 1a f8 f7 a6 f0 82" set threat=Win32-Ransom.CryptoKill
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker
   if "%filemd5%" == "12 7b 80 31 1e 32 0f ff a2 44 61 f7 35 66 d4 80" set threat=Win32-Ransom.Cryptolocker
   if "%filemd5%" == "b1 8c 5a f6 96 e8 84 72 41 e4 c1 72 30 db 36 c9" set threat=Win32-Ransom.CryptoSpider
@@ -662,6 +664,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
+  if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
   if "%filemd5%" == "17 c2 5c 8a 7c 14 11 95 ee 88 7d e9 05 f3 3d 7b" set threat=Win32-Ransom.NotPetya
@@ -745,8 +748,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "5d 82 00 d6 99 e5 7e d8 ce 75 ad 22 fe 9f 59 8f" set threat=Win32-SnakeKeylogger
   if "%filemd5%" == "fd b0 57 61 a7 ed a3 f1 82 48 50 3f 2c 97 d6 97" set threat=Win32-Sobig.E
   if "%filemd5%" == "d3 a8 b3 dc de 44 b8 1c 0e 69 cc 2a 8a 36 e8 44" set threat=Win32-Sobig.E
-  if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spy.Zbot
-  if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spy.Zbot
+  if "%filemd5%" == "ca 22 1b 0f e0 3c 1f 0a 75 6a aa dd 55 e1 cc 43" set threat=Win32-SonicGatherBattle
+  if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spyware.Zbot
+  if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spyware.Zbot
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
   if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet.A
   if "%filemd5%" == "70 b5 a2 41 74 c9 2e 90 33 a6 11 c4 6d 03 de a8" set threat=Win32-Supern0va
@@ -798,6 +802,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "25 27 29 b2 30 4c dc 2e 91 24 8c ea 56 72 41 eb" set threat=Win32-Wallpaper
   if "%filemd5%" == "e7 9d 0b 1a 34 27 12 ea 9b 96 10 40 86 14 9d 65" set threat=Win32-Winevar
   if "%filemd5%" == "02 73 ed 44 d5 87 4d c3 03 90 15 16 3b c8 91 32" set threat=Win32-Worm.Agent
+  if "%filemd5%" == "39 c8 5a 0d 84 7a a2 1c 7d ed d6 9d ca 7a e9 bc" set threat=Win32-Worm.Badtrans
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "0b ba 28 8e 55 ed 34 b5 eb c7 6f 86 5a 53 2c bf" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "fd cd a5 5b 16 42 6a 6f ed 53 d9 19 e3 1b 3d 23" set threat=Win32-Worm.Dumaru.A
@@ -978,6 +983,10 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "chromeKey" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "FileEncryptor" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic  
+  find /i /c "KillCtrlAltDelete" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "MaxFilesizeToEncryptInBytes" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "I made a payment, now give me back my files!" %file% > NUL
@@ -992,6 +1001,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Jigsaw
   find /i /c "KRAKEN ENCRYPTED UNIQUE KEY" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Kraken
+  find /i /c "MindSystemNotRansomWare" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.MindSystem
   find /i /c "http://wannadie.altervista.org/" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Rogue
   find /i /c "ShellLocker.My.Resources" %file% > NUL
