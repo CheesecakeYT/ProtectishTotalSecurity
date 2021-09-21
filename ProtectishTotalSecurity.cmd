@@ -55,9 +55,9 @@ if not exist pts_configversion3.txt (
   pause
 )
 
-if not exist pts_analytics1.txt (
-  set /a msgcount=msgcount+1
-)
+rem if not exist pts_analytics1.txt (
+rem   set /a msgcount=msgcount+1
+rem )
 find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
 
@@ -122,6 +122,7 @@ if %errorlevel% equ 1 goto start
     echo This may be done due to piracy.
     pause
     goto antipiracy
+  )
   pause
   goto license_key
 
@@ -147,7 +148,7 @@ if %errorlevel% equ 1 goto start
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
-  echo (SETTINGS) - show Protectish settings
+  rem echo (SETTINGS) - show Protectish settings
   echo (MESSAGES) - show messages
   echo (EXIT) - exit
   echo (QUIT) - exit
@@ -163,7 +164,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
-  if /i "%choice%" == "settings" goto settings
+  rem if /i "%choice%" == "settings" goto settings
   if /i "%choice%" == "messages" goto messages
   echo.
   echo %choice% is not a valid choice.
@@ -180,12 +181,12 @@ if %errorlevel% equ 1 goto start
   echo.
   echo Messages: %msgcount%
   echo.
-  if not exist pts_analytics1.txt (
-    echo Detection information sharing is turned off. Sharing
-    echo some detection information helps us to develop our
-    echo scans. To turn it on, navigate to Settings - Analytics.
-    echo.
-  )
+  rem if not exist pts_analytics1.txt (
+  rem  echo Detection information sharing is turned off. Sharing
+  rem  echo some detection information helps us to develop our
+  rem  echo scans. To turn it on, navigate to Settings - Analytics.
+  rem  echo.
+  rem )
   echo (BACK) - back
   echo.
   set /p choice="Enter your choice: "
