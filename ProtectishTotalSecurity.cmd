@@ -2,6 +2,7 @@
 rem License key is PTS_PJF5G4DAZ5R3
 
 set msgcount=0
+set license_attempts=0
 
 if not exist pts_configversion3.txt (
   cls
@@ -114,7 +115,13 @@ if %errorlevel% equ 1 goto start
     pause
     goto start
   )
+  set /a license_attempts=%license_attempts%+1
   echo This is not a valid license key.
+  if "%license_attempts%" == "3" (
+    echo You used three unsuccessful attempts.
+    echo This may be done due to piracy.
+    pause
+    goto antipiracy
   pause
   goto license_key
 
