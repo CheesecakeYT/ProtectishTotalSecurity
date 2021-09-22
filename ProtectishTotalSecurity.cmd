@@ -1036,7 +1036,6 @@ if %errorlevel% equ 1 goto start
       set /a filenumber=filenumber+1
       goto scan
     ) else (
-      pause
       goto behavior_safe
     )
   )
@@ -1173,7 +1172,6 @@ if %errorlevel% equ 1 goto start
       set /a filenumber=filenumber+1
       goto scan
     ) else (
-      pause
       goto safe
     )
   )
