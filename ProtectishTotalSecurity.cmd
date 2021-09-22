@@ -505,6 +505,7 @@ if %errorlevel% equ 1 goto start
   )
   echo MD5 Scan: Pending
   echo Behavior Scan: Waiting
+  echo Suspicious Actions Scan: Waiting
 
   set threat=""
 
@@ -964,6 +965,7 @@ if %errorlevel% equ 1 goto start
   )
   echo MD5 Scan: Successful
   echo Behavior Scan: Pending
+  echo Suspicious Actions Scan: Waiting
 
   find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
@@ -1035,7 +1037,7 @@ if %errorlevel% equ 1 goto start
       goto scan
     ) else (
       pause
-      goto safe
+      goto behavior_safe
     )
   )
 
@@ -1144,6 +1146,143 @@ if %errorlevel% equ 1 goto start
   taskkill /f /im %file%
   echo Tasks killed.
   goto behavior_threat
+  
+:behavior_safe
+  cls
+  title Behavior Scan Pending - Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  if "%dirscan%" == "true" (
+    echo Now scanning: %file%
+    echo.
+  )
+  echo MD5 Scan: Successful
+  echo Behavior Scan: Successful
+  echo Suspicious Actions Scan: Pending
+
+  find /i /c "git clone http" %file% > NUL
+  if %errorlevel% == 0 set threat=Exploitation-Of-CVE-2017-9800
+  find /i /c "git clone ssh" %file% > NUL
+  if %errorlevel% == 0 set threat=Exploitation-Of-CVE-2017-9800
+
+  if "%threat%" == """" (
+    if "%dirscan%" == "true" (
+      set /a filenumber=filenumber+1
+      goto scan
+    ) else (
+      pause
+      goto safe
+    )
+  )
+
+:action_threat
+  rem if exist pts_analytics1.txt (
+    rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
+    rem echo Set objEmail = CreateObject("CDO.Message") > pts_analytics1.vbs
+    rem echo objEmail.From = "%email%" >> pts_analytics1.vbs
+    rem echo objEmail.To = "martinekmatej@gmail.com" >> pts_analytics1.vbs
+    rem echo objEmail.Subject = "Protectish Automated Message - New malware hash was found" >> pts_analytics1.vbs
+    rem echo objEmail.Textbody = "Hash %filemd5% contains suspicious content classified as %threat% by suspicious actions scan." >> pts_analytics1.vbs
+    rem echo objEmail.Send >> pts_analytics1.vbs
+    rem pause
+    rem pts_analytics1.vbs
+    rem del pts_analytics1.vbs
+  rem )
+  cls
+  color cf
+  title Threat detected: %threat% - Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo.
+  echo Warning! Malware was found inside this file.
+  echo.
+  echo Reported by: Suspicious Actions Scan
+  echo Note: Suspicious Actions Scan doesn't always have to be accurate.
+  echo.
+  echo Action: %threat%
+  echo.
+  echo Path: %file%
+  echo.
+  echo (DELETE) - deletes the file
+  echo (QUARANTINE) - quarantines the file
+  echo (TERMINATE) - forcibly terminates all tasks provided by the threat, then returns to this point
+  echo (IGNORE) - ignores the threat
+  echo.
+  set /p choice="Enter your choice: "
+  if /i "%choice%" == "delete" goto delete
+  if /i "%choice%" == "ignore" goto ignore
+  if /i "%choice%" == "quarantine" goto quarantine
+  if /i "%choice%" == "terminate" goto terminate_action
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto action_threat
+  rem find /i /c "MD5" pts_autoaction2.txt >NUL
+  rem if %errorlevel% equ 0 (
+  rem  set /p choice="Enter your choice: "
+  rem  if /i "%choice%" == "delete" goto delete
+  rem  if /i "%choice%" == "ignore" goto ignore
+  rem  if /i "%choice%" == "quarantine" goto quarantine
+  rem  if /i "%choice%" == "terminate" goto terminate
+  rem  echo.
+  rem  echo %choice% is not a valid choice.
+  rem  pause
+  rem  goto md5_threat
+  rem )
+  rem find /i /c "None" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem   set /p choice="Enter your choice: "
+  rem   if /i "%choice%" == "delete" goto delete
+  rem   if /i "%choice%" == "ignore" goto ignore
+  rem   if /i "%choice%" == "quarantine" goto quarantine
+  rem   if /i "%choice%" == "terminate" goto terminate
+  rem  echo.
+  rem  echo %choice% is not a valid choice.
+  rem  pause
+  rem  goto md5_threat
+  rem )
+  rem find /i /c "Delete" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem  del %file%
+  rem  echo Threat deleted. (Automatic action)
+  rem  pause
+  rem  if "%dirscan%" == "true" (
+  rem    set threat=""""
+  rem    set /a filenumber=%filenumber%+1
+  rem    goto scan
+  rem  )
+  rem  goto start
+  rem )
+  rem find /i /c "Quarantine" pts_autoaction2.txt
+  rem if %errorlevel% equ 0 (
+  rem  cd %ptsdir%
+  rem  if not exist quarant\ mkdir quarant
+  rem  move /Y %file% quarant\%threat%.protquarant
+  rem  cipher /e quarant\%threat%.protquarant
+  rem  echo Threat quarantined. (Automatic action)
+  rem  pause
+  rem  if "%dirscan%" == "true" (
+  rem    set threat=""""
+  rem    set /a filenumber=%filenumber%+1
+  rem    goto scan
+  rem  )
+  rem  goto start
+  rem )
+  rem echo An error occured at pts_autoaction2.txt.
+  rem echo Contact Protectish support.
+  rem pause
+  rem exit
+
+:terminate_action
+  echo.
+  taskkill /f /im %file%
+  echo Tasks killed.
+  goto action_threat
 
 :safe
   cls
