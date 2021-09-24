@@ -55,9 +55,9 @@ if not exist pts_configversion3.txt (
   pause
 )
 
-rem if not exist pts_analytics1.txt (
-rem   set /a msgcount=msgcount+1
-rem )
+if not exist pts_analytics1.txt (
+  set /a msgcount=msgcount+1
+)
 find /i /c "License Key not used" pts_lkused1.txt >NUL
 if %errorlevel% equ 1 goto start
 
@@ -148,7 +148,7 @@ if %errorlevel% equ 1 goto start
   echo (FILE) - scan file
   rem echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
-  rem echo (SETTINGS) - show Protectish settings
+  echo (SETTINGS) - show Protectish settings
   echo (MESSAGES) - show messages
   echo (EXIT) - exit
   echo (QUIT) - exit
@@ -164,7 +164,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "file" goto file
   rem if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
-  rem if /i "%choice%" == "settings" goto settings
+  if /i "%choice%" == "settings" goto settings
   if /i "%choice%" == "messages" goto messages
   echo.
   echo %choice% is not a valid choice.
@@ -310,7 +310,8 @@ if %errorlevel% equ 1 goto start
   echo Making you safe
   echo.
   echo.
-  echo Notice: Detection information sharing uses your email address.
+  echo Notice: Detection information sharing uses your email address and
+  echo SMTP server address. Blat software is needed.
   echo.
   echo (ON) - turn detection information sharing on
   echo (OFF) - turn detection information sharing off
@@ -341,12 +342,14 @@ if %errorlevel% equ 1 goto start
   echo.
   echo.
   echo To turn on detection information sharing, please insert your email address
-  echo to send emails from.
+  echo to send emails from, and your website's SMTP server address.
   echo.
   set /p email="Email address: "
+  set /p smtp="SMTP server address: "
   echo Protectish Total Security settings - DO NOT CHANGE THIS FILE > pts_analytics1.txt
   echo Analytics On >> pts_analytics1.txt
   echo %email% >> pts_analytics1.txt
+  echo %smtp% >> pts_analytics1.txt
   set msg_noanalytics=0
   set /a msgcount=msgcount-1
   echo Detection information sharing was turned on.
@@ -1046,17 +1049,12 @@ if %errorlevel% equ 1 goto start
   )
 
 :behavior_threat
-  rem if exist pts_analytics1.txt (
-    rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
-    rem echo Set objEmail = CreateObject("CDO.Message") > pts_analytics1.vbs
-    rem echo objEmail.From = "%email%" >> pts_analytics1.vbs
-    rem echo objEmail.To = "martinekmatej@gmail.com" >> pts_analytics1.vbs
-    rem echo objEmail.Subject = "Protectish Automated Message - New malware hash was found" >> pts_analytics1.vbs
-    rem echo objEmail.Textbody = "Hash %filemd5% was detected as %threat% by behavior scan." >> pts_analytics1.vbs
-    rem echo objEmail.Send >> pts_analytics1.vbs
-    rem pause
-    rem pts_analytics1.vbs
-    rem del pts_analytics1.vbs
+  if exist pts_analytics1.txt (
+    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
+    rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 4 set smtp=%%H
+    Malware %threat% found inside %filemd5% by Behavior Scan. > blatmsg.txt
+    blat blat.txt -s "Protectish: Malware found" -t martinekmatej@gmail.com -f %email%
+    del blatmsg.txt
   rem )
   cls
   color cf
