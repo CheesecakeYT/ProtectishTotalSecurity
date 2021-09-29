@@ -559,6 +559,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d2 b5 5a 2d 03 ba ee fd 9b ac b2 7b 58 25 0b 35" set threat=Win32-Backdoor.Theef.EM
   if "%filemd5%" == "ec 40 cc aa d6 3f 88 55 d8 de 31 a4 2b 7c 67 ac" set threat=Win32-Backdoor.Tofsee
   if "%filemd5%" == "db 19 1b ba 75 d9 ec a8 0f bb f4 fa 02 52 d2 4e" set threat=Win32-Blackbat
+  if "%filemd5%" == "15 b8 93 9a 07 1e 23 c9 11 f9 17 d8 76 05 32 e3" set threat=Win32-BlastButton
   if "%filemd5%" == "86 76 21 0e 62 46 94 82 01 aa 01 4d b4 71 de 90" set threat=Win32-Blaster
   if "%filemd5%" == "f3 e4 fb 7f 22 3b ef 58 2c 63 e5 b8 7e 14 40 e7" set threat=Win32-Bloored
   if "%filemd5%" == "68 ab 07 e4 e7 79 ed 8b 5b 71 b7 c5 5f 33 b0 87" set threat=Win32-Blueballs
@@ -695,6 +696,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "9c ce 98 a7 0c 25 36 06 33 ce 79 1e af 9f ba 18" set threat=Win32-Ransom.PolyRansom
   if "%filemd5%" == "38 3c 36 8a e3 3c 53 0d a3 6f fa e0 bc ee c8 0e" set threat=Win32-Ransom.PopcornTime
   if "%filemd5%" == "40 d2 9a ce 41 27 9f 3d f8 db f7 a0 96 09 b2 44" set threat=Win32-Ransom.PUBG
+  if "%filemd5%" == "48 45 2d d2 50 68 31 d0 b3 40 e4 5b 08 79 96 23" set threat=Win32-Ransom.Ragnarok
   if "%filemd5%" == "e0 34 0f 45 6f 76 99 3f c0 47 bc 71 5d fd ae 6a" set threat=Win32-Ransom.RedBoot
   if "%filemd5%" == "3c 76 75 48 d8 a7 4b 96 e8 51 a5 8b cc 4c 44 bc" set threat=Win32-Ransom.Rogue
   if "%filemd5%" == "db 63 b9 73 12 15 79 bc ad 7c 99 52 80 ca 4d 03" set threat=Win32-Ransom.RollSafe
@@ -1025,6 +1027,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Kraken
   find /i /c "MindSystemNotRansomWare" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.MindSystem
+  find /i /c "aes_key_rand" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Ragnarok
   find /i /c "http://wannadie.altervista.org/" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Rogue
   find /i /c "ShellLocker.My.Resources" %file% > NUL
