@@ -1049,12 +1049,12 @@ if %errorlevel% equ 1 goto start
   )
 
 :behavior_threat
-  if exist pts_analytics1.txt (
-    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
-    rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 4 set smtp=%%H
-    Malware %threat% found inside %filemd5% by Behavior Scan. > blatmsg.txt
-    blat -f %email% -to martinekmatej@gmail.com -subject "Protectish: Malware was found" -body "%filemd5% was classified as %threat% by Behavior Scan."
- )
+ rem if exist pts_analytics1.txt (
+ rem   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 3 set email=%%H
+ rem   rem for /f "tokens=1*delims=:" %%G in ('findstr /n "^" pts_analytics1.txt') do if %%G equ 4 set smtp=%%H
+ rem   Malware %threat% found inside %filemd5% by Behavior Scan. > blatmsg.txt
+ rem   blat -f %email% -to martinekmatej@gmail.com -s "Protectish: Malware was found" -body "%filemd5% was classified as %threat% by Behavior Scan."
+ rem )
   cls
   color cf
   title Threat detected: %threat% - Protectish Total Security
