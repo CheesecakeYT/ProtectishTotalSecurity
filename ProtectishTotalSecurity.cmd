@@ -804,6 +804,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
   if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
   if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
+  if "%filemd5%" == "33 6e ff e8 44 da ab 0e f3 88 fe 60 02 81 17 de" set threat=Win32-Trojan.Remtasu
   if "%filemd5%" == "a9 c6 7b 0f c1 c8 16 32 f1 34 f2 bd f4 67 8e 21" set threat=Win32-Trojan.Resonate
   if "%filemd5%" == "ad 4d 5e da b2 ce 61 e9 22 44 dc ec c0 49 b8 66" set threat=Win32-Trojan.Resonate
   if "%filemd5%" == "8e 90 ad 82 52 86 72 49 cc 5c be e3 19 9d ef 2f" set threat=Win32-Trojan.SpyAnyTime.D
