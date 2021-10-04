@@ -686,6 +686,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "17 c2 5c 8a 7c 14 11 95 ee 88 7d e9 05 f3 3d 7b" set threat=Win32-Ransom.NotPetya
   if "%filemd5%" == "09 f2 c2 f3 81 e6 19 89 47 cb 1b 9b c1 22 8a a8" set threat=Win32-Ransom.NTKCryptolocker
   if "%filemd5%" == "c0 28 e2 74 29 34 8c 73 3b f0 81 12 ae a1 b9 06" set threat=Win32-Ransom.OhNo
+  if "%filemd5%" == "74 25 7f 66 ac 9e 43 b1 5b 98 ee 71 66 f8 bd c7" set threat=Win32-Ransom.Oops
+  if "%filemd5%" == "b5 f9 36 35 8b 65 59 ac 3c 71 fd 53 c0 f0 9f 0e" set threat=Win32-Ransom.Orion
   if "%filemd5%" == "40 1c 7d ef d9 81 57 01 93 17 65 c4 e8 b8 d8 f9" set threat=Win32-Ransom.Paradise
   if "%filemd5%" == "59 7d ea cb e8 a1 d7 cf 84 1e 1f 41 e9 10 89 8f" set threat=Win32-Ransom.Petya.A
   if "%filemd5%" == "af 23 79 cc 4d 60 7a 45 ac 44 d6 21 35 fb 70 15" set threat=Win32-Ransom.Petya.A
