@@ -637,6 +637,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "50 a7 db 13 62 f5 53 4a 1b 6a db f9 cc be 9d 5b" set threat=Win32-Ransom.Bisquilla
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
   if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
+  if "%filemd5%" == "75 04 e4 c1 94 81 c1 0a 67 a8 f4 c3 c1 09 ae 47" set threat=Win32-Ransom.BloodJaws
   if "%filemd5%" == "16 ad a5 1d c0 a0 62 f8 60 8d a8 92 2b 0f c9 f8" set threat=Win32-Ransom.Blooper
   if "%filemd5%" == "92 66 05 0f 3c e5 ba 99 53 35 31 68 9e ae 7e 2f" set threat=Win32-Ransom.Bluerose
   if "%filemd5%" == "ab 07 5e b2 ad 67 2b fa 36 99 62 c1 be 15 66 9a" set threat=Win32-Ransom.Braincrypt
@@ -730,6 +731,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor.H
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.N
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
+  if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
