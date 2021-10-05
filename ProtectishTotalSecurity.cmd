@@ -638,6 +638,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
   if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
   if "%filemd5%" == "75 04 e4 c1 94 81 c1 0a 67 a8 f4 c3 c1 09 ae 47" set threat=Win32-Ransom.BloodJaws
+  if "%filemd5%" == "b2 dd 12 b7 17 a2 cf cc b2 7a e2 e8 39 df f9 f7" set threat=Win32-Ransom.BloodJaws
+  if "%filemd5%" == "0f 55 c5 a3 c4 2d 6d 6c cf c2 95 7d 74 ff 6e b2" set threat=Win32-Ransom.BloodJaws
+  if "%filemd5%" == "13 26 34 0d 8a 1b 99 2e a7 1b f4 84 05 50 d9 17" set threat=Win32-Ransom.BloodJaws
+  if "%filemd5%" == "e6 42 55 6c bb 20 a9 7d 6c 4f 9d c2 5e a9 68 7f" set threat=Win32-Ransom.BloodJaws
   if "%filemd5%" == "16 ad a5 1d c0 a0 62 f8 60 8d a8 92 2b 0f c9 f8" set threat=Win32-Ransom.Blooper
   if "%filemd5%" == "92 66 05 0f 3c e5 ba 99 53 35 31 68 9e ae 7e 2f" set threat=Win32-Ransom.Bluerose
   if "%filemd5%" == "ab 07 5e b2 ad 67 2b fa 36 99 62 c1 be 15 66 9a" set threat=Win32-Ransom.Braincrypt
@@ -723,6 +727,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8e 5f f6 0b f6 66 5c 57 93 8a b5 66 46 72 6e 1c" set threat=Win32-Ransom.Thanos
   if "%filemd5%" == "6c aa f5 00 c2 48 de 17 b1 90 72 93 70 00 7d da" set threat=Win32-Ransom.Tyrant
   if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
+  if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
   if "%filemd5%" == "77 48 7c 27 f5 47 6f 7b cb 09 21 06 f4 84 5b 4f" set threat=Win32-Ransom.VegaLocker
   if "%filemd5%" == "68 2f 91 e3 ce 76 9a 68 65 ec d9 f2 b2 36 e8 3a" set threat=Win32-Ransom.VindowsLocker
   if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor.A
