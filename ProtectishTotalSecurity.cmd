@@ -1056,6 +1056,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
   find /i /c "-------- Snake Keylogger --------" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
+  find /i /c "The software you just executed is considered malware. This malware will harm your computer and makes it unusable. If you are seeing this message without knowing what you just executed, simply press" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Trojan.MEMZ
 
 
   if "%threat%" == """" (
