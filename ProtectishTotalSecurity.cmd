@@ -649,6 +649,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e6 0e 76 7e 33 ac f4 9c 02 56 8a 79 d9 cb da dd" set threat=Win32-Ransom.Buran
   if "%filemd5%" == "cf d2 d6 f1 89 b0 4d 42 61 80 07 fc 9c 54 03 52" set threat=Win32-Ransom.Cerber
   if "%filemd5%" == "db 9e ef 8a d5 41 98 59 c6 76 ac b4 ef 4a 5b 13" set threat=Win32-Ransom.Cerber
+  if "%filemd5%" == "e6 92 2a 68 fc a9 00 16 58 4a c4 8f c7 72 2e f8" set threat=Win32-Ransom.Chimera
   if "%filemd5%" == "4f 41 35 fc 5b 67 6c 4d 40 7e a9 0d 89 08 e8 14" set threat=Win32-Ransom.Clown
   if "%filemd5%" == "63 cc 40 d1 2e 49 ff b5 07 d9 1a f8 f7 a6 f0 82" set threat=Win32-Ransom.CryptoKill
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker
@@ -741,6 +742,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
   if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
+  if "%filemd5%" == "40 e7 40 3b 6b 86 d5 f8 a5 3a 35 e3 bd cd f2 b6" set threat=Win32-Ransom.XeroWare
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus
@@ -1031,6 +1033,8 @@ if %errorlevel% equ 1 goto start
   find /i /c "I made a payment, now give me back my files!" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "Download Tor browser - https://www.torproject.org/" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "hidden tear" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "It starts out slowly then increases rapidly." %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Jigsaw
