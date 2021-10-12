@@ -667,6 +667,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "61 2b a5 a5 20 38 14 1d d5 c5 71 a4 b0 dc 6b 86" set threat=Win32-Ransom.EggLocker
   if "%filemd5%" == "a7 4b 25 0b 40 28 d5 39 7c c0 9f 62 7b b5 89 ab" set threat=Win32-Ransom.Explorer
   if "%filemd5%" == "24 f3 2d a2 58 b8 c4 2c 71 ab fb 75 77 fb 35 a8" set threat=Win32-Ransom.FakeWannaCryptor
+  if "%filemd5%" == "98 4a ac b6 8d bc 13 c0 e9 cb 3a a4 41 f6 97 44" set threat=Win32-Ransom.FakeWannaCryptor
   if "%filemd5%" == "94 32 8c a2 cb 87 23 0a 5b 0c 73 4e 23 21 e9 93" set threat=Win32-Ransom.Fantom
   if "%filemd5%" == "fa fa 32 c5 26 86 14 82 da 1b 49 49 32 69 f8 75" set threat=Win32-Ransom.FSociety
   if "%filemd5%" == "d3 87 09 92 ca 34 b0 dc 5c 3b cf c2 a1 9e 39 85" set threat=Win32-Ransom.GandCrab
@@ -734,11 +735,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
   if "%filemd5%" == "77 48 7c 27 f5 47 6f 7b cb 09 21 06 f4 84 5b 4f" set threat=Win32-Ransom.VegaLocker
   if "%filemd5%" == "68 2f 91 e3 ce 76 9a 68 65 ec d9 f2 b2 36 e8 3a" set threat=Win32-Ransom.VindowsLocker
-  if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor.A
-  if "%filemd5%" == "c8 87 22 ef 42 a6 ee 08 cb ed 91 40 6e a5 c0 e5" set threat=Win32-Ransom.WannaCryptor.A
-  if "%filemd5%" == "e4 b6 23 3a e4 6e 8a 64 f0 58 aa c3 c3 78 b0 17" set threat=Win32-Ransom.WannaCryptor.H
-  if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor.H
-  if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.N
+  if "%filemd5%" == "74 d6 e7 09 98 32 b4 d0 6f 45 39 80 aa 71 5b 05" set threat=Win32-Ransom.WannaCryptor
+  if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor
+  if "%filemd5%" == "c8 87 22 ef 42 a6 ee 08 cb ed 91 40 6e a5 c0 e5" set threat=Win32-Ransom.WannaCryptor
+  if "%filemd5%" == "e4 b6 23 3a e4 6e 8a 64 f0 58 aa c3 c3 78 b0 17" set threat=Win32-Ransom.WannaCryptor
+  if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor
+  if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
   if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
@@ -747,6 +749,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "6b e6 53 cd 2f 91 72 54 37 36 e3 f5 3a ef cd 54" set threat=Win32-Ransom.Ziggy
+  if "%filemd5%" == "db a6 df b2 73 3a a1 c9 2e 7e e7 62 ea 66 66 65" set threat=Win32-RAT.Agent
   if "%filemd5%" == "85 2c f7 6a b9 2c 6a a9 03 c5 fc 9a 78 b6 0d 9c" set threat=Win32-RAT.DarkKomet
   if "%filemd5%" == "96 30 5f 55 42 86 f7 84 d9 92 8c 49 90 45 c3 d6" set threat=Win32-RAT.NanoCore
   if "%filemd5%" == "c1 7c ad 86 80 51 b0 7e 56 1f 08 d9 de 11 b6 70" set threat=Win32-RAT.Quasar
@@ -802,6 +805,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c0 9c f4 31 21 67 fa 96 83 d8 e8 73 30 04 b7 e6" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "03 f6 9c 46 00 2a e2 77 22 2c 0c 32 b9 28 c4 c0" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "85 f3 04 84 98 9c 9f b2 40 e7 ad 0d 3d bd 5b 25" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "30 58 85 26 80 b6 13 ec b1 35 8c 0f 35 50 68 27" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "1a 66 a0 29 72 8c 19 25 4d 52 13 53 4e e5 92 5d" set threat=Win32-Trojan.Agent
+  if "%filemd5%" == "f8 76 b8 ce 91 d5 72 54 7e a7 91 04 f3 f2 4f 48" set threat=Win32-Trojan.Agent
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta
   if "%filemd5%" == "d5 40 ca 29 e9 ea 33 f1 31 e4 ce 46 74 d1 08 5f" set threat=Win32-Trojan.Denes
@@ -1054,6 +1060,12 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.ShellLocker
   find /i /c "Brouillettebusiness@outlook.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Sodinokibi
+  find /i /c "Injecting into process" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-RAT.Generic
+  find /i /c "Opening process..." %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-RAT.Generic
+  find /i /c "Failed to inject" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-RAT.Generic
   find /i /c "j.maxmind.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Rootkit.ZeroAccess
   find /i /c "\SnakeKeylogger\" %file% > NUL
