@@ -125,6 +125,17 @@ if %errorlevel% equ 1 goto start
   )
   pause
   goto license_key
+  
+  tasklist > tasks.txt
+  find /i /c "TJprojMain.exe" %file% > NUL
+  if %errorlevel% == 0 (
+    set suspicioustask="TJprojMain.exe"
+    wmic process where "name='TJprojMain.exe'" get ExecutablePath > tasks.txt
+    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" tasks.txt') do if %%G equ 1 set suspiciousfile=%%H
+    set suspicioustask=1
+  )
+  del tasks.txt
+  if "%suspicioustask%" == "1" goto suspicioustask
 
 :start
   find /i /c "Piracy not detected" pts_gendetect1.txt > NUL
@@ -170,6 +181,44 @@ if %errorlevel% equ 1 goto start
   echo %choice% is not a valid choice.
   pause
   goto start
+  
+:suspicioustask
+  cls
+  color cf
+  title Suspicious task detected - Protectish Total Security
+  echo Protectish Total Security
+  echo.
+  echo Making you safe
+  echo.
+  echo
+  echo A file was found hosting a suspicious task.
+  echo.
+  echo.
+  echo Task: %suspicioustask%
+  echo.
+  echo Hosting file: %suspiciousfile%
+  echo.
+  echo.
+  echo Do you want to scan the hosting file for malware?
+  echo.
+  echo (YES) - scan the file
+  echo (NO) - don't scan the file
+  echo.
+  set /p choice="Enter your choice: "
+  if /i "%choice%" == "yes" (
+    set file=%suspiciousfile%
+    goto md5
+  )
+  if /i "%choice%" == "no" (
+    echo.
+    echo The file won't be scanned.
+    pause
+    goto start
+  )
+  echo.
+  echo %choice% is not a valid choice.
+  pause
+  goto suspicioustask
   
 :messages
   cls
@@ -461,13 +510,14 @@ if %errorlevel% equ 1 goto start
   set /p file="Enter a filename to scan: "
 
   if "%file%" == "back" goto start
-
+  
+:md5
   title MD5 Scan Pending - Protectish Total Security
   @CertUtil -hashfile %file% MD5 > md5.txt
 
   for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.txt') do if %%G equ 2 set filemd5=%%H
   del md5.txt
-
+ 
   cls
   echo Protectish Total Security
   echo.
