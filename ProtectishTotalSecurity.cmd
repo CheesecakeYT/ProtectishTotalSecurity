@@ -134,6 +134,13 @@ if %errorlevel% equ 1 goto start
     for /f "tokens=1*delims=:" %%G in ('findstr /n "^" tasks.txt') do if %%G equ 1 set suspiciousfile=%%H
     set suspicioustask=1
   )
+  find /i /c "Synaptics.exe" %file% > NUL
+  if %errorlevel% == 0 (
+    set suspicioustask="Synaptics.exe"
+    wmic process where "name='Synaptics.exe'" get ExecutablePath > tasks.txt
+    for /f "tokens=1*delims=:" %%G in ('findstr /n "^" tasks.txt') do if %%G equ 1 set suspiciousfile=%%H
+    set suspicioustask=1
+  )
   del tasks.txt
   if "%suspicioustask%" == "1" goto suspicioustask
 
@@ -728,6 +735,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "4e 89 0b a5 a4 f6 fd 63 72 7c 00 05 da a6 54 dd" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "a4 bb 3a 5c b6 83 5c 08 9d 76 91 00 d5 46 16 62" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "f5 4c 9a fc 52 02 9f d4 3b fb e6 dd 3c a2 f6 16" set threat=Win32-Ransom.JSterling
+  if "%filemd5%" == "5e b7 d1 79 ad 6a 50 61 b4 ac 21 9d 58 4d 8e f8" set threat=Win32-Ransom.Kangaroo
   if "%filemd5%" == "56 f3 d3 d6 82 d6 11 2e 4d 6f 9f 31 6b e5 8d f4" set threat=Win32-Ransom.Karma
   if "%filemd5%" == "7f 87 db 33 98 0c 00 99 73 9d e4 0d 1b 72 55 00" set threat=Win32-Ransom.Katyusha
   if "%filemd5%" == "12 e2 ef f0 9c 11 4c 18 46 28 94 a4 89 11 ce 8a" set threat=Win32-Ransom.KesLan
@@ -1098,6 +1106,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Jigsaw
   find /i /c "If you turn off your computer or try to close me, when I start next time" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Jigsaw
+  find /i /c "Local\Kangaroo_Ransomware" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Kangaroo
   find /i /c "KRAKEN ENCRYPTED UNIQUE KEY" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Kraken
   find /i /c "MindSystemNotRansomWare" %file% > NUL
