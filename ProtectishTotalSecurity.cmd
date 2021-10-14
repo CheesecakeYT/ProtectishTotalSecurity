@@ -161,6 +161,7 @@ if %errorlevel% equ 1 goto start
   echo Making you safe
   echo.
   echo.
+  echo You're fully protected.
   echo You have %msgcount% messages.
   echo.
   echo (FILE) - scan file
@@ -192,7 +193,7 @@ if %errorlevel% equ 1 goto start
 :suspicioustask
   cls
   color cf
-  title Suspicious task detected - Protectish Total Security
+  title Your action is required - Protectish Total Security
   echo Protectish Total Security
   echo.
   echo Making you safe
@@ -649,6 +650,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "01 99 ae 48 b0 97 cf e3 ae 92 4c 60 5a e9 8f 41" set threat=Win32-Microjoin
   if "%filemd5%" == "46 85 ee e7 10 ce 45 e5 34 02 77 87 54 6e 0a 56" set threat=Win32-Mofksys
   if "%filemd5%" == "6f 19 a3 ab bc fd 79 4a 9c 17 65 79 90 27 d5 52" set threat=Win32-Mofksys
+  if "%filemd5%" == "7a 96 3a 73 6a 1c 21 5e 9a b3 52 af c4 be 0a 85" set threat=Win32-Mofksys
   if "%filemd5%" == "ae 9f c2 81 2c 2a 6d 55 c9 f6 6b 62 69 63 63 9f" set threat=Win32-MSILZilla
   if "%filemd5%" == "6b 78 82 e1 97 90 13 ae 92 ee 1b 8c ea 9f bd 10" set threat=Win32-MyDoom
   if "%filemd5%" == "0d e0 8e 8f a1 36 9b 15 ef 29 2f 93 7a 8e e1 de" set threat=Win32-MyDoom
@@ -731,6 +733,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d3 87 09 92 ca 34 b0 dc 5c 3b cf c2 a1 9e 39 85" set threat=Win32-Ransom.GandCrab
   if "%filemd5%" == "bf 58 71 48 38 ed fc c1 35 a6 48 18 d3 66 75 47" set threat=Win32-Ransom.GPAA
   if "%filemd5%" == "f9 da 7d cf 28 c9 e0 6e f9 b2 d3 94 67 c8 2f 70" set threat=Win32-Ransom.GX40
+  if "%filemd5%" == "43 13 fd 0a 3d 2c be dd 45 70 23 09 31 83 3f e1" set threat=Win32-Ransom.HolyCrypt
   if "%filemd5%" == "3e 7b d2 12 6a d2 d0 56 b1 2a 90 6e c7 4f 4e 75" set threat=Win32-Ransom.Ims00ry
   if "%filemd5%" == "15 4b 74 33 56 d5 1d ea c0 da 4e be 5f c1 fb 71" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "4e 89 0b a5 a4 f6 fd 63 72 7c 00 05 da a6 54 dd" set threat=Win32-Ransom.Jigsaw
@@ -915,6 +918,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
   if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
+  if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
   if "%filemd5%" == "ba 6b d0 ba 81 12 a7 5e b7 0e b3 01 71 7a a9 bc" set threat=Win32-Worm.Totilix
   if "%filemd5%" == "7b c3 22 d9 59 51 df e1 6e 8c f4 7e e5 86 e9 09" set threat=Win95-CIH
   if "%filemd5%" == "dc 40 29 6f 43 5a 8b 3a c6 c0 24 d6 dc ee cd df" set threat=Win95-CIH
@@ -925,7 +929,7 @@ if %errorlevel% equ 1 goto start
 :md5_threat
   cls
   color cf
-  title Threat detected: %threat% - Protectish Total Security
+  title Your action is required - Protectish Total Security
   echo Protectish Total Security
   echo.
   echo Making you safe
@@ -1156,7 +1160,7 @@ if %errorlevel% equ 1 goto start
  rem )
   cls
   color cf
-  title Threat detected: %threat% - Protectish Total Security
+  title Your action is required - Protectish Total Security
   echo Protectish Total Security
   echo.
   echo Making you safe
@@ -1292,7 +1296,7 @@ if %errorlevel% equ 1 goto start
   rem )
   cls
   color cf
-  title Threat detected: %threat% - Protectish Total Security
+  title Your action is required - Protectish Total Security
   echo Protectish Total Security
   echo.
   echo Making you safe
