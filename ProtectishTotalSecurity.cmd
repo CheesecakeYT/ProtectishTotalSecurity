@@ -583,6 +583,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "82 3d b9 b3 27 57 a7 fa 05 45 2c b9 58 e9 6e 50" set threat=VBS-Melissa.C
   if "%filemd5%" == "3f 76 a6 9e 1f d9 bb 3f a2 52 a3 ce d1 5e ba 72" set threat=VBS-Melissa.C
   if "%filemd5%" == "9d 7f 91 6d f5 05 16 ac 67 05 eb 0c 00 78 38 20" set threat=VBS-Melissa.Z
+  if "%filemd5%" == "3a d9 58 ad d8 a0 7e a3 a0 77 ec 97 68 6c 67 d6" set threat=VBS-Trojan.Gansom
   if "%filemd5%" == "65 25 9c 11 e1 ff 8d 04 0f 9e c5 85 24 a4 7f 02" set threat=Win32-Adware.Bonzi
   if "%filemd5%" == "06 d8 7d 4c 89 c7 6c b1 bc b2 f5 a5 fc 40 97 d1" set threat=Win32-Adware.Bonzi
   if "%filemd5%" == "9f 8c 96 41 5f bf d3 d1 84 83 d1 df ad 62 26 38" set threat=Win32-Adware.BrowserAssistant
@@ -686,6 +687,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "1c 12 64 41 d4 63 5b af 74 e6 fd 62 8b aa 67 14" set threat=Win32-Ransom.1337Locker
   if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
+  if "%filemd5%" == "98 c0 c4 e5 8a 97 cf 92 f9 c6 99 2e e6 5e 3f 0f" set threat=Win32-Ransom.Amnesia
   if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
   if "%filemd5%" == "7a b9 1e 57 a1 e2 75 2c d8 ab ee 3d b1 08 53 c5" set threat=Win32-Ransom.AngryDuck
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
@@ -709,6 +711,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "cf d2 d6 f1 89 b0 4d 42 61 80 07 fc 9c 54 03 52" set threat=Win32-Ransom.Cerber
   if "%filemd5%" == "db 9e ef 8a d5 41 98 59 c6 76 ac b4 ef 4a 5b 13" set threat=Win32-Ransom.Cerber
   if "%filemd5%" == "e6 92 2a 68 fc a9 00 16 58 4a c4 8f c7 72 2e f8" set threat=Win32-Ransom.Chimera
+  if "%filemd5%" == "84 f3 c3 7f db 67 23 84 a0 e0 82 84 ee ff 44 e4" set threat=Win32-Ransom.Cockblocker
   if "%filemd5%" == "4f 41 35 fc 5b 67 6c 4d 40 7e a9 0d 89 08 e8 14" set threat=Win32-Ransom.Clown
   if "%filemd5%" == "63 cc 40 d1 2e 49 ff b5 07 d9 1a f8 f7 a6 f0 82" set threat=Win32-Ransom.CryptoKill
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker
@@ -751,6 +754,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
+  if "%filemd5%" == "b5 94 41 2c 00 33 1c 12 d1 5d 9e 18 c0 2a 77 8a" set threat=Win32-Ransom.LostFiles
+  if "%filemd5%" == "a5 ed 29 35 a9 f8 5c 27 9f ce 7d de 74 25 24 34" set threat=Win32-Ransom.LostFiles
   if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
@@ -917,6 +922,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "02 dd 0e aa 96 49 a1 1e 55 fa 54 67 fa 4b 8e f8" set threat=Win32-Worm.Happy99
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
   if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail
+  if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
   if "%filemd5%" == "ba 6b d0 ba 81 12 a7 5e b7 0e b3 01 71 7a a9 bc" set threat=Win32-Worm.Totilix
@@ -1167,6 +1173,7 @@ if %errorlevel% equ 1 goto start
   echo.
   echo.
   echo Warning! Malware was found inside this file.
+  echo We recommend you to report %filemd5% to Protectish staff.
   echo.
   echo Reported by: Behavior Scan
   echo Note: Behavior Scan doesn't always have to be accurate.
@@ -1303,6 +1310,7 @@ if %errorlevel% equ 1 goto start
   echo.
   echo.
   echo Warning! Malware was found inside this file.
+  echo We recommend you to report %filemd5% to Protectish staff.
   echo.
   echo Reported by: Suspicious Actions Scan
   echo Note: Suspicious Actions Scan doesn't always have to be accurate.
