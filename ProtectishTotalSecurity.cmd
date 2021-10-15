@@ -713,6 +713,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e6 92 2a 68 fc a9 00 16 58 4a c4 8f c7 72 2e f8" set threat=Win32-Ransom.Chimera
   if "%filemd5%" == "84 f3 c3 7f db 67 23 84 a0 e0 82 84 ee ff 44 e4" set threat=Win32-Ransom.Cockblocker
   if "%filemd5%" == "4f 41 35 fc 5b 67 6c 4d 40 7e a9 0d 89 08 e8 14" set threat=Win32-Ransom.Clown
+  if "%filemd5%" == "1b ba 89 d7 a8 b8 7f b7 5b 6a e5 95 85 f7 17 b6" set threat=Win32-Ransom.CryptoFinancial
   if "%filemd5%" == "63 cc 40 d1 2e 49 ff b5 07 d9 1a f8 f7 a6 f0 82" set threat=Win32-Ransom.CryptoKill
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker
   if "%filemd5%" == "12 7b 80 31 1e 32 0f ff a2 44 61 f7 35 66 d4 80" set threat=Win32-Ransom.Cryptolocker
@@ -744,6 +745,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f5 4c 9a fc 52 02 9f d4 3b fb e6 dd 3c a2 f6 16" set threat=Win32-Ransom.JSterling
   if "%filemd5%" == "5e b7 d1 79 ad 6a 50 61 b4 ac 21 9d 58 4d 8e f8" set threat=Win32-Ransom.Kangaroo
   if "%filemd5%" == "56 f3 d3 d6 82 d6 11 2e 4d 6f 9f 31 6b e5 8d f4" set threat=Win32-Ransom.Karma
+  if "%filemd5%" == "05 42 7e d1 c4 77 cc 01 91 0e b9 ad bf 35 06 8d" set threat=Win32-Ransom.Karmen
   if "%filemd5%" == "7f 87 db 33 98 0c 00 99 73 9d e4 0d 1b 72 55 00" set threat=Win32-Ransom.Katyusha
   if "%filemd5%" == "12 e2 ef f0 9c 11 4c 18 46 28 94 a4 89 11 ce 8a" set threat=Win32-Ransom.KesLan
   if "%filemd5%" == "e8 9e 40 9c 91 84 cc 61 3e 0b 69 6b a5 be 95 41" set threat=Win32-Ransom.Kostya
@@ -893,6 +895,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
   if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
   if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
+  if "%filemd5%" == "de 51 6f bb c0 9f ca dd 95 39 c2 80 9c f4 ff 9b" set threat=Win32-Trojan.Reconyc
   if "%filemd5%" == "33 6e ff e8 44 da ab 0e f3 88 fe 60 02 81 17 de" set threat=Win32-Trojan.Remtasu
   if "%filemd5%" == "a9 c6 7b 0f c1 c8 16 32 f1 34 f2 bd f4 67 8e 21" set threat=Win32-Trojan.Resonate
   if "%filemd5%" == "ad 4d 5e da b2 ce 61 e9 22 44 dc ec c0 49 b8 66" set threat=Win32-Trojan.Resonate
