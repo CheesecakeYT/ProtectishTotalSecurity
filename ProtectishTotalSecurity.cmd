@@ -755,6 +755,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "a4 bb 3a 5c b6 83 5c 08 9d 76 91 00 d5 46 16 62" set threat=Win32-Ransom.Jigsaw
   if "%filemd5%" == "35 f0 50 c3 84 15 4c 4a e2 3e 02 b3 fc e7 98 47" set threat=Win32-Ransom.JNEC.A
   if "%filemd5%" == "f5 4c 9a fc 52 02 9f d4 3b fb e6 dd 3c a2 f6 16" set threat=Win32-Ransom.JSterling
+  if "%filemd5%" == "c6 69 32 0b 97 f2 c1 24 30 7c 3e 8a e2 e9 20 6d" set threat=Win32-Ransom.JSWorm
   if "%filemd5%" == "5e b7 d1 79 ad 6a 50 61 b4 ac 21 9d 58 4d 8e f8" set threat=Win32-Ransom.Kangaroo
   if "%filemd5%" == "56 f3 d3 d6 82 d6 11 2e 4d 6f 9f 31 6b e5 8d f4" set threat=Win32-Ransom.Karma
   if "%filemd5%" == "05 42 7e d1 c4 77 cc 01 91 0e b9 ad bf 35 06 8d" set threat=Win32-Ransom.Karmen
@@ -877,6 +878,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "fd b0 57 61 a7 ed a3 f1 82 48 50 3f 2c 97 d6 97" set threat=Win32-Sobig.E
   if "%filemd5%" == "d3 a8 b3 dc de 44 b8 1c 0e 69 cc 2a 8a 36 e8 44" set threat=Win32-Sobig.E
   if "%filemd5%" == "ca 22 1b 0f e0 3c 1f 0a 75 6a aa dd 55 e1 cc 43" set threat=Win32-SonicGatherBattle
+  if "%filemd5%" == "31 f1 d2 08 ee 74 0e 1f df 96 67 b2 e5 25 f3 d7" set threat=Win32-Spyware.FinSpy
+  if "%filemd5%" == "49 94 95 20 20 da 28 bb 0a a0 23 d2 36 a6 bf 3b" set threat=Win32-Spyware.FinSpy
   if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spyware.Zbot
   if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spyware.Zbot
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
@@ -909,6 +912,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f5 97 17 fb 8f 2a 9a d3 e5 f7 16 40 94 0f 1c 08" set threat=Win32-Trojan.Emotet
   if "%filemd5%" == "d3 ff 42 73 09 6c 13 af a8 8c 71 31 c4 14 f9 3b" set threat=Win32-Trojan.Emotet
   if "%filemd5%" == "8d 7e a5 5f f7 f8 74 c0 98 b2 3c a2 ad f4 0b 71" set threat=Win32-Trojan.Emotet
+  if "%filemd5%" == "f0 b6 d1 4e b0 b4 e1 24 81 2f db 9a 87 0a bc 43" set threat=Win32-Trojan.ExcelProtected
   if "%filemd5%" == "ac 54 76 ae 5a 15 a0 98 1e 7e 56 f9 51 60 1c 82" set threat=Win32-Trojan.Icefog
   if "%filemd5%" == "9e 28 4c 15 f0 31 ab 67 5b 1a 89 86 4f f3 d0 d5" set threat=Win32-Trojan.KillWin
   if "%filemd5%" == "07 18 75 df 86 3f 4a ea 3c 89 fb e4 1b 52 d1 9c" set threat=Win32-Trojan.Klone
