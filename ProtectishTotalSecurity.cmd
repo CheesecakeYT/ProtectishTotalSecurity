@@ -677,10 +677,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "aa 9e ca 49 c7 22 ec 1b ab bc 21 55 f1 a9 10 39" set threat=Win32-Nimda.T
   if "%filemd5%" == "ef 4f df 65 fc 90 bf da 8d 1d 2a e6 d2 0a ff 60" set threat=Win32-NoEscape
   if "%filemd5%" == "19 65 6c 44 0d 11 46 e0 79 50 e5 e3 28 0a 0e 82" set threat=Win32-OpenInstall
-  if "%filemd5%" == "2f 9a f2 30 d0 36 ba 31 09 49 94 5a e4 b1 a2 f4" set threat=Win32-Parite.B
-  if "%filemd5%" == "68 5f 1c bd 4a f3 0a 1d 0c 25 f2 52 d3 99 a6 66" set threat=Win32-Parite.B
-  if "%filemd5%" == "3e c0 23 c1 37 6f 3b 59 ec 56 ff 41 db 98 51 ec" set threat=Win32-Parite.B
-  if "%filemd5%" == "53 66 c2 a6 62 cd dd 60 0d 93 e3 99 2b 8e d1 cd" set threat=Win32-Parite.B
+  if "%filemd5%" == "2f 9a f2 30 d0 36 ba 31 09 49 94 5a e4 b1 a2 f4" set threat=Win32-Parite
+  if "%filemd5%" == "68 5f 1c bd 4a f3 0a 1d 0c 25 f2 52 d3 99 a6 66" set threat=Win32-Parite
+  if "%filemd5%" == "3e c0 23 c1 37 6f 3b 59 ec 56 ff 41 db 98 51 ec" set threat=Win32-Parite
+  if "%filemd5%" == "53 66 c2 a6 62 cd dd 60 0d 93 e3 99 2b 8e d1 cd" set threat=Win32-Parite
   if "%filemd5%" == "73 d3 54 51 db fb ba 5a c0 51 d3 6f 09 5a 62 9f" set threat=Win32-Parrot.A
   if "%filemd5%" == "6c 1c fe 55 c4 c2 6f cf b8 3e 2d cb b9 a4 2e 89" set threat=Win32-Parrot.B
   if "%filemd5%" == "96 5e df d8 ee 48 b6 f7 40 4e 28 5c 36 4a 3b 76" set threat=Win32-Phishing.FedX
@@ -690,6 +690,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "a9 2e 0b e7 1c ed 2d 13 69 5b 75 55 28 0d df 51" set threat=Win32-PoisonIvy
   if "%filemd5%" == "4a a5 0b ef 4c 3b 2a e1 4f 20 77 66 35 65 5b 50" set threat=Win32-Ramnit
   if "%filemd5%" == "ff 5e 1f 27 19 3c e5 1e ec 31 87 14 ef 03 8b ef" set threat=Win32-Ramnit
+  if "%filemd5%" == "3d 67 d7 7d 4c 0f 38 6c 7b e6 a9 2f 41 50 c0 15" set threat=Win32-Ramnit
+  if "%filemd5%" == "c5 c9 99 88 72 8c 55 02 82 ae 76 27 0b 64 9e a1" set threat=Win32-Ramnit
   if "%filemd5%" == "1c 12 64 41 d4 63 5b af 74 e6 fd 62 8b aa 67 14" set threat=Win32-Ransom.1337Locker
   if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
