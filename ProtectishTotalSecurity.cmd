@@ -613,6 +613,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "63 c0 76 ed 73 97 2a 21 c3 54 63 3d 43 b9 38 65" set threat=Win32-Backdoor.Clampi
   if "%filemd5%" == "ef 69 4b 89 ad 7a dd b9 a1 6b b6 f2 6f 1e fa f7" set threat=Win32-Backdoor.FakeCCleaner
   if "%filemd5%" == "db c2 bd 34 6f f8 1a 0c 5f c1 6f a6 83 b2 6a 36" set threat=Win32-Backdoor.FedEx
+  if "%filemd5%" == "24 b2 57 3e 59 e4 f1 6c 7b f3 54 48 bd 03 e5 a7" set threat=Win32-Backdoor.Hupigon
+  if "%filemd5%" == "30 b2 9f d4 75 30 53 10 cd 14 8a cd 0f 17 4c 70" set threat=Win32-Backdoor.Hupigon
   if "%filemd5%" == "64 87 6d 5d e7 06 1e 92 5e 29 f6 a0 c8 7c ea 9b" set threat=Win32-Backdoor.Konus
   if "%filemd5%" == "d4 07 55 9e 9d f5 43 20 e4 14 ff 6d 6c 5d cc b6" set threat=Win32-Backdoor.Prorat
   if "%filemd5%" == "27 0b a3 d7 c6 98 6a da e1 e3 da 12 99 39 ba 9d" set threat=Win32-Backdoor.Prorat
@@ -818,6 +820,11 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
   if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
   if "%filemd5%" == "77 48 7c 27 f5 47 6f 7b cb 09 21 06 f4 84 5b 4f" set threat=Win32-Ransom.VegaLocker
+  if "%filemd5%" == "6d 12 54 77 72 b5 7a 6d a2 b2 5d 21 88 45 19 83" set threat=Win32-Ransom.VHD
+  if "%filemd5%" == "d0 80 6c 9d 8b ce a0 bd 47 d8 0f a0 04 74 4d 7d" set threat=Win32-Ransom.VHD
+  if "%filemd5%" == "dd 00 a8 61 0b b8 4b 54 e9 9a e8 09 9d b1 fc 20" set threat=Win32-Ransom.VHD
+  if "%filemd5%" == "cc c6 02 6a cf 7e ad ad a9 ad ac ca b7 0c a4 d6" set threat=Win32-Ransom.VHD
+  if "%filemd5%" == "ef d4 a8 7e 7c 5d cb b6 4b 73 13 a1 3b 4b 10 12" set threat=Win32-Ransom.VHD
   if "%filemd5%" == "68 2f 91 e3 ce 76 9a 68 65 ec d9 f2 b2 36 e8 3a" set threat=Win32-Ransom.VindowsLocker
   if "%filemd5%" == "74 d6 e7 09 98 32 b4 d0 6f 45 39 80 aa 71 5b 05" set threat=Win32-Ransom.WannaCryptor
   if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor
@@ -1128,7 +1135,37 @@ if %errorlevel% equ 1 goto start
   find /i /c "chromeKey" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "FileEncryptor" %file% > NUL
-  if %errorlevel% == 0 set threat=Win32-Ransom.Generic  
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "Decrypt.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DecryptFiles.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "Decrypt-Files.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DecryptFilesHere.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT_INSTRUCTION.TXT" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "FILES ENCRYPTED.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "DECRYPT MY FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT-MY-FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT_MY_FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT YOUR FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT-YOUR-FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT_YOUR_FILES" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic 
+  find /i /c "DECRYPT FILES.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "HowToDecrypt.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "DecryptGuide.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "KillCtrlAltDelete" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "MaxFilesizeToEncryptInBytes" %file% > NUL
@@ -1159,6 +1196,16 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.ShellLocker
   find /i /c "Brouillettebusiness@outlook.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Sodinokibi
+  find /i /c "miclejaps@msgden.net" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "stevenjoker@msgden.net" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "CulibDoett@gmail.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "ha7medtit@tutanota.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "araujosantos@protonmail.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.VHD
   find /i /c "Injecting into process" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-RAT.Generic
   find /i /c "Opening process..." %file% > NUL
