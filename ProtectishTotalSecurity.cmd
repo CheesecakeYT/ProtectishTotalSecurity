@@ -842,6 +842,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus
   if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus
+  if "%filemd5%" == "f8 18 93 8b 98 72 36 cd d4 11 95 79 6b 4c 1f b5" set threat=Win32-Ransom.Zeppelin
   if "%filemd5%" == "6b e6 53 cd 2f 91 72 54 37 36 e3 f5 3a ef cd 54" set threat=Win32-Ransom.Ziggy
   if "%filemd5%" == "db a6 df b2 73 3a a1 c9 2e 7e e7 62 ea 66 66 65" set threat=Win32-RAT.Agent
   if "%filemd5%" == "85 2c f7 6a b9 2c 6a a9 03 c5 fc 9a 78 b6 0d 9c" set threat=Win32-RAT.DarkKomet
@@ -1120,14 +1121,16 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Adware.BrowserAssistant
   find /i /c "TImageMargins8vI" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Adware.DealPly
-  find /i /c "http://megadowl.com/terms-ru.html" %file% > NUL
-  if %errorlevel% == 0 set threat=Win32-ICLoader
   find /i /c "zincite" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-MyDoom
   find /i /c "! Best regards 2 Tommy Salo. [Nov-2005] yours [Dziadulja Apanas]" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Neshta
   find /i /c "Visit our web service at caforssztxqzf2nm.onion" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.BadRabbit
+  find /i /c "encrypter@tuta.io" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.CryptoJoker
+  find /i /c "I am NocryCrypt0r" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.CryptoJoker
   find /i /c "DANGEROUS_RANSOM" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Dangerous
   find /i /c "NitroRansomware.exe" %file% > NUL
@@ -1170,6 +1173,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "HowToDecrypt.txt" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "how to decrypt my files.txt" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "DecryptGuide.txt" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "KillCtrlAltDelete" %file% > NUL
@@ -1196,8 +1201,6 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.MindSystem
   find /i /c "aes_key_rand" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Ragnarok
-  find /i /c "http://wannadie.altervista.org/" %file% > NUL
-  if %errorlevel% == 0 set threat=Win32-Ransom.Rogue
   find /i /c "ShellLocker.My.Resources" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.ShellLocker
   find /i /c "Brouillettebusiness@outlook.com" %file% > NUL
