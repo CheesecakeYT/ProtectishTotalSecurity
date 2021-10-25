@@ -632,10 +632,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c1 49 2e f9 be 34 a8 74 3b 52 4b 1a 0a 3e 07 7c" set threat=Win32-CoinMiner.Agent
   if "%filemd5%" == "92 ed 22 d3 89 26 26 ce 4b c0 50 cb 5f a7 e5 2d" set threat=Win32-CoinMiner.Agent
   if "%filemd5%" == "ab a2 d8 6e d1 7f 58 7e b6 d5 7e 6c 75 f6 4f 05" set threat=Win32-CoinMiner.Agent
+  if "%filemd5%" == "fc 72 4e b2 89 4f 34 a3 ac a4 b9 52 d2 f8 16 cd" set threat=Win32-CoinMiner.UAParser
   if "%filemd5%" == "1c d6 3b c5 4f 81 7b 94 fe fe 44 d5 ce 02 26 27" set threat=Win32-CoinMiner.XMRig
   if "%filemd5%" == "2e 8d a5 a5 58 65 a0 91 86 4a 43 38 ef 4d 2e 44" set threat=Win32-Conficker
   if "%filemd5%" == "3a fe b8 e9 af 02 a3 3f f7 1b f2 f6 75 1c ae 3a" set threat=Win32-CPUMiner
   if "%filemd5%" == "3a f2 98 63 3c c2 f3 c3 f3 5a f9 6e 93 0c 98 44" set threat=Win32-Dabber
+  if "%filemd5%" == "de 8b 54 a9 38 ac 18 f1 5c ad 80 4d 79 a0 e1 9d" set threat=Win32-Danabot
   if "%filemd5%" == "44 51 20 7a a3 fe 02 1d c2 bf c6 83 d5 7b a5 a1" set threat=Win32-Gogo
   if "%filemd5%" == "e2 55 12 40 5a cd fa 4e 2d 71 7a 56 69 d3 0d 54" set threat=Win32-Gullible
   if "%filemd5%" == "40 67 ae a4 c2 12 5d 2d 0a 80 aa eb be c6 86 b6" set threat=Win32-IceIX
@@ -732,6 +734,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "0a aa d9 fd 6d 9d e6 a1 89 e8 97 09 e0 52 f0 6b" set threat=Win32-Ransom.CrySiS
   if "%filemd5%" == "5d 2a 7e 18 9d ef 04 ff 14 8e ee 04 e4 37 34 8d" set threat=Win32-Ransom.Damage
   if "%filemd5%" == "d5 f1 64 9c dd df 19 2d 4e d3 c2 89 bc 1e 95 f0" set threat=Win32-Ransom.Dangerous
+  if "%filemd5%" == "97 96 92 cd 7f c6 38 be ea 6e 9d 68 c7 52 f3 60" set threat=Win32-Ransom.Darkside
   if "%filemd5%" == "fc 3d 3e 54 3a ef 4b 09 79 9c f7 8d 12 04 50 06" set threat=Win32-Ransom.Delphimorix
   if "%filemd5%" == "7e 17 9d 06 4b 2d 20 b4 ea 5e 6d 49 2a bf 8f 2b" set threat=Win32-Ransom.DexLocker
   if "%filemd5%" == "d3 2e 4d 8b 42 38 cf cc 79 3e c3 b3 7c c9 a8 75" set threat=Win32-Ransom.Dharma
@@ -819,6 +822,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "be 42 07 0f d1 68 10 7d d2 ac 6e d9 12 72 35 72" set threat=Win32-Ransom.SuchSecurity
   if "%filemd5%" == "63 d4 e4 da c5 7b d7 d2 05 95 87 eb a4 16 26 52" set threat=Win32-Ransom.SureRansom.A
   if "%filemd5%" == "8e 5f f6 0b f6 66 5c 57 93 8a b5 66 46 72 6e 1c" set threat=Win32-Ransom.Thanos
+  if "%filemd5%" == "b0 c6 15 c0 a4 f4 85 b2 03 0d 6e 1a b9 83 75 f0" set threat=Win32-Ransom.Thanos
   if "%filemd5%" == "6c aa f5 00 c2 48 de 17 b1 90 72 93 70 00 7d da" set threat=Win32-Ransom.Tyrant
   if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
   if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
@@ -1133,6 +1137,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.CryptoJoker
   find /i /c "DANGEROUS_RANSOM" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Dangerous
+  find /i /c "ox0ku!" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Darkside
   find /i /c "NitroRansomware.exe" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.DiscordNitro
   find /i /c "decrypter.files@mail.ru" %file% > NUL
@@ -1205,6 +1211,10 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.ShellLocker
   find /i /c "Brouillettebusiness@outlook.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Sodinokibi
+  find /i /c "steriok@mail2tor.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Thanos
+  find /i /c "proper12132@tutanota.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Thanos
   find /i /c "miclejaps@msgden.net" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.VHD
   find /i /c "stevenjoker@msgden.net" %file% > NUL
