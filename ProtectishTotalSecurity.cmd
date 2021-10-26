@@ -1125,6 +1125,10 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Adware.BrowserAssistant
   find /i /c "TImageMargins8vI" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Adware.DealPly
+  find /i /c "xmrig.exe" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
+  find /i /c "xmrig.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
   find /i /c "zincite" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-MyDoom
   find /i /c "! Best regards 2 Tommy Salo. [Nov-2005] yours [Dziadulja Apanas]" %file% > NUL
