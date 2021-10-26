@@ -165,7 +165,7 @@ if %errorlevel% equ 1 goto start
   echo You have %msgcount% messages.
   echo.
   echo (FILE) - scan file
-  rem echo (DIR) - scan directory
+  echo (DIR) - scan directory
   echo (QUARANTINE) - show quarantine settings
   echo (SETTINGS) - show Protectish settings
   echo (MESSAGES) - show messages
@@ -181,7 +181,7 @@ if %errorlevel% equ 1 goto start
   if /i "%choice%" == "end" exit
   if /i "%choice%" == "konec" exit
   if /i "%choice%" == "file" goto file
-  rem if /i "%choice%" == "dir" goto dir
+  if /i "%choice%" == "dir" goto dir
   if /i "%choice%" == "quarantine" goto quarantine_menu
   if /i "%choice%" == "settings" goto settings
   if /i "%choice%" == "messages" goto messages
@@ -551,7 +551,9 @@ if %errorlevel% equ 1 goto start
     if "%oldfile%" == "%file%" (
       goto safe
     ) else (
-      set oldfile=%file%
+      aaaa > actualfile.txt
+      echo %file% > actualfile.txt
+      for /f "tokens=1*delims=:" %%G in ('findstr /n "^" actualfile.txt') do if %%G equ 1 set oldfile=%%H
     )
   )
 
