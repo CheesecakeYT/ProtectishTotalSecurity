@@ -1,6 +1,7 @@
 @echo off
 rem License key is PTS_PJF5G4DAZ5R3
 
+set ptsdir=%cd%
 set msgcount=0
 set license_attempts=0
 
@@ -145,6 +146,7 @@ if %errorlevel% equ 1 goto start
   if "%suspicioustask%" == "1" goto suspicioustask
 
 :start
+  cd %ptsdir%
   find /i /c "Piracy not detected" pts_gendetect1.txt > NUL
   if %errorlevel% equ 1 goto antipiracy
   find /i /c "License Key used" pts_lkused1.txt > NUL
@@ -155,7 +157,6 @@ if %errorlevel% equ 1 goto start
   color 0f
   title Protectish Total Security
   set dirscan=false
-  set ptsdir=%cd%
   echo Protectish Total Security
   echo.
   echo Making you safe
@@ -504,6 +505,9 @@ if %errorlevel% equ 1 goto start
 
   title MD5 Scan Pending - Protectish Total Security
   set dirscan=true
+  for /f %%A in ('dir /a-d-s-h /b ^| find /v /c ""') do set cnt=%%A
+  echo File count = %cnt%
+  pause
   goto scan
 
 :file
@@ -539,8 +543,6 @@ if %errorlevel% equ 1 goto start
 :scan
   cls
   color 9f
-  set oldfile=null
-
   if "%dirscan%" == "true" (
     for /f "tokens=1*delims=:" %%G in ('findstr /n "^" files.txt') do if %%G equ %filenumber% set file=%%H
     @CertUtil -hashfile %file% MD5 > md5.txt
@@ -548,15 +550,10 @@ if %errorlevel% equ 1 goto start
     for /f "tokens=1*delims=:" %%G in ('findstr /n "^" md5.txt') do if %%G equ 2 set filemd5=%%H
     del md5.txt
 
-    if "%oldfile%" == "%file%" (
+    if "%cnt%" lss "%filenumber%" (
       goto safe
-    ) else (
-      aaaa > actualfile.txt
-      echo %file% > actualfile.txt
-      for /f "tokens=1*delims=:" %%G in ('findstr /n "^" actualfile.txt') do if %%G equ 1 set oldfile=%%H
     )
   )
-
   echo Protectish Total Security
   echo.
   echo Making you safe
