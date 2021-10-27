@@ -966,6 +966,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "02 dd 0e aa 96 49 a1 1e 55 fa 54 67 fa 4b 8e f8" set threat=Win32-Worm.Happy99
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
   if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail
+  if "%filemd5%" == "b6 ab 9c 65 81 7e 91 43 76 82 2e aa b8 e0 3e 36" set threat=Win32-Worm.Mimail
   if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
@@ -1242,6 +1243,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
   find /i /c "The software you just executed is considered malware. This malware will harm your computer and makes it unusable. If you are seeing this message without knowing what you just executed, simply press" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Trojan.MEMZ
+  find /i /c "visit our friendly site www.blackgate.us" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Worm.Mimail
 
 
   if "%threat%" == """" (
