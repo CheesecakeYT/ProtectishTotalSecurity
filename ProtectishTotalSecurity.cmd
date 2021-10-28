@@ -505,9 +505,7 @@ if %errorlevel% equ 1 goto start
 
   title MD5 Scan Pending - Protectish Total Security
   set dirscan=true
-  for /f %%A in ('dir /a-d-s-h /b ^| find /v /c ""') do set cnt=%%A
-  echo File count = %cnt%
-  pause
+  for /f %%A in ('dir /a-d-s-h /b /s ^| find /v /c ""') do set cnt=%%A
   goto scan
 
 :file
@@ -850,6 +848,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "db a6 df b2 73 3a a1 c9 2e 7e e7 62 ea 66 66 65" set threat=Win32-RAT.Agent
   if "%filemd5%" == "85 2c f7 6a b9 2c 6a a9 03 c5 fc 9a 78 b6 0d 9c" set threat=Win32-RAT.DarkKomet
   if "%filemd5%" == "96 30 5f 55 42 86 f7 84 d9 92 8c 49 90 45 c3 d6" set threat=Win32-RAT.NanoCore
+  if "%filemd5%" == "6d 17 bd f6 1e 8c ec 2f 59 e8 39 a0 f1 8e e5 1c" set threat=Win32-RAT.NanoCore
   if "%filemd5%" == "c1 7c ad 86 80 51 b0 7e 56 1f 08 d9 de 11 b6 70" set threat=Win32-RAT.Quasar
   if "%filemd5%" == "e9 50 81 4f 0a 29 f9 59 37 50 f7 ea 42 06 e2 dd" set threat=Win32-RBot
   if "%filemd5%" == "51 b3 30 e6 b3 04 76 5f 3a b6 17 8a 99 ea 87 f4" set threat=Win32-Rogue.AntivirusBEST
