@@ -702,6 +702,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit.A
   if "%filemd5%" == "2f e3 2d 2a 6b fc 72 d2 15 49 6b 05 5e 5a 53 ad" set threat=Win32-Ransom.BadRabbit.B
+  if "%filemd5%" == "d9 fe 38 12 2b b0 8d 96 ef 0d e6 10 76 aa 49 45" set threat=Win32-Ransom.Bart
   if "%filemd5%" == "50 a7 db 13 62 f5 53 4a 1b 6a db f9 cc be 9d 5b" set threat=Win32-Ransom.Bisquilla
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
   if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
@@ -740,6 +741,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "13 c1 c6 8c 14 10 df 27 7f c3 7d 68 55 7b b4 3b" set threat=Win32-Ransom.DriedSister
   if "%filemd5%" == "14 41 b0 70 4b 07 d6 e8 f7 98 f6 68 4f af 0f 79" set threat=Win32-Ransom.EDA2
   if "%filemd5%" == "61 2b a5 a5 20 38 14 1d d5 c5 71 a4 b0 dc 6b 86" set threat=Win32-Ransom.EggLocker
+  if "%filemd5%" == "3d 1c c4 ef 33 ba d0 e3 9c 75 7f ce 31 7e f8 2a" set threat=Win32-Ransom.Ekans.A
+  if "%filemd5%" == "57 13 49 81 fb 5f 6d b5 db 8d 7f 30 51 50 3d c1" set threat=Win32-Ransom.Ekans.B
+  if "%filemd5%" == "ed 3c 05 bd e9 f0 ea 0f 13 21 35 5b 03 ac 42 d0" set threat=Win32-Ransom.Ekans.C
+  if "%filemd5%" == "64 9d e3 98 d8 d5 ad 64 d0 6c dc 98 2f 0e f2 5e" set threat=Win32-Ransom.Ekans.D
   if "%filemd5%" == "a7 4b 25 0b 40 28 d5 39 7c c0 9f 62 7b b5 89 ab" set threat=Win32-Ransom.Explorer
   if "%filemd5%" == "24 f3 2d a2 58 b8 c4 2c 71 ab fb 75 77 fb 35 a8" set threat=Win32-Ransom.FakeWannaCryptor.A
   if "%filemd5%" == "98 4a ac b6 8d bc 13 c0 e9 cb 3a a4 41 f6 97 44" set threat=Win32-Ransom.FakeWannaCryptor.B
@@ -770,9 +775,11 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "78 9d dc a4 99 7c 12 65 9f 23 93 6c 4f 91 e0 e5" set threat=Win32-Ransom.Kryptonite
   if "%filemd5%" == "b3 17 53 31 ae 74 ee 27 7e 94 d3 e0 bc 98 2b f4" set threat=Win32-Ransom.Lockbit
   if "%filemd5%" == "b2 69 85 00 c9 c9 0d 9c fb 5a a9 0f e2 81 ee 51" set threat=Win32-Ransom.LockerGoga
+  if "%filemd5%" == "8b 4a cf ac e9 6f c4 ec 54 37 44 15 78 cc a1 03" set threat=Win32-Ransom.Lockon
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
   if "%filemd5%" == "b5 94 41 2c 00 33 1c 12 d1 5d 9e 18 c0 2a 77 8a" set threat=Win32-Ransom.LostFiles.A
   if "%filemd5%" == "a5 ed 29 35 a9 f8 5c 27 9f ce 7d de 74 25 24 34" set threat=Win32-Ransom.LostFiles.B
+  if "%filemd5%" == "9a b7 55 b3 0d 22 f8 fc 26 c9 c8 5e eb 46 c1 c9" set threat=Win32-Ransom.Mancros
   if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
   if "%filemd5%" == "0e 0b 7b 23 8a 06 a2 a3 7a 4d e0 6a 5a b5 e6 15" set threat=Win32-Ransom.Nemty
@@ -836,9 +843,13 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e4 b6 23 3a e4 6e 8a 64 f0 58 aa c3 c3 78 b0 17" set threat=Win32-Ransom.WannaCryptor.D
   if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor.E
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.F
+  if "%filemd5%" == "bc 80 1d 8d c0 9e a6 6b 39 fd f8 20 d7 76 23 97" set threat=Win32-Ransom.WannaCryptor.G
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
   if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
+  if "%filemd5%" == "d6 4b f6 3b 70 47 1f 51 cc 5a 65 7b 67 c3 2f 6c" set threat=Win32-Ransom.XDLocker.A
+  if "%filemd5%" == "34 b5 4e d3 e0 66 1b 6b bf ca c3 20 a6 13 dc dc" set threat=Win32-Ransom.XDLocker.B
+  if "%filemd5%" == "44 a7 8e 41 f2 d6 db d3 75 d2 86 cc dc 5e 0e 16" set threat=Win32-Ransom.XDLocker.C
   if "%filemd5%" == "40 e7 40 3b 6b 86 d5 f8 a5 3a 35 e3 bd cd f2 b6" set threat=Win32-Ransom.XeroWare
   if "%filemd5%" == "45 3a 78 91 0a 83 4a d8 83 0a b9 de e7 c1 83 e3" set threat=Win32-Ransom.XiaoBa
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus.A
@@ -951,10 +962,11 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "84 b9 6a 3d 44 c0 8a 22 1d 13 93 1c e8 e3 fd 4e" set threat=Win32-Virut.B
   if "%filemd5%" == "53 29 50 cd 94 48 93 c7 36 71 9f de 46 3a 10 31" set threat=Win32-Vtflooder
   if "%filemd5%" == "25 27 29 b2 30 4c dc 2e 91 24 8c ea 56 72 41 eb" set threat=Win32-Wallpaper
-  if "%filemd5%" == "e7 9d 0b 1a 34 27 12 ea 9b 96 10 40 86 14 9d 65" set threat=Win32-Winevar
   if "%filemd5%" == "c8 2b 6d 5a 84 96 06 4a bb 5e 66 a2 6a a6 71 7b" set threat=Win32-Winfig
-  if "%filemd5%" == "02 73 ed 44 d5 87 4d c3 03 90 15 16 3b c8 91 32" set threat=Win32-Worm.Agent
+  if "%filemd5%" == "02 73 ed 44 d5 87 4d c3 03 90 15 16 3b c8 91 32" set threat=Win32-Worm.Agent.A
+  if "%filemd5%" == "e8 4f a2 88 8b 01 e3 98 cc 13 90 36 fe 5b 92 21" set threat=Win32-Worm.Agent.B
   if "%filemd5%" == "39 c8 5a 0d 84 7a a2 1c 7d ed d6 9d ca 7a e9 bc" set threat=Win32-Worm.Badtrans
+  if "%filemd5%" == "49 2c b4 7d 84 43 68 06 38 28 cd 74 c5 18 5a 1f" set threat=Win32-Worm.Calposa
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "0b ba 28 8e 55 ed 34 b5 eb c7 6f 86 5a 53 2c bf" set threat=Win32-Worm.CodeRed.B
   if "%filemd5%" == "fd cd a5 5b 16 42 6a 6f ed 53 d9 19 e3 1b 3d 23" set threat=Win32-Worm.Dumaru
@@ -970,6 +982,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
   if "%filemd5%" == "ba 6b d0 ba 81 12 a7 5e b7 0e b3 01 71 7a a9 bc" set threat=Win32-Worm.Totilix
+  if "%filemd5%" == "e7 9d 0b 1a 34 27 12 ea 9b 96 10 40 86 14 9d 65" set threat=Win32-Worm.Winevar
   if "%filemd5%" == "7b c3 22 d9 59 51 df e1 6e 8c f4 7e e5 86 e9 09" set threat=Win95-CIH.A
   if "%filemd5%" == "dc 40 29 6f 43 5a 8b 3a c6 c0 24 d6 dc ee cd df" set threat=Win95-CIH.B
   if "%filemd5%" == "99 d3 fd 29 85 01 2d 43 c3 d5 32 cf 1f 70 b3 42" set threat=Win95-CIH.C
@@ -1144,6 +1157,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Darkside
   find /i /c "NitroRansomware.exe" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.DiscordNitro
+  find /i /c "bapcocrypt@ctemplar.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Ekans
   find /i /c "decrypter.files@mail.ru" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Explorer
   find /i /c "set_encrypted_key" %file% > NUL
