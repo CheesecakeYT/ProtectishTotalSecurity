@@ -581,6 +581,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "3f 76 a6 9e 1f d9 bb 3f a2 52 a3 ce d1 5e ba 72" set threat=VBS-Melissa.C
   if "%filemd5%" == "9d 7f 91 6d f5 05 16 ac 67 05 eb 0c 00 78 38 20" set threat=VBS-Melissa.D
   if "%filemd5%" == "3a d9 58 ad d8 a0 7e a3 a0 77 ec 97 68 6c 67 d6" set threat=VBS-Trojan.Gansom
+  if "%filemd5%" == "db 6d 18 71 03 bf 80 f7 3c 22 0e ea c3 bc b8 04" set threat=VBS-Worm.Bumerang
   if "%filemd5%" == "65 25 9c 11 e1 ff 8d 04 0f 9e c5 85 24 a4 7f 02" set threat=Win32-Adware.Bonzi.A
   if "%filemd5%" == "06 d8 7d 4c 89 c7 6c b1 bc b2 f5 a5 fc 40 97 d1" set threat=Win32-Adware.Bonzi.B
   if "%filemd5%" == "9f 8c 96 41 5f bf d3 d1 84 83 d1 df ad 62 26 38" set threat=Win32-Adware.BrowserAssistant.A
@@ -713,6 +714,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e6 42 55 6c bb 20 a9 7d 6c 4f 9d c2 5e a9 68 7f" set threat=Win32-Ransom.BloodJaws.E
   if "%filemd5%" == "16 ad a5 1d c0 a0 62 f8 60 8d a8 92 2b 0f c9 f8" set threat=Win32-Ransom.Blooper
   if "%filemd5%" == "92 66 05 0f 3c e5 ba 99 53 35 31 68 9e ae 7e 2f" set threat=Win32-Ransom.Bluerose
+  if "%filemd5%" == "0f 74 3c 34 61 a9 fa 3e 60 f6 0d e8 44 3d a4 09" set threat=Win32-Ransom.Bot
   if "%filemd5%" == "ab 07 5e b2 ad 67 2b fa 36 99 62 c1 be 15 66 9a" set threat=Win32-Ransom.Braincrypt
   if "%filemd5%" == "27 14 58 8f b8 93 30 40 93 88 5c 23 f5 41 69 ee" set threat=Win32-Ransom.BrainLag
   if "%filemd5%" == "e6 0e 76 7e 33 ac f4 9c 02 56 8a 79 d9 cb da dd" set threat=Win32-Ransom.Buran
@@ -723,6 +725,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "4f 41 35 fc 5b 67 6c 4d 40 7e a9 0d 89 08 e8 14" set threat=Win32-Ransom.Clown
   if "%filemd5%" == "02 d9 97 a8 98 31 b6 54 7a 28 4b aa 75 75 25 f2" set threat=Win32-Ransom.Cry9
   if "%filemd5%" == "10 99 19 9d c2 27 a8 a2 14 ff 9f 57 6c fd ec 1e" set threat=Win32-Ransom.CryForMe
+  if "%filemd5%" == "7e 90 26 a1 de e0 80 ad 62 02 55 3f 79 73 d0 56" set threat=Win32-Ransom.Cryp70n1c
   if "%filemd5%" == "1b ba 89 d7 a8 b8 7f b7 5b 6a e5 95 85 f7 17 b6" set threat=Win32-Ransom.CryptoFinancial
   if "%filemd5%" == "63 cc 40 d1 2e 49 ff b5 07 d9 1a f8 f7 a6 f0 82" set threat=Win32-Ransom.CryptoKill
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker.A
@@ -779,6 +782,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "77 1d eb 8b 72 0d bd 78 4d 67 15 40 3a 41 bd cc" set threat=Win32-Ransom.Locky
   if "%filemd5%" == "b5 94 41 2c 00 33 1c 12 d1 5d 9e 18 c0 2a 77 8a" set threat=Win32-Ransom.LostFiles.A
   if "%filemd5%" == "a5 ed 29 35 a9 f8 5c 27 9f ce 7d de 74 25 24 34" set threat=Win32-Ransom.LostFiles.B
+  if "%filemd5%" == "bf 21 af 86 7a 4a 41 79 5b cb ad c6 b4 18 5f 8b" set threat=Win32-Ransom.LTML
   if "%filemd5%" == "9a b7 55 b3 0d 22 f8 fc 26 c9 c8 5e eb 46 c1 c9" set threat=Win32-Ransom.Mancros
   if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
@@ -918,6 +922,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "30 58 85 26 80 b6 13 ec b1 35 8c 0f 35 50 68 27" set threat=Win32-Trojan.Agent.O
   if "%filemd5%" == "1a 66 a0 29 72 8c 19 25 4d 52 13 53 4e e5 92 5d" set threat=Win32-Trojan.Agent.P
   if "%filemd5%" == "f8 76 b8 ce 91 d5 72 54 7e a7 91 04 f3 f2 4f 48" set threat=Win32-Trojan.Agent.Q
+  if "%filemd5%" == "09 ae 2b 5f ce 9b 03 1c 78 42 d8 84 02 c4 7c 27" set threat=Win32-Trojan.Agent.R
+  if "%filemd5%" == "aa f5 08 bc 68 b8 4d 5d a0 b4 b4 c0 7f 14 93 39" set threat=Win32-Trojan.Agent.S
+  if "%filemd5%" == "19 b7 3d 5e 0a c6 eb 01 f9 ff 8d 3e e6 16 2e d6" set threat=Win32-Trojan.Agent.T
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
   if "%filemd5%" == "67 75 d2 02 e6 8f ec 88 26 97 27 a7 b0 6a 8c 63" set threat=Win32-Trojan.BSOD
@@ -1141,6 +1148,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
   find /i /c "xmrig.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
+  find /i /c "777777d" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Malware.Generic  
   find /i /c "zincite" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-MyDoom
   find /i /c "! Best regards 2 Tommy Salo. [Nov-2005] yours [Dziadulja Apanas]" %file% > NUL
