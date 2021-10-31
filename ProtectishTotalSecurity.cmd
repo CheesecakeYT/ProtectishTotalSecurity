@@ -732,6 +732,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "bc 11 c9 3f 1b 6d c7 4b f4 80 4a 35 b3 4d 92 67" set threat=Win32-Ransom.Cryptolocker.A
   if "%filemd5%" == "12 7b 80 31 1e 32 0f ff a2 44 61 f7 35 66 d4 80" set threat=Win32-Ransom.Cryptolocker.B
   if "%filemd5%" == "b1 8c 5a f6 96 e8 84 72 41 e4 c1 72 30 db 36 c9" set threat=Win32-Ransom.CryptoSpider
+  if "%filemd5%" == "0c ff ee 26 6a 8f 14 10 31 58 46 5e 2e cd d2 c1" set threat=Win32-Ransom.CryptoWall
   if "%filemd5%" == "41 d4 ab 0d e7 f5 6c 1d 4b 38 fc 10 c2 55 18 f9" set threat=Win32-Ransom.CryptoWire
   if "%filemd5%" == "0a aa d9 fd 6d 9d e6 a1 89 e8 97 09 e0 52 f0 6b" set threat=Win32-Ransom.CrySiS
   if "%filemd5%" == "5d 2a 7e 18 9d ef 04 ff 14 8e ee 04 e4 37 34 8d" set threat=Win32-Ransom.Damage
