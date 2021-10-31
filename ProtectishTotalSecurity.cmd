@@ -898,6 +898,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "25 aa 9b b5 49 ec c7 bb 61 00 f8 d1 79 45 25 08" set threat=Win32-Sality.D
   if "%filemd5%" == "14 50 d3 b0 6b 90 85 6d db a1 fc 58 a7 bf bb fc" set threat=Win32-Sality.E
   if "%filemd5%" == "ab e4 33 21 24 b4 37 00 a0 9d d8 68 ac 4d 11 a1" set threat=Win32-Sality.F
+  if "%filemd5%" == "a2 ee 24 0d 9a 49 79 e2 ff 9f 64 6c 1f c2 98 9a" set threat=Win32-Sality.G
   if "%filemd5%" == "a7 3c 16 cc d0 b9 c4 f2 0b c7 84 2e dd 90 fc 20" set threat=Win32-Sasser.A
   if "%filemd5%" == "1a 2c 0e 61 30 85 0f 8f d9 b9 b5 30 94 13 cd 00" set threat=Win32-Sasser.B
   if "%filemd5%" == "0e 97 3c ba 35 97 e3 39 d1 d8 48 1d 9a 35 8b 87" set threat=Win32-Sasser.C
