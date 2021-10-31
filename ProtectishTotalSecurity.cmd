@@ -626,6 +626,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f3 e4 fb 7f 22 3b ef 58 2c 63 e5 b8 7e 14 40 e7" set threat=Win32-Bloored
   if "%filemd5%" == "68 ab 07 e4 e7 79 ed 8b 5b 71 b7 c5 5f 33 b0 87" set threat=Win32-Blueballs
   if "%filemd5%" == "6a 48 53 cd 05 84 dc 90 06 7e 15 af b4 3c 49 62" set threat=Win32-ChilledWindows
+  if "%filemd5%" == "da 4b da 83 ff f7 8e 29 44 19 7d 57 32 0d 4d 7c" set threat=Win32-ClassicVirus
   if "%filemd5%" == "3a 70 25 17 61 a4 ac c0 53 d3 9f 2c 5f 61 3b 42" set threat=Win32-CodecPack
   if "%filemd5%" == "c1 49 2e f9 be 34 a8 74 3b 52 4b 1a 0a 3e 07 7c" set threat=Win32-CoinMiner.Agent.A
   if "%filemd5%" == "92 ed 22 d3 89 26 26 ce 4b c0 50 cb 5f a7 e5 2d" set threat=Win32-CoinMiner.Agent.B
@@ -757,6 +758,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "94 32 8c a2 cb 87 23 0a 5b 0c 73 4e 23 21 e9 93" set threat=Win32-Ransom.Fantom
   if "%filemd5%" == "fa fa 32 c5 26 86 14 82 da 1b 49 49 32 69 f8 75" set threat=Win32-Ransom.FSociety
   if "%filemd5%" == "d3 87 09 92 ca 34 b0 dc 5c 3b cf c2 a1 9e 39 85" set threat=Win32-Ransom.GandCrab
+  if "%filemd5%" == "5a 22 ab 88 6f 3f a7 c0 58 7c 4b 3d 7a e7 71 fb" set threat=Win32-Ransom.GoRansomPOC
   if "%filemd5%" == "bf 58 71 48 38 ed fc c1 35 a6 48 18 d3 66 75 47" set threat=Win32-Ransom.GPAA
   if "%filemd5%" == "92 b2 c0 3f 09 a0 7b 6c 12 23 3c 4c 21 32 c7 10" set threat=Win32-Ransom.GPCode
   if "%filemd5%" == "f9 da 7d cf 28 c9 e0 6e f9 b2 d3 94 67 c8 2f 70" set threat=Win32-Ransom.GX40
