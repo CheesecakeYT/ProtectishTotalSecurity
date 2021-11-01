@@ -725,6 +725,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "db 9e ef 8a d5 41 98 59 c6 76 ac b4 ef 4a 5b 13" set threat=Win32-Ransom.Cerber.B
   if "%filemd5%" == "e6 92 2a 68 fc a9 00 16 58 4a c4 8f c7 72 2e f8" set threat=Win32-Ransom.Chimera
   if "%filemd5%" == "84 f3 c3 7f db 67 23 84 a0 e0 82 84 ee ff 44 e4" set threat=Win32-Ransom.Cockblocker
+  if "%filemd5%" == "88 d9 52 ef 3e 00 e2 5d e1 10 c7 c7 8f cc 57 99" set threat=Win32-Ransom.Comrade
+  if "%filemd5%" == "c1 9c 2a d1 c0 b8 c1 35 e3 c9 f3 82 0c d8 87 ba" set threat=Win32-Ransom.ComradeCircle
   if "%filemd5%" == "4f 41 35 fc 5b 67 6c 4d 40 7e a9 0d 89 08 e8 14" set threat=Win32-Ransom.Clown
   if "%filemd5%" == "02 d9 97 a8 98 31 b6 54 7a 28 4b aa 75 75 25 f2" set threat=Win32-Ransom.Cry9
   if "%filemd5%" == "10 99 19 9d c2 27 a8 a2 14 ff 9f 57 6c fd ec 1e" set threat=Win32-Ransom.CryForMe
@@ -792,6 +794,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b5 94 41 2c 00 33 1c 12 d1 5d 9e 18 c0 2a 77 8a" set threat=Win32-Ransom.LostFiles.A
   if "%filemd5%" == "a5 ed 29 35 a9 f8 5c 27 9f ce 7d de 74 25 24 34" set threat=Win32-Ransom.LostFiles.B
   if "%filemd5%" == "bf 21 af 86 7a 4a 41 79 5b cb ad c6 b4 18 5f 8b" set threat=Win32-Ransom.LTML
+  if "%filemd5%" == "62 2b 76 9c 58 66 36 5c c3 cc 08 aa db fa 03 df" set threat=Win32-Ransom.Major
   if "%filemd5%" == "9a b7 55 b3 0d 22 f8 fc 26 c9 c8 5e eb 46 c1 c9" set threat=Win32-Ransom.Mancros
   if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
   if "%filemd5%" == "2d 71 a6 ce f2 f5 f7 25 a7 bc f8 6a 4a a7 60 22" set threat=Win32-Ransom.Mole
@@ -1021,6 +1024,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c8 f7 94 fe 1e 95 64 24 df a1 68 67 91 fa ec ba" set threat=Win32-Worm.Lentin
   if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail.A
   if "%filemd5%" == "b6 ab 9c 65 81 7e 91 43 76 82 2e aa b8 e0 3e 36" set threat=Win32-Worm.Mimail.B
+  if "%filemd5%" == "d6 a3 6c 90 17 a9 29 c2 1e 13 97 a5 27 27 9f 34" set threat=Win32-Worm.MTX.A
+  if "%filemd5%" == "db 8b e5 21 c3 3d 7c 88 2a db 27 6c 1b 78 09 40" set threat=Win32-Worm.MTX.B
   if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
