@@ -710,6 +710,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "7a b9 1e 57 a1 e2 75 2c d8 ab ee 3d b1 08 53 c5" set threat=Win32-Ransom.AngryDuck
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
   if "%filemd5%" == "bb ac d7 e5 e7 be 9d e0 18 1e 41 8d e9 c2 6c 5a" set threat=Win32-Ransom.Armage
+  if "%filemd5%" == "24 81 44 f9 24 d4 9b 37 31 2d a1 71 f1 4f 41 31" set threat=Win32-Ransom.AVCrypt
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit.A
   if "%filemd5%" == "2f e3 2d 2a 6b fc 72 d2 15 49 6b 05 5e 5a 53 ad" set threat=Win32-Ransom.BadRabbit.B
@@ -817,6 +818,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b5 94 41 2c 00 33 1c 12 d1 5d 9e 18 c0 2a 77 8a" set threat=Win32-Ransom.LostFiles.A
   if "%filemd5%" == "a5 ed 29 35 a9 f8 5c 27 9f ce 7d de 74 25 24 34" set threat=Win32-Ransom.LostFiles.B
   if "%filemd5%" == "bf 21 af 86 7a 4a 41 79 5b cb ad c6 b4 18 5f 8b" set threat=Win32-Ransom.LTML
+  if "%filemd5%" == "da 23 c8 a7 be 5d 83 ae 3e 6b 7b 32 91 fd b8 80" set threat=Win32-Ransom.Mafia
   if "%filemd5%" == "62 2b 76 9c 58 66 36 5c c3 cc 08 aa db fa 03 df" set threat=Win32-Ransom.Major
   if "%filemd5%" == "9a b7 55 b3 0d 22 f8 fc 26 c9 c8 5e eb 46 c1 c9" set threat=Win32-Ransom.Mancros
   if "%filemd5%" == "75 0c 2c c9 1b 6c e6 97 aa 6a 5f c8 61 08 40 1f" set threat=Win32-Ransom.MindSystem
@@ -1045,9 +1047,11 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e8 4f a2 88 8b 01 e3 98 cc 13 90 36 fe 5b 92 21" set threat=Win32-Worm.Agent.B
   if "%filemd5%" == "39 c8 5a 0d 84 7a a2 1c 7d ed d6 9d ca 7a e9 bc" set threat=Win32-Worm.Badtrans
   if "%filemd5%" == "49 2c b4 7d 84 43 68 06 38 28 cd 74 c5 18 5a 1f" set threat=Win32-Worm.Calposa
+  if "%filemd5%" == "ae 51 f8 6d 67 41 6f e3 1b 8b 78 1e c6 67 6c 98" set threat=Win32-Worm.Codegreen
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
   if "%filemd5%" == "0b ba 28 8e 55 ed 34 b5 eb c7 6f 86 5a 53 2c bf" set threat=Win32-Worm.CodeRed.B
   if "%filemd5%" == "fd cd a5 5b 16 42 6a 6f ed 53 d9 19 e3 1b 3d 23" set threat=Win32-Worm.Dumaru
+  if "%filemd5%" == "2c 36 69 9a bc 71 f6 d2 0c 1c 5f 77 83 9a 23 4a" set threat=Win32-Worm.Duqu
   if "%filemd5%" == "d2 a5 f4 b7 69 de 0f 89 d5 91 fd 05 05 b6 e5 84" set threat=Win32-Worm.Fix2001
   if "%filemd5%" == "a8 9c 0e d6 ef 75 17 9a db 6f 52 24 01 02 b9 b2" set threat=Win32-Worm.Fizzer
   if "%filemd5%" == "a1 3a 4d b8 60 d7 43 a0 88 ef 7a b9 ba cb 4d da" set threat=Win32-Worm.Funsoul
@@ -1062,6 +1066,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "db 8b e5 21 c3 3d 7c 88 2a db 27 6c 1b 78 09 40" set threat=Win32-Worm.MTX.B
   if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
+  if "%filemd5%" == "d2 92 f1 40 08 64 81 fc 51 d2 a6 04 50 f9 0d 1b" set threat=Win32-Worm.Oror
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
   if "%filemd5%" == "ba 6b d0 ba 81 12 a7 5e b7 0e b3 01 71 7a a9 bc" set threat=Win32-Worm.Totilix
   if "%filemd5%" == "e7 9d 0b 1a 34 27 12 ea 9b 96 10 40 86 14 9d 65" set threat=Win32-Worm.Winevar
