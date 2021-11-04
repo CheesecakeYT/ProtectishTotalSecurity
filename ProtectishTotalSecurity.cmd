@@ -758,6 +758,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d3 2e 4d 8b 42 38 cf cc 79 3e c3 b3 7c c9 a8 75" set threat=Win32-Ransom.Dharma
   if "%filemd5%" == "2f fc d2 d6 2a 57 32 93 c8 67 9b fd 60 66 77 b5" set threat=Win32-Ransom.DiscordNitro
   if "%filemd5%" == "8f 03 15 e9 0a 70 73 f1 5f 1d 56 3e 9b 16 44 80" set threat=Win32-Ransom.Dogge
+  if "%filemd5%" == "76 16 57 30 83 eb 07 45 d8 50 f9 9b da 0c fa 5c" set threat=Win32-Ransom.Domino.A
+  if "%filemd5%" == "78 96 94 07 38 9f d3 75 9f 54 00 fa f3 be 7f f3" set threat=Win32-Ransom.Domino.B
   if "%filemd5%" == "13 c1 c6 8c 14 10 df 27 7f c3 7d 68 55 7b b4 3b" set threat=Win32-Ransom.DriedSister
   if "%filemd5%" == "14 41 b0 70 4b 07 d6 e8 f7 98 f6 68 4f af 0f 79" set threat=Win32-Ransom.EDA2
   if "%filemd5%" == "99 c2 8c cc 3a d7 1f 20 9a ea b1 65 26 5d 78 63" set threat=Win32-Ransom.EdgeLocker
@@ -1043,6 +1045,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "a8 51 a9 68 f7 17 ed 30 a9 da ea 4d 88 fd d8 df" set threat=Win32-Virut.A
   if "%filemd5%" == "84 b9 6a 3d 44 c0 8a 22 1d 13 93 1c e8 e3 fd 4e" set threat=Win32-Virut.B
   if "%filemd5%" == "ec 2b 6e cf c8 ca 67 f9 35 7b 65 50 16 6a 08 38" set threat=Win32-Virut.C
+  if "%filemd5%" == "49 26 80 07 ac 21 21 aa e8 1f 72 91 03 ec 8f 81" set threat=Win32-Virut.D
   if "%filemd5%" == "53 29 50 cd 94 48 93 c7 36 71 9f de 46 3a 10 31" set threat=Win32-Vtflooder
   if "%filemd5%" == "25 27 29 b2 30 4c dc 2e 91 24 8c ea 56 72 41 eb" set threat=Win32-Wallpaper
   if "%filemd5%" == "c8 2b 6d 5a 84 96 06 4a bb 5e 66 a2 6a a6 71 7b" set threat=Win32-Winfig
