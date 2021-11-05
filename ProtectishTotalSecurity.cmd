@@ -77,20 +77,32 @@ if %errorlevel% equ 1 goto start
   echo staff and pay 10 CZK to acquire a life-time license key to Protectish 
   echo Total Security.
   echo.
-  set /p check_key="If you do, insert it here: "
+  echo You can also type "trial" to activate a 7-day free trial of Protectish
+  echo Total Security, containing all of its functions, if you haven't already.
+  echo This message will appear again in 7 days if you do so.
+  echo.
+  set /p check_key="If you do have a license key, insert it here: "
   if "%check_key%" == "SetAdminModeOn" (
     echo Admin mode activated.
     pause
     goto start
   )
   if /i "%check_key%" == "trial" (
-    FOR /F “TOKENS=1* DELIMS= ” %%A IN (‘DATE/T’) DO SET CDATE=%%B
-    FOR /F “TOKENS=1,2 eol=/ DELIMS=/ ” %%A IN (‘DATE/T’) DO SET mm=%%B
-    FOR /F “TOKENS=1,2 DELIMS=/ eol=/” %%A IN (‘echo %CDATE%’) DO SET dd=%%B
-    FOR /F “TOKENS=2,3 DELIMS=/ ” %%A IN (‘echo %CDATE%’) DO SET yyyy=%%B
-    echo.%dd%.%mm%.%yyyy%
+    rem for /F "tokens=2" %%i in ('date /t') do set mydate=%%i
+    rem echo %mydate%
+    
+    set day=%date:~4,5%
+    set month=%date:~7,8%
+    set year=%date:~10,13%
+    echo.%day%
+    echo.%month%
+    echo.%year%
+    
+    pause
+    echo.%DATE%
     pause
     exit
+
   )
   aaaa > check_license_key.txt
   echo %check_key% > check_license_key.txt
@@ -112,6 +124,10 @@ if %errorlevel% equ 1 goto start
   echo If you don't have a license key, close this window, contact Protectish 
   echo staff and pay 10 CZK to acquire a life-time license key to Protectish 
   echo Total Security.
+  echo.
+  echo You can also type "trial" to activate a 7-day free trial of Protectish
+  echo Total Security, containing all of its functions, if you haven't already.
+  echo This message will appear again in 7 days if you do so.
   echo.
   if "%check_key%" == "ca 2f a9 74 9b 7c 75 3d c0 cb a9 30 05 2d 13 da" (
     aaaa > pts_lkused1.txt
@@ -591,6 +607,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "9d 7f 91 6d f5 05 16 ac 67 05 eb 0c 00 78 38 20" set threat=VBS-Melissa.D
   if "%filemd5%" == "3a d9 58 ad d8 a0 7e a3 a0 77 ec 97 68 6c 67 d6" set threat=VBS-Trojan.Gansom
   if "%filemd5%" == "db 6d 18 71 03 bf 80 f7 3c 22 0e ea c3 bc b8 04" set threat=VBS-Worm.Bumerang
+  if "%filemd5%" == "d5 de ce 3f 46 a6 b0 5b 6b d8 98 78 da be fb 63" set threat=Win32-Adware.Adstantinko
   if "%filemd5%" == "65 25 9c 11 e1 ff 8d 04 0f 9e c5 85 24 a4 7f 02" set threat=Win32-Adware.Bonzi.A
   if "%filemd5%" == "06 d8 7d 4c 89 c7 6c b1 bc b2 f5 a5 fc 40 97 d1" set threat=Win32-Adware.Bonzi.B
   if "%filemd5%" == "9f 8c 96 41 5f bf d3 d1 84 83 d1 df ad 62 26 38" set threat=Win32-Adware.BrowserAssistant.A
@@ -1070,6 +1087,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b6 ab 9c 65 81 7e 91 43 76 82 2e aa b8 e0 3e 36" set threat=Win32-Worm.Mimail.B
   if "%filemd5%" == "d6 a3 6c 90 17 a9 29 c2 1e 13 97 a5 27 27 9f 34" set threat=Win32-Worm.MTX.A
   if "%filemd5%" == "db 8b e5 21 c3 3d 7c 88 2a db 27 6c 1b 78 09 40" set threat=Win32-Worm.MTX.B
+  if "%filemd5%" == "7c a3 9f 54 a3 f7 1a 38 31 e6 0f 5a 38 3f 6a 49" set threat=Win32-Worm.Myparty.A
+  if "%filemd5%" == "28 33 dd 60 6c ce 95 cc 8f cf b4 45 11 01 87 58" set threat=Win32-Worm.Myparty.B
+  if "%filemd5%" == "79 06 fc aa 6a 8c 84 49 f7 66 dd 46 c6 60 61 5d" set threat=Win32-Worm.Myparty.C
   if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "d2 92 f1 40 08 64 81 fc 51 d2 a6 04 50 f9 0d 1b" set threat=Win32-Worm.Oror
