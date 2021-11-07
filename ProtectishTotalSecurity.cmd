@@ -624,6 +624,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "07 16 8b d3 7f 9c 1c 19 c9 61 65 b9 eb d5 c6 9c" set threat=Win32-Adware.DownloadHelper
   if "%filemd5%" == "79 e1 67 48 cc 1c 72 58 25 d5 c5 99 1a 82 fd 89" set threat=Win32-Adware.Machaer
   if "%filemd5%" == "b1 da c6 3a f1 39 bc f3 08 c9 1b e5 b9 dd 7b 0f" set threat=Win32-Adware.Mobogenie
+  if "%filemd5%" == "86 b0 fa bb a4 6a 22 7a 96 fc 84 4c b1 02 70 d5" set threat=Win32-Adware.MyWebSearch.A
+  if "%filemd5%" == "d0 7f 6d c1 22 fb 0e ca 6f b2 00 c9 9b 02 ad 1b" set threat=Win32-Adware.MyWebSearch.B
+  if "%filemd5%" == "dc 87 a7 8a bc 76 5a 6d b5 0d 2c ec 91 7c b2 24" set threat=Win32-Adware.MyWebSearch.C
   if "%filemd5%" == "0e be b3 ed a3 e2 aa f5 02 4a a6 7b 7f 49 4c f1" set threat=Win32-Adware.OpenCandy.A
   if "%filemd5%" == "14 64 da b8 53 df ac 75 09 7e 6f 81 fa 06 0c 9a" set threat=Win32-Adware.OpenCandy.B
   if "%filemd5%" == "d7 7a 5b f2 0c ca 45 5c 0c f9 13 2c 65 33 d6 43" set threat=Win32-Adware.PriceGong
@@ -716,6 +719,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "11 79 08 a0 e6 3d a0 e9 ce 13 a3 8e b1 2f b4 0f" set threat=Win32-Neshta.D
   if "%filemd5%" == "f0 86 4b 70 31 04 57 87 2e 55 8f c5 d8 96 7f 01" set threat=Win32-Neshta.E
   if "%filemd5%" == "85 52 e2 f0 bb cd 7a ba 9d 0d f3 3a b8 65 93 f3" set threat=Win32-Neshta.F
+  if "%filemd5%" == "44 6c 1e 5f 0b 5e 9d a0 df 06 b6 a3 49 53 9d 38" set threat=Win32-Neshta.G
+  if "%filemd5%" == "5f 45 97 5d 56 43 3a c8 34 b6 53 45 49 12 7e 0d" set threat=Win32-Neshta.H
+  if "%filemd5%" == "d5 e6 ad d0 3e ba 06 4b 4f b9 0e a5 82 72 de 32" set threat=Win32-Neshta.I
   if "%filemd5%" == "64 2a 39 3a 5c 65 d2 02 18 0d f5 af 06 f2 9c 5a" set threat=Win32-Nimda.A
   if "%filemd5%" == "08 3d 59 7f 4b 8d e7 c2 a7 88 8d f0 e5 e3 9a 8a" set threat=Win32-Nimda.B
   if "%filemd5%" == "aa 9e ca 49 c7 22 ec 1b ab bc 21 55 f1 a9 10 39" set threat=Win32-Nimda.C
@@ -816,6 +822,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "3a 99 3d 38 ca 54 5c 2b 45 bb b4 9d fb 3d c2 46" set threat=Win32-Ransom.Foxxy
   if "%filemd5%" == "fa fa 32 c5 26 86 14 82 da 1b 49 49 32 69 f8 75" set threat=Win32-Ransom.FSociety
   if "%filemd5%" == "d3 87 09 92 ca 34 b0 dc 5c 3b cf c2 a1 9e 39 85" set threat=Win32-Ransom.GandCrab
+  if "%filemd5%" == "82 40 1e ba de c1 06 50 cf 02 4b 0e a4 8e a6 94" set threat=Win32-Ransom.Good
   if "%filemd5%" == "5a 22 ab 88 6f 3f a7 c0 58 7c 4b 3d 7a e7 71 fb" set threat=Win32-Ransom.GoRansomPOC
   if "%filemd5%" == "bf 58 71 48 38 ed fc c1 35 a6 48 18 d3 66 75 47" set threat=Win32-Ransom.GPAA
   if "%filemd5%" == "92 b2 c0 3f 09 a0 7b 6c 12 23 3c 4c 21 32 c7 10" set threat=Win32-Ransom.GPCode
@@ -924,6 +931,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "63 d4 e4 da c5 7b d7 d2 05 95 87 eb a4 16 26 52" set threat=Win32-Ransom.SureRansom.A
   if "%filemd5%" == "8e 5f f6 0b f6 66 5c 57 93 8a b5 66 46 72 6e 1c" set threat=Win32-Ransom.Thanos.A
   if "%filemd5%" == "b0 c6 15 c0 a4 f4 85 b2 03 0d 6e 1a b9 83 75 f0" set threat=Win32-Ransom.Thanos.B
+  if "%filemd5%" == "79 db a7 d5 7c 7e 9b aa 79 7e e2 b1 b0 81 68 ad" set threat=Win32-Ransom.TripleM
   if "%filemd5%" == "6c aa f5 00 c2 48 de 17 b1 90 72 93 70 00 7d da" set threat=Win32-Ransom.Tyrant
   if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
   if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
@@ -1003,6 +1011,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
   if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet.A
   if "%filemd5%" == "70 b5 a2 41 74 c9 2e 90 33 a6 11 c4 6d 03 de a8" set threat=Win32-Supern0va
+  if "%filemd5%" == "5a a0 cd a7 43 e5 fb d1 d0 31 5b 68 6e 5e 60 24" set threat=Win32-Trojan.AdShield.A
+  if "%filemd5%" == "81 bc 96 5e 07 a0 d6 c9 e3 eb 01 24 cd f9 7a a2" set threat=Win32-Trojan.AdShield.B
+  if "%filemd5%" == "ac 9e 74 ef 5c ca b1 d5 c2 bd d9 c7 4b b7 98 cc" set threat=Win32-Trojan.AdShield.C
   if "%filemd5%" == "06 8e 06 ae 07 fd 6f 5d e1 b7 fa a4 61 fd f3 f7" set threat=Win32-Trojan.Agent.A
   if "%filemd5%" == "9d 0d e6 7a 5c 84 1f fc 67 ef a7 a1 72 3f 41 dd" set threat=Win32-Trojan.Agent.B
   if "%filemd5%" == "7f ae ac 65 e9 cb 2f df 40 d1 70 bb 50 8e fd 83" set threat=Win32-Trojan.Agent.C
@@ -1067,6 +1078,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "83 c5 20 4b ac b4 9b 83 af ec ea 31 be af 1f 63" set threat=Win32-Trojan.MrsMajor.B
   if "%filemd5%" == "45 0f 49 42 6b 45 19 ec aa c8 cd 04 81 4c 03 a4" set threat=Win32-Trojan.MrsMajor.C
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
+  if "%filemd5%" == "9e 98 9e f2 a8 d4 bc 5b a1 42 11 43 aa d5 9a 47" set threat=Win32-Trojan.NetShield
+  if "%filemd5%" == "21 56 f6 e4 df 94 16 00 fe 3f 44 d0 71 09 35 4e" set threat=Win32-Trojan.OpenDNS
   if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
   if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
   if "%filemd5%" == "77 ad 29 1b 0b 88 a7 31 4c 1d d8 11 d6 69 e0 77" set threat=Win32-Trojan.RandomMusic
@@ -1109,6 +1122,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d7 4c f2 ca 99 82 e4 77 d2 2c f3 2f e5 da 49 dc" set threat=Win32-Worm.Alcaul
   if "%filemd5%" == "97 4a dd e7 ad 94 76 3c 18 fe 24 8f a4 83 9f 1e" set threat=Win32-Worm.Allaple
   if "%filemd5%" == "39 c8 5a 0d 84 7a a2 1c 7d ed d6 9d ca 7a e9 bc" set threat=Win32-Worm.Badtrans
+  if "%filemd5%" == "70 f5 49 ae 7f af c4 25 a4 c5 44 72 93 f0 4f db" set threat=Win32-Worm.Bugsoft.A
+  if "%filemd5%" == "a7 25 af 7c 07 b5 25 49 02 3b e7 33 28 e5 58 09" set threat=Win32-Worm.Bugsoft.B
+  if "%filemd5%" == "2b f4 8d 55 d1 70 79 dd 33 de 99 83 81 53 ed a9" set threat=Win32-Worm.Bugsoft.C
+  if "%filemd5%" == "1b 9f 35 3d cb 52 81 3c 85 43 65 79 d5 9a 9e f8" set threat=Win32-Worm.Bugsoft.D
   if "%filemd5%" == "49 2c b4 7d 84 43 68 06 38 28 cd 74 c5 18 5a 1f" set threat=Win32-Worm.Calposa
   if "%filemd5%" == "ae 51 f8 6d 67 41 6f e3 1b 8b 78 1e c6 67 6c 98" set threat=Win32-Worm.Codegreen
   if "%filemd5%" == "6f 57 67 ec 5a 9c c6 f7 d1 95 dd e3 c3 93 91 20" set threat=Win32-Worm.CodeRed.A
@@ -1412,6 +1429,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
   find /i /c "-------- Snake Keylogger --------" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
+  find /i /c "adshield.pro" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Trojan.AdShield
   find /i /c "WOODTALE TECHNOLOGY INC" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Trojan.Generic
   find /i /c "Flyingbird Technology Limited" %file% > NUL
