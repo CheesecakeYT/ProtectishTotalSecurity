@@ -668,6 +668,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "2e 8d a5 a5 58 65 a0 91 86 4a 43 38 ef 4d 2e 44" set threat=Win32-Conficker.A
   if "%filemd5%" == "57 4c f0 06 29 11 c8 c4 ec a2 15 61 87 b8 20 7d" set threat=Win32-Conficker.B
   if "%filemd5%" == "55 b1 d7 5a bc 52 55 21 ae 50 fd b4 b3 29 c2 a7" set threat=Win32-Conficker.C
+  if "%filemd5%" == "a7 79 70 08 8c 74 75 1c 25 a5 6e 33 81 80 b2 92" set threat=Win32-Colors.A
+  if "%filemd5%" == "24 e2 14 09 ef 6b 38 2d 72 51 0c 3a 1e e2 f3 04" set threat=Win32-Colors.B
   if "%filemd5%" == "3a fe b8 e9 af 02 a3 3f f7 1b f2 f6 75 1c ae 3a" set threat=Win32-CPUMiner
   if "%filemd5%" == "3a f2 98 63 3c c2 f3 c3 f3 5a f9 6e 93 0c 98 44" set threat=Win32-Dabber
   if "%filemd5%" == "de 8b 54 a9 38 ac 18 f1 5c ad 80 4d 79 a0 e1 9d" set threat=Win32-Danabot
@@ -706,6 +708,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "29 fa 8a 13 f3 b0 eb c8 fb 40 de 2f c6 86 cc 17" set threat=Win32-MyDoom.H
   if "%filemd5%" == "ee c0 03 d5 97 e1 0e 93 ee 10 da 2d 9e a4 eb 49" set threat=Win32-MyDoom.I
   if "%filemd5%" == "b0 fe 74 71 9b 1b 64 7e 20 56 64 19 31 90 7f 4a" set threat=Win32-MyDoom.J
+  if "%filemd5%" == "c9 08 bb d9 26 25 5c 4e 47 bd cb 14 dd b4 e5 7e" set threat=Win32-MyDoom.K
   if "%filemd5%" == "fb 15 69 b5 a3 26 64 44 d6 76 e5 f8 2d 6b ac 85" set threat=Win32-MyDoom.Doomjuice.A
   if "%filemd5%" == "6f 51 0e 97 91 43 a5 63 71 a4 f8 02 c8 ff d2 0d" set threat=Win32-MyDoom.Doomjuice.B
   if "%filemd5%" == "b7 84 72 31 7b ae 5e 4f 97 9f f4 78 0e 3c 44 eb" set threat=Win32-MyDoom.Doomjuice.C
@@ -746,7 +749,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c5 c9 99 88 72 8c 55 02 82 ae 76 27 0b 64 9e a1" set threat=Win32-Ramnit.D
   if "%filemd5%" == "1c 12 64 41 d4 63 5b af 74 e6 fd 62 8b aa 67 14" set threat=Win32-Ransom.1337Locker
   if "%filemd5%" == "d4 45 2a df c4 1a 70 75 f5 e5 79 61 72 77 58 98" set threat=Win32-Ransom.AdamLocker
-  if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent
+  if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent.A
+  if "%filemd5%" == "af 4f d8 23 5d 26 56 40 1c 5a 95 2d ef 4f 99 0c" set threat=Win32-Ransom.Agent.B
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
   if "%filemd5%" == "98 c0 c4 e5 8a 97 cf 92 f9 c6 99 2e e6 5e 3f 0f" set threat=Win32-Ransom.Amnesia
   if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
@@ -754,6 +758,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
   if "%filemd5%" == "bb ac d7 e5 e7 be 9d e0 18 1e 41 8d e9 c2 6c 5a" set threat=Win32-Ransom.Armage
   if "%filemd5%" == "24 81 44 f9 24 d4 9b 37 31 2d a1 71 f1 4f 41 31" set threat=Win32-Ransom.AVCrypt
+  if "%filemd5%" == "4f 3f 27 3a 71 70 e6 2f 7d 31 17 9c 4a ed 7a ab" set threat=Win32-Ransom.AWT.A
+  if "%filemd5%" == "3f aa fd 23 f8 d4 b8 6d fb 35 29 d0 a1 5c 88 d5" set threat=Win32-Ransom.AWT.B
   if "%filemd5%" == "85 6b 19 af f2 37 ac e0 dd a3 ec fc 71 c0 97 67" set threat=Win32-Ransom.BadBlock
   if "%filemd5%" == "f1 94 25 31 86 f9 43 fc 2a e3 fc 7c 54 70 7c 00" set threat=Win32-Ransom.BadRabbit.A
   if "%filemd5%" == "2f e3 2d 2a 6b fc 72 d2 15 49 6b 05 5e 5a 53 ad" set threat=Win32-Ransom.BadRabbit.B
@@ -829,6 +835,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "92 b2 c0 3f 09 a0 7b 6c 12 23 3c 4c 21 32 c7 10" set threat=Win32-Ransom.GPCode
   if "%filemd5%" == "f9 da 7d cf 28 c9 e0 6e f9 b2 d3 94 67 c8 2f 70" set threat=Win32-Ransom.GX40
   if "%filemd5%" == "ea 7c 80 1a 66 b7 73 0c 67 7a f5 cb 5d f2 05 4b" set threat=Win32-Ransom.HappyNewYear
+  if "%filemd5%" == "6e 1e 70 fa 33 4c eb c3 7a 3a 88 48 59 cf 2d d0" set threat=Win32-Ransom.Help50
   if "%filemd5%" == "88 f9 46 0b 8e d5 e6 30 0e ef d0 3e 40 79 0b ef" set threat=Win32-Ransom.Hese
   if "%filemd5%" == "43 13 fd 0a 3d 2c be dd 45 70 23 09 31 83 3f e1" set threat=Win32-Ransom.HolyCrypt
   if "%filemd5%" == "3e 7b d2 12 6a d2 d0 56 b1 2a 90 6e c7 4f 4e 75" set threat=Win32-Ransom.Ims00ry
