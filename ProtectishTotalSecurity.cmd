@@ -841,6 +841,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "3e 7b d2 12 6a d2 d0 56 b1 2a 90 6e c7 4f 4e 75" set threat=Win32-Ransom.Ims00ry
   if "%filemd5%" == "f9 a2 f3 e4 32 e3 53 88 4e e7 7e a6 d7 ef 3f f4" set threat=Win32-Ransom.InfoDot
   if "%filemd5%" == "2d c2 18 b4 3c b1 3d e2 78 f4 f0 68 c5 03 a6 e3" set threat=Win32-Ransom.Jamper
+  if "%filemd5%" == "f7 ad ed 1f e8 38 c4 57 5a 9c 79 ed d4 c1 7c 6d" set threat=Win32-Ransom.Janelle
   if "%filemd5%" == "70 39 c0 de 73 72 92 11 9e ee a1 44 12 f7 8b cc" set threat=Win32-Ransom.JCrypt.A
   if "%filemd5%" == "24 1c 8c 8c 80 9f e6 70 f1 f6 ef 0f 7c 93 58 15" set threat=Win32-Ransom.JCrypt.B
   if "%filemd5%" == "58 4a ca a6 04 ae 63 3f 16 6b 77 bd 6a 25 88 8d" set threat=Win32-Ransom.JCrypt.C
@@ -1061,6 +1062,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "81 53 45 85 cf 4e 9d 9d 7a 08 9b 3f 42 27 43 86" set threat=Win32-Trojan.Agent.AJ
   if "%filemd5%" == "03 65 6d 45 70 5a d0 50 a9 32 40 58 5b f3 24 98" set threat=Win32-Trojan.Agent.AK
   if "%filemd5%" == "98 99 df 18 a9 ba 76 d4 0f e9 65 de 82 9d 0c 06" set threat=Win32-Trojan.Agent.AL
+  if "%filemd5%" == "26 38 15 99 c3 0d e2 8f b0 5b bf 19 cc 89 d8 c3" set threat=Win32-Trojan.Agent.AM
+  if "%filemd5%" == "a9 d2 a4 02 69 51 58 fc c2 ec 3a 97 5e 86 03 12" set threat=Win32-Trojan.Agent.AN
+  if "%filemd5%" == "7a af de 59 d7 ff ce 82 a2 91 32 3c cf 65 1f a7" set threat=Win32-Trojan.Agent.AO
+  if "%filemd5%" == "52 eb 48 c0 d3 99 fd 85 0e 4b 66 ae 72 d2 42 c0" set threat=Win32-Trojan.Agent.AP
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1074,6 +1079,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d5 40 ca 29 e9 ea 33 f1 31 e4 ce 46 74 d1 08 5f" set threat=Win32-Trojan.Denes.A
   if "%filemd5%" == "6e db fc c6 44 5a f5 82 63 0f a2 4d a5 f9 03 35" set threat=Win32-Trojan.Denes.B
   if "%filemd5%" == "2f 8f 6e 90 ca 21 1d 7e f5 f6 cf 3c 99 5a 40 e7" set threat=Win32-Trojan.DesktopPuzzle
+  if "%filemd5%" == "51 8e 19 33 ec e4 d9 57 eb e0 50 64 57 50 bf 40" set threat=Win32-Trojan.Dridex.A
+  if "%filemd5%" == "97 30 d0 9c 41 f2 5f 63 f4 50 8d ee 90 a7 4c 61" set threat=Win32-Trojan.Dridex.B
   if "%filemd5%" == "f5 97 17 fb 8f 2a 9a d3 e5 f7 16 40 94 0f 1c 08" set threat=Win32-Trojan.Emotet.A
   if "%filemd5%" == "d3 ff 42 73 09 6c 13 af a8 8c 71 31 c4 14 f9 3b" set threat=Win32-Trojan.Emotet.B
   if "%filemd5%" == "8d 7e a5 5f f7 f8 74 c0 98 b2 3c a2 ad f4 0b 71" set threat=Win32-Trojan.Emotet.C
@@ -1396,6 +1403,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "hidden tear" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "janelle2021@protonmail.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Janelle
   find /i /c "It starts out slowly then increases rapidly." %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Jigsaw
   find /i /c "Now, let's start and enjoy our little game together!" %file% > NUL
