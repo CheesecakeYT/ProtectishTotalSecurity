@@ -934,6 +934,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "5a 9a e5 f5 1c 41 f2 de 4f 3e ca 94 dd b4 cc fd" set threat=Win32-Ransom.Snatch.A
   if "%filemd5%" == "ed 52 77 5f d3 3e 70 ad 76 58 ec 35 c8 2d 29 92" set threat=Win32-Ransom.Snatch.B
   if "%filemd5%" == "b7 da 21 0b 88 5c 66 36 de 70 c0 12 9d a4 8a 66" set threat=Win32-Ransom.Snatch.C
+  if "%filemd5%" == "1e 4f 2f 69 1d 03 7c a3 f9 82 21 dc 93 17 d1 cc" set threat=Win32-Ransom.SNSLocker
   if "%filemd5%" == "be d6 fc 04 ae b7 85 81 57 44 70 62 39 a1 f2 43" set threat=Win32-Ransom.Sodinokibi.A
   if "%filemd5%" == "56 1c ff ba ba 71 a6 e8 cc 1c dc ed a9 90 ea d4" set threat=Win32-Ransom.Sodinokibi.B
   if "%filemd5%" == "61 c0 03 ba c2 28 85 7c b0 db 62 07 eb 5a 7f 3e" set threat=Win32-Ransom.StalinLocker
@@ -963,6 +964,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.F
   if "%filemd5%" == "bc 80 1d 8d c0 9e a6 6b 39 fd f8 20 d7 76 23 97" set threat=Win32-Ransom.WannaCryptor.G
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
+  if "%filemd5%" == "13 e6 23 cd fb 75 d9 9e a7 e0 4c 61 57 ca 8a e6" set threat=Win32-Ransom.WastedLocker
   if "%filemd5%" == "98 89 2a 91 cb d8 1b cc 99 71 08 49 b5 db c7 d3" set threat=Win32-Ransom.WeAreFriends
   if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
@@ -1214,6 +1216,7 @@ if %errorlevel% equ 1 goto start
   echo.
   echo Path: %file%
   echo.
+  echo (DECRYPT) - if ransomware was detected, finds a way to decrypt encrypted files
   echo (DELETE) - deletes the file
   echo (QUARANTINE) - quarantines the file
   echo (TERMINATE) - forcibly terminates all tasks provided by the threat, then returns to this point
@@ -1222,6 +1225,7 @@ if %errorlevel% equ 1 goto start
   find /i /c "Behavior" pts_autoaction2.txt >NUL
   if %errorlevel% equ 0 (
     set /p choice="Enter your choice: "
+    if /i "%choice%" == "decrypt" goto decrypt
     if /i "%choice%" == "delete" goto delete
     if /i "%choice%" == "ignore" goto ignore
     if /i "%choice%" == "quarantine" goto quarantine
@@ -1274,6 +1278,16 @@ if %errorlevel% equ 1 goto start
   echo Contact Protectish support.
   pause
   exit
+  
+:decrypt
+  echo.
+  %threat% > threat.txt
+  find /i /c "Dharma" threat.txt > NUL
+  if %errorlevel% == 0 start /max https://media.kaspersky.com/utilities/VirusUtilities/EN/RakhniDecryptor.zip
+  del threat.txt
+  echo If nothing happened, Protectish Total Security doesn't know how to decrypt your files.
+  pause
+  goto md5_threat
 
 :delete
   echo.
