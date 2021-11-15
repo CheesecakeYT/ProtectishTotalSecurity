@@ -1039,10 +1039,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ca 22 1b 0f e0 3c 1f 0a 75 6a aa dd 55 e1 cc 43" set threat=Win32-SonicGatherBattle
   if "%filemd5%" == "31 f1 d2 08 ee 74 0e 1f df 96 67 b2 e5 25 f3 d7" set threat=Win32-Spyware.FinSpy.A
   if "%filemd5%" == "49 94 95 20 20 da 28 bb 0a a0 23 d2 36 a6 bf 3b" set threat=Win32-Spyware.FinSpy.B
+  if "%filemd5%" == "4c 70 5a 8a 0a 21 e1 32 6f 40 94 7b 62 17 1e 85" set threat=Win32-Spyware.Hakey.A
+  if "%filemd5%" == "16 43 4c 8d 22 51 c3 bc 02 3f 50 a4 80 18 4a 0d" set threat=Win32-Spyware.Hakey.B
   if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spyware.Zbot.A
   if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spyware.Zbot.B
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
-  if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet.A
+  if "%filemd5%" == "b4 42 9d 77 58 67 98 06 4b 56 b0 09 9f 0c cd 49" set threat=Win32-Stuxnet
   if "%filemd5%" == "70 b5 a2 41 74 c9 2e 90 33 a6 11 c4 6d 03 de a8" set threat=Win32-Supern0va
   if "%filemd5%" == "5a a0 cd a7 43 e5 fb d1 d0 31 5b 68 6e 5e 60 24" set threat=Win32-Trojan.AdShield.A
   if "%filemd5%" == "81 bc 96 5e 07 a0 d6 c9 e3 eb 01 24 cd f9 7a a2" set threat=Win32-Trojan.AdShield.B
