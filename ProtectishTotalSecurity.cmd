@@ -993,7 +993,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "38 51 45 99 93 a1 b8 13 77 5a 7d c9 ba a2 ff 6c" set threat=Win32-Ransom.YamiCat
   if "%filemd5%" == "d0 e8 7f d3 56 97 9a ff 2a 42 09 57 ec 07 0d 54" set threat=Win32-Ransom.Zeoticus.A
   if "%filemd5%" == "b1 90 29 68 92 d3 44 14 1a ec c5 38 f6 e4 40 01" set threat=Win32-Ransom.Zeoticus.B
-  if "%filemd5%" == "f8 18 93 8b 98 72 36 cd d4 11 95 79 6b 4c 1f b5" set threat=Win32-Ransom.Zeppelin
+  if "%filemd5%" == "f8 18 93 8b 98 72 36 cd d4 11 95 79 6b 4c 1f b5" set threat=Win32-Ransom.Zeppelin.A
+  if "%filemd5%" == "dc ef 20 8f cd ac 33 45 c6 89 9a 47 8d 16 98 0f" set threat=Win32-Ransom.Zeppelin.B
+  if "%filemd5%" == "ef 57 2e 2c 7b 1b bd 57 65 4b 36 e8 dc fd c3 7a" set threat=Win32-Ransom.Zeppelin.C
   if "%filemd5%" == "6b e6 53 cd 2f 91 72 54 37 36 e3 f5 3a ef cd 54" set threat=Win32-Ransom.Ziggy
   if "%filemd5%" == "48 0c 56 47 da fb 9e b2 26 f7 40 25 b7 83 17 70" set threat=Win32-RAT.Adwind
   if "%filemd5%" == "db a6 df b2 73 3a a1 c9 2e 7e e7 62 ea 66 66 65" set threat=Win32-RAT.Agent
@@ -1493,6 +1495,20 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "www.tempinfo.96.lt" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "bcdedit /set {default} bootstatuspolicy ignoreallfailures" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "bcdedit /set {default} recoveryenabled no" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "wbadmin delete catalog" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "wbadmin delete systemstatebackup" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "wbadmin delete backup" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "wmic shadowcopy delete" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
+  find /i /c "vssadmin delete shadows" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Generic
   find /i /c "janelle2021@protonmail.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Janelle
   find /i /c "It starts out slowly then increases rapidly." %file% > NUL
@@ -1529,6 +1545,8 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.VHD
   find /i /c "araujosantos@protonmail.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "PE hP(" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.Zeppelin
   find /i /c "Injecting into process" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-RAT.Generic
   find /i /c "Opening process..." %file% > NUL
