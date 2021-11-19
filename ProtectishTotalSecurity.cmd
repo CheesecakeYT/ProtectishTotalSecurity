@@ -1299,6 +1299,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "cd 3c 9f 54 8d dc b2 98 95 fb 50 33 aa 0e aa ff" set threat=Win32-Worm.Mytob.A
   if "%filemd5%" == "60 ec da 54 ce f0 a5 a6 ef d7 99 aa 35 63 94 f5" set threat=Win32-Worm.Mytob.A
   if "%filemd5%" == "da 9d ba 70 de 70 dc 43 d6 53 5f 29 75 ce c6 8d" set threat=Win32-Worm.Naked
+  if "%filemd5%" == "1c 66 90 4e cb 84 6d a5 b1 fb 20 72 f9 ea 6e 0e" set threat=Win32-Worm.Nyxem
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "d2 92 f1 40 08 64 81 fc 51 d2 a6 04 50 f9 0d 1b" set threat=Win32-Worm.Oror
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
