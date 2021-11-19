@@ -826,6 +826,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "97 96 92 cd 7f c6 38 be ea 6e 9d 68 c7 52 f3 60" set threat=Win32-Ransom.Darkside
   if "%filemd5%" == "85 b9 39 4c ca 22 14 8e 3f c1 1d 2f 12 b4 8f 69" set threat=Win32-Ransom.Deadly
   if "%filemd5%" == "5d cc 44 9d 51 c8 64 ee b6 57 c5 46 79 eb 9d 20" set threat=Win32-Ransom.Defender
+  if "%filemd5%" == "d1 3f 89 00 34 a6 8c cb 4a f4 e0 bf 51 e2 b5 ec" set threat=Win32-Ransom.Defray
   if "%filemd5%" == "fc 3d 3e 54 3a ef 4b 09 79 9c f7 8d 12 04 50 06" set threat=Win32-Ransom.Delphimorix
   if "%filemd5%" == "0a 7b 70 ef ba 0a a9 3d 4b c0 85 7b 87 ac 2f cb" set threat=Win32-Ransom.DeriaLock
   if "%filemd5%" == "7e 17 9d 06 4b 2d 20 b4 ea 5e 6d 49 2a bf 8f 2b" set threat=Win32-Ransom.DexLocker
@@ -847,6 +848,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "64 9d e3 98 d8 d5 ad 64 d0 6c dc 98 2f 0e f2 5e" set threat=Win32-Ransom.Ekans.D
   if "%filemd5%" == "00 d1 e1 f6 af 06 d6 6c 81 73 b7 bf ea 7b b0 b5" set threat=Win32-Ransom.Exotic
   if "%filemd5%" == "a7 4b 25 0b 40 28 d5 39 7c c0 9f 62 7b b5 89 ab" set threat=Win32-Ransom.Explorer
+  if "%filemd5%" == "a1 c5 80 2e 32 04 4c cd 39 f4 d7 b6 bd 68 6a 2a" set threat=Win32-Ransom.Extractor
   if "%filemd5%" == "ee 95 7c ff d7 8f db 40 6c 8c 87 da 0d 33 b1 6a" set threat=Win32-Ransom.Facebook
   if "%filemd5%" == "24 f3 2d a2 58 b8 c4 2c 71 ab fb 75 77 fb 35 a8" set threat=Win32-Ransom.FakeWannaCryptor.A
   if "%filemd5%" == "98 4a ac b6 8d bc 13 c0 e9 cb 3a a4 41 f6 97 44" set threat=Win32-Ransom.FakeWannaCryptor.B
@@ -989,6 +991,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "6c aa f5 00 c2 48 de 17 b1 90 72 93 70 00 7d da" set threat=Win32-Ransom.Tyrant
   if "%filemd5%" == "bb 46 b9 28 c3 2e c9 63 06 42 89 d2 1b d1 6d da" set threat=Win32-Ransom.Unlock92
   if "%filemd5%" == "57 7b e8 c5 b7 3e 59 fb 71 57 0f 63 23 49 e5 fe" set threat=Win32-Ransom.UselessDisk
+  if "%filemd5%" == "c1 ec be ab 43 18 39 ba ed ca 41 69 3c e5 c2 0d" set threat=Win32-Ransom.Vanguard
   if "%filemd5%" == "77 48 7c 27 f5 47 6f 7b cb 09 21 06 f4 84 5b 4f" set threat=Win32-Ransom.VegaLocker
   if "%filemd5%" == "6d 12 54 77 72 b5 7a 6d a2 b2 5d 21 88 45 19 83" set threat=Win32-Ransom.VHD.A
   if "%filemd5%" == "d0 80 6c 9d 8b ce a0 bd 47 d8 0f a0 04 74 4d 7d" set threat=Win32-Ransom.VHD.B
