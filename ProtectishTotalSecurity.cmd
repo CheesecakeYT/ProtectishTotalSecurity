@@ -815,7 +815,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "12 7b 80 31 1e 32 0f ff a2 44 61 f7 35 66 d4 80" set threat=Win32-Ransom.Cryptolocker.B
   if "%filemd5%" == "48 18 2d 1c 42 a3 7c e2 49 25 bc c7 9d 14 7b f2" set threat=Win32-Ransom.CryptoMix
   if "%filemd5%" == "b1 8c 5a f6 96 e8 84 72 41 e4 c1 72 30 db 36 c9" set threat=Win32-Ransom.CryptoSpider
-  if "%filemd5%" == "0c ff ee 26 6a 8f 14 10 31 58 46 5e 2e cd d2 c1" set threat=Win32-Ransom.CryptoWall
+  if "%filemd5%" == "0c ff ee 26 6a 8f 14 10 31 58 46 5e 2e cd d2 c1" set threat=Win32-Ransom.CryptoWall.A
+  if "%filemd5%" == "a6 cc dc 33 3a 50 5d 02 2f 13 49 a9 42 7d 26 a8" set threat=Win32-Ransom.CryptoWall.B
   if "%filemd5%" == "41 d4 ab 0d e7 f5 6c 1d 4b 38 fc 10 c2 55 18 f9" set threat=Win32-Ransom.CryptoWire
   if "%filemd5%" == "0a aa d9 fd 6d 9d e6 a1 89 e8 97 09 e0 52 f0 6b" set threat=Win32-Ransom.CrySiS
   if "%filemd5%" == "cd 4b 86 4a 78 da 9f d6 74 f0 99 ec 17 03 db b9" set threat=Win32-Ransom.Dablio
@@ -1168,6 +1169,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "96 1f 16 8e ac 11 1a 4e 2a 85 c0 86 0d ef 3e ff" set threat=Win32-Trojan.Agent.CC
   if "%filemd5%" == "2b c6 5e 64 dd c2 63 6d 52 47 1f 41 e3 50 a6 4c" set threat=Win32-Trojan.Agent.CD
   if "%filemd5%" == "fc 1c 48 88 dd 61 55 27 24 0d 18 c1 45 ea be d0" set threat=Win32-Trojan.Agent.CE
+  if "%filemd5%" == "4b d1 2f 2e af 0f 8d f6 31 cb c9 2f 66 ea b0 46" set threat=Win32-Trojan.Agent.CF
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1302,6 +1304,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "1c 66 90 4e cb 84 6d a5 b1 fb 20 72 f9 ea 6e 0e" set threat=Win32-Worm.Nyxem
   if "%filemd5%" == "71 c9 81 d4 f5 31 6c 3a d1 de ef e4 8f dd b9 4a" set threat=Win32-Worm.Opaserv
   if "%filemd5%" == "d2 92 f1 40 08 64 81 fc 51 d2 a6 04 50 f9 0d 1b" set threat=Win32-Worm.Oror
+  if "%filemd5%" == "2d 89 84 8d 03 6a 54 8a 61 3a 36 1e 4c 1d 66 b0" set threat=Win32-Worm.Runouce
   if "%filemd5%" == "63 db 72 35 16 db 09 bf 83 79 38 25 4e 8c b1 d3" set threat=Win32-Worm.Silver
   if "%filemd5%" == "7a 3b c4 d1 3b 83 c9 6f 5b f1 3b 17 d8 5d 28 95" set threat=Win32-Worm.Swen.A
   if "%filemd5%" == "b0 9e 26 c2 92 75 9d 65 46 33 d3 c8 ed 00 d1 8d" set threat=Win32-Worm.Swen.B
