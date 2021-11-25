@@ -720,6 +720,10 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "b7 e5 a5 fa ce 2f 5c 64 94 e0 4b 1e db 48 d2 ef" set threat=Win32-MyDoom.M
   if "%filemd5%" == "50 52 a2 4d 8f 3e 90 fc bb 3b c4 42 c0 53 ca d4" set threat=Win32-MyDoom.N
   if "%filemd5%" == "61 5e 48 2d 9f c7 61 97 48 38 bf 6b 66 26 6a 67" set threat=Win32-MyDoom.O
+  if "%filemd5%" == "56 25 07 35 12 10 ad 0a f3 66 21 ad fb 69 a0 32" set threat=Win32-MyDoom.P
+  if "%filemd5%" == "9c 87 6d e6 17 41 80 7a 07 7f 84 2a 11 1c 25 f1" set threat=Win32-MyDoom.Q
+  if "%filemd5%" == "f9 bb 63 a2 55 a4 43 ad f4 4a fe 6f b8 5f 80 f6" set threat=Win32-MyDoom.R
+  if "%filemd5%" == "41 9e 93 7e 1f b9 2f 1b a0 6e aa fe 3a e5 39 cd" set threat=Win32-MyDoom.S
   if "%filemd5%" == "fb 15 69 b5 a3 26 64 44 d6 76 e5 f8 2d 6b ac 85" set threat=Win32-MyDoom.Doomjuice.A
   if "%filemd5%" == "6f 51 0e 97 91 43 a5 63 71 a4 f8 02 c8 ff d2 0d" set threat=Win32-MyDoom.Doomjuice.B
   if "%filemd5%" == "b7 84 72 31 7b ae 5e 4f 97 9f f4 78 0e 3c 44 eb" set threat=Win32-MyDoom.Doomjuice.C
@@ -954,6 +958,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "38 3c 36 8a e3 3c 53 0d a3 6f fa e0 bc ee c8 0e" set threat=Win32-Ransom.PopcornTime
   if "%filemd5%" == "b7 5d 9c cd fe 58 0f fc d5 3f 98 74 52 be 4d ac" set threat=Win32-Ransom.PrincessEvolution.A
   if "%filemd5%" == "ac ae af 1e 1f f0 b0 43 a3 7d 2a 3e 3f 9f 3f be" set threat=Win32-Ransom.PrincessEvolution.B
+  if "%filemd5%" == "66 c7 2c 0c 05 8b de e8 b2 6c 13 d9 de c0 72 f3" set threat=Win32-Ransom.PTP
   if "%filemd5%" == "40 d2 9a ce 41 27 9f 3d f8 db f7 a0 96 09 b2 44" set threat=Win32-Ransom.PUBG
   if "%filemd5%" == "52 74 68 a4 05 3d c1 42 dd 47 96 59 cf 2f c9 4c" set threat=Win32-Ransom.PureLocker
   if "%filemd5%" == "53 54 94 aa 6c e3 cc ef 73 46 b5 48 da 50 61 a9" set threat=Win32-Ransom.RAA
@@ -1058,6 +1063,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "14 50 d3 b0 6b 90 85 6d db a1 fc 58 a7 bf bb fc" set threat=Win32-Sality.E
   if "%filemd5%" == "ab e4 33 21 24 b4 37 00 a0 9d d8 68 ac 4d 11 a1" set threat=Win32-Sality.F
   if "%filemd5%" == "a2 ee 24 0d 9a 49 79 e2 ff 9f 64 6c 1f c2 98 9a" set threat=Win32-Sality.G
+  if "%filemd5%" == "86 d9 d5 ac 58 b8 a4 80 11 62 80 aa f2 ed d3 d9" set threat=Win32-Sality.H
   if "%filemd5%" == "a7 3c 16 cc d0 b9 c4 f2 0b c7 84 2e dd 90 fc 20" set threat=Win32-Sasser.A
   if "%filemd5%" == "1a 2c 0e 61 30 85 0f 8f d9 b9 b5 30 94 13 cd 00" set threat=Win32-Sasser.B
   if "%filemd5%" == "0e 97 3c ba 35 97 e3 39 d1 d8 48 1d 9a 35 8b 87" set threat=Win32-Sasser.C
@@ -1293,6 +1299,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "98 2f 02 f6 1d d9 ce a1 ad 96 2a f2 fe 90 42 73" set threat=Win32-Worm.Merkur
   if "%filemd5%" == "bd 86 e7 62 7d 29 10 d6 7b f3 d9 49 86 27 54 5a" set threat=Win32-Worm.Mimail.A
   if "%filemd5%" == "b6 ab 9c 65 81 7e 91 43 76 82 2e aa b8 e0 3e 36" set threat=Win32-Worm.Mimail.B
+  if "%filemd5%" == "db 5f 43 0b df d6 ba cc e9 66 4a c2 6e 75 7f 65" set threat=Win32-Worm.Mimail.C
+  if "%filemd5%" == "2e df 96 05 26 13 c6 34 a3 41 2f bf 88 ad db 0e" set threat=Win32-Worm.Mimail.D
+  if "%filemd5%" == "d8 0d 93 1c 28 48 bf c0 cc 6d cb 47 90 ed 34 3a" set threat=Win32-Worm.Mimail.E
+  if "%filemd5%" == "79 2b 09 82 c2 3c fe d0 d6 5c a8 ed 2e ed fc 28" set threat=Win32-Worm.Mimail.F
+  if "%filemd5%" == "0e 93 79 e3 57 ab a9 5f 8b 98 83 af 9b 67 67 5e" set threat=Win32-Worm.Mimail.G
+  if "%filemd5%" == "7b 7c 04 22 88 8e f1 0f 88 27 ab 6c 18 5f 99 d1" set threat=Win32-Worm.Mimail.H
   if "%filemd5%" == "d6 a3 6c 90 17 a9 29 c2 1e 13 97 a5 27 27 9f 34" set threat=Win32-Worm.MTX.A
   if "%filemd5%" == "db 8b e5 21 c3 3d 7c 88 2a db 27 6c 1b 78 09 40" set threat=Win32-Worm.MTX.B
   if "%filemd5%" == "7c a3 9f 54 a3 f7 1a 38 31 e6 0f 5a 38 3f 6a 49" set threat=Win32-Worm.Myparty.A
@@ -1482,6 +1494,10 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
   find /i /c "xmrig.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
+  find /i /c "67.231.149.140" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-MaliciousIP.MyDoom
+  find /i /c "96.47.72.85" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-MaliciousIP.MyDoom
   find /i /c "777777d" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Malware.Generic  
   find /i /c "zincite" %file% > NUL
