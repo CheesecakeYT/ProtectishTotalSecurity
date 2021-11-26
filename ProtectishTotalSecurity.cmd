@@ -1176,6 +1176,11 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "2b c6 5e 64 dd c2 63 6d 52 47 1f 41 e3 50 a6 4c" set threat=Win32-Trojan.Agent.CD
   if "%filemd5%" == "fc 1c 48 88 dd 61 55 27 24 0d 18 c1 45 ea be d0" set threat=Win32-Trojan.Agent.CE
   if "%filemd5%" == "4b d1 2f 2e af 0f 8d f6 31 cb c9 2f 66 ea b0 46" set threat=Win32-Trojan.Agent.CF
+  if "%filemd5%" == "47 f5 00 2a 0b 9d 31 2f 28 82 2d 92 a3 96 2c 81" set threat=Win32-Trojan.Agent.CG
+  if "%filemd5%" == "49 a7 c3 9e 2d bf b9 a9 c1 99 3a d7 4e eb d7 a8" set threat=Win32-Trojan.Agent.CH
+  if "%filemd5%" == "41 99 08 d5 d0 7c 67 b2 63 4d bf 03 5a 5f 6b 02" set threat=Win32-Trojan.Agent.CI
+  if "%filemd5%" == "49 de 2a 62 b0 ae 82 24 85 27 40 58 06 0c 97 c7" set threat=Win32-Trojan.Agent.CJ
+  if "%filemd5%" == "aa 92 38 bc 0e 7f 6e d7 58 c8 84 22 7b 44 58 28" set threat=Win32-Trojan.Agent.CK
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1263,6 +1268,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ec 2b 6e cf c8 ca 67 f9 35 7b 65 50 16 6a 08 38" set threat=Win32-Virut.C
   if "%filemd5%" == "49 26 80 07 ac 21 21 aa e8 1f 72 91 03 ec 8f 81" set threat=Win32-Virut.D
   if "%filemd5%" == "bd 32 86 68 71 75 82 be b0 e1 32 d3 12 83 0c 3a" set threat=Win32-Virut.E
+  if "%filemd5%" == "76 93 0e 7b a5 d6 11 cd ea 2a f9 3a 78 3c 80 ca" set threat=Win32-Virut.F
   if "%filemd5%" == "53 29 50 cd 94 48 93 c7 36 71 9f de 46 3a 10 31" set threat=Win32-Vtflooder
   if "%filemd5%" == "25 27 29 b2 30 4c dc 2e 91 24 8c ea 56 72 41 eb" set threat=Win32-Wallpaper
   if "%filemd5%" == "c8 2b 6d 5a 84 96 06 4a bb 5e 66 a2 6a a6 71 7b" set threat=Win32-Winfig
@@ -1480,6 +1486,18 @@ if %errorlevel% equ 1 goto start
   echo Behavior Scan: Pending
   echo Suspicious Actions Scan: Waiting
 
+  find /i /c "67.231.149.140" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "96.47.72.85" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "184.168.221.67" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "14.17.102.104" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "35.186.238.101" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "151.139.128.14" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
   find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
   find /i /c "PROTECTISH-TOTAL-SECURITY-TEST-FILE!-HOORAY!" %file% > NUL
@@ -1494,10 +1512,6 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
   find /i /c "xmrig.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-CoinMiner.XMRig
-  find /i /c "67.231.149.140" %file% > NUL
-  if %errorlevel% == 0 set threat=Win32-MaliciousIP.MyDoom
-  find /i /c "96.47.72.85" %file% > NUL
-  if %errorlevel% == 0 set threat=Win32-MaliciousIP.MyDoom
   find /i /c "777777d" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Malware.Generic  
   find /i /c "zincite" %file% > NUL
