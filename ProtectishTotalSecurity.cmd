@@ -1242,6 +1242,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ad 4d 5e da b2 ce 61 e9 22 44 dc ec c0 49 b8 66" set threat=Win32-Trojan.Resonate.B
   if "%filemd5%" == "c4 65 0a d4 38 3f cb e1 ae 27 b2 69 d4 12 01 ba" set threat=Win32-Trojan.SpBit
   if "%filemd5%" == "8e 90 ad 82 52 86 72 49 cc 5c be e3 19 9d ef 2f" set threat=Win32-Trojan.SpyAnyTime
+  if "%filemd5%" == "66 87 03 e9 82 3d d3 8b e6 9f d0 ff 6b c1 0b 6a" set threat=Win32-Trojan.Stihat.A
+  if "%filemd5%" == "a0 b3 f2 bc a9 90 f8 ed e2 e7 70 10 61 d2 69 fb" set threat=Win32-Trojan.Stihat.B
+  if "%filemd5%" == "da e3 5a a5 b7 74 6f 65 d9 a2 56 61 d7 5f c3 23" set threat=Win32-Trojan.Stihat.C
+  if "%filemd5%" == "93 29 0c 14 35 c6 0b e7 87 ca 00 51 30 ab ad 34" set threat=Win32-Trojan.Stihat.D
+  if "%filemd5%" == "04 43 36 3e 99 a6 0a 5f 48 c1 18 8d 2a 94 d8 f9" set threat=Win32-Trojan.Stihat.E
+  if "%filemd5%" == "06 dd 7f e0 68 5d 9f d9 d1 a3 0f 6c 72 0b 6a f9" set threat=Win32-Trojan.Stihat.F
   if "%filemd5%" == "b9 70 9a 07 05 9b b0 80 57 34 39 80 e9 79 de 2f" set threat=Win32-Trojan.Tremp
   if "%filemd5%" == "3d 3e 08 ad 3a 8f 3b 35 b9 a1 0a a6 c5 7b 29 0f" set threat=Win32-Trojan.Trickbot
   if "%filemd5%" == "2e 03 d0 10 bb 51 43 16 df b9 cf 2d 87 a6 63 21" set threat=Win32-Trojan.Updane
