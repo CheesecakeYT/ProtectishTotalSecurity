@@ -753,7 +753,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "53 66 c2 a6 62 cd dd 60 0d 93 e3 99 2b 8e d1 cd" set threat=Win32-Parite.D
   if "%filemd5%" == "73 d3 54 51 db fb ba 5a c0 51 d3 6f 09 5a 62 9f" set threat=Win32-Parrot.A
   if "%filemd5%" == "6c 1c fe 55 c4 c2 6f cf b8 3e 2d cb b9 a4 2e 89" set threat=Win32-Parrot.B
-  if "%filemd5%" == "96 5e df d8 ee 48 b6 f7 40 4e 28 5c 36 4a 3b 76" set threat=Win32-Phishing.FedX
+  if "%filemd5%" == "37 7c fd 5b 9a ad 24 73 d1 65 9a 5d ba d0 1d 90" set threat=Win32-Phishing.Agent.A
+  if "%filemd5%" == "96 5e df d8 ee 48 b6 f7 40 4e 28 5c 36 4a 3b 76" set threat=Win32-Phishing.Agent.B
   if "%filemd5%" == "1e ad 86 42 7f c0 76 f7 7f 21 cc b7 51 2d c8 b2" set threat=Win32-Picsys.A
   if "%filemd5%" == "06 ec be a1 47 d7 c1 3a b2 5b 9b 65 db 33 01 17" set threat=Win32-Picsys.B
   if "%filemd5%" == "71 56 14 e0 92 61 b3 9d fa 43 9f a1 32 6c 0c ec" set threat=Win32-Pikachu
@@ -1036,6 +1037,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "12 39 1c 17 7d 21 5e f0 1f 65 e3 43 39 e5 4b f9" set threat=Win32-RAT.DarkKomet.B
   if "%filemd5%" == "96 30 5f 55 42 86 f7 84 d9 92 8c 49 90 45 c3 d6" set threat=Win32-RAT.NanoCore.A
   if "%filemd5%" == "6d 17 bd f6 1e 8c ec 2f 59 e8 39 a0 f1 8e e5 1c" set threat=Win32-RAT.NanoCore.B
+  if "%filemd5%" == "0e fa 8a 4d c0 7c b2 c1 8f a2 40 35 bf 93 88 cf" set threat=Win32-RAT.NetWire
   if "%filemd5%" == "c1 7c ad 86 80 51 b0 7e 56 1f 08 d9 de 11 b6 70" set threat=Win32-RAT.Quasar
   if "%filemd5%" == "e9 50 81 4f 0a 29 f9 59 37 50 f7 ea 42 06 e2 dd" set threat=Win32-RBot
   if "%filemd5%" == "7a 34 80 d2 f4 e1 00 1f 14 89 3b e6 b8 49 ec 93" set threat=Win32-Rogue.AntiVirGear
@@ -1078,6 +1080,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "49 94 95 20 20 da 28 bb 0a a0 23 d2 36 a6 bf 3b" set threat=Win32-Spyware.FinSpy.B
   if "%filemd5%" == "4c 70 5a 8a 0a 21 e1 32 6f 40 94 7b 62 17 1e 85" set threat=Win32-Spyware.Hakey.A
   if "%filemd5%" == "16 43 4c 8d 22 51 c3 bc 02 3f 50 a4 80 18 4a 0d" set threat=Win32-Spyware.Hakey.B
+  if "%filemd5%" == "0f 55 ad da c0 cc 58 93 04 6e ec 75 77 72 d4 16" set threat=Win32-Spyware.RedLine.A
+  if "%filemd5%" == "e6 3a da 8c 3c 27 e5 00 21 b5 18 41 3c 31 3e c8" set threat=Win32-Spyware.RedLine.B
+  if "%filemd5%" == "3e c9 a5 59 d4 ba 30 55 79 16 e9 db cb a6 da a9" set threat=Win32-Spyware.RedLine.C
   if "%filemd5%" == "5c 8d f4 e2 f2 ea 5b 69 f1 c6 b6 5f 7b 6f 73 c0" set threat=Win32-Spyware.Zbot.A
   if "%filemd5%" == "38 61 55 80 0f 4c 16 9a 6b 81 19 43 0c e7 88 1f" set threat=Win32-Spyware.Zbot.B
   if "%filemd5%" == "aa b2 e7 79 4e ec af 39 d2 f1 5c 3d e4 36 48 8d" set threat=Win32-StartPage
@@ -1206,6 +1211,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "72 dc fe ec b3 56 6f 9f 86 26 20 eb fd b5 f5 f9" set threat=Win32-Trojan.Cacogen
   if "%filemd5%" == "4f dc 35 aa 37 d4 df 3f 9f 17 d4 4a 33 40 71 38" set threat=Win32-Trojan.Chapak
   if "%filemd5%" == "02 9c e2 e5 32 fe 5c 70 d3 34 2f 97 8f 54 63 d0" set threat=Win32-Trojan.ClipBanker
+  if "%filemd5%" == "bd 76 41 92 e9 51 b5 af d5 68 70 d2 08 4b cc fd" set threat=Win32-Trojan.DarkHydrusScripter.A
+  if "%filemd5%" == "95 3a 75 3d d4 94 4c 9a 2b 98 76 b0 90 bf 7c 00" set threat=Win32-Trojan.DarkHydrusScripter.B
   if "%filemd5%" == "84 69 43 dc 3e b9 e8 7e 1b 89 ac 9a 80 cd 82 7a" set threat=Win32-Trojan.DelTree
   if "%filemd5%" == "d5 40 ca 29 e9 ea 33 f1 31 e4 ce 46 74 d1 08 5f" set threat=Win32-Trojan.Denes.A
   if "%filemd5%" == "6e db fc c6 44 5a f5 82 63 0f a2 4d a5 f9 03 35" set threat=Win32-Trojan.Denes.B
@@ -1217,7 +1224,6 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f5 97 17 fb 8f 2a 9a d3 e5 f7 16 40 94 0f 1c 08" set threat=Win32-Trojan.Emotet.A
   if "%filemd5%" == "d3 ff 42 73 09 6c 13 af a8 8c 71 31 c4 14 f9 3b" set threat=Win32-Trojan.Emotet.B
   if "%filemd5%" == "8d 7e a5 5f f7 f8 74 c0 98 b2 3c a2 ad f4 0b 71" set threat=Win32-Trojan.Emotet.C
-  if "%filemd5%" == "f0 b6 d1 4e b0 b4 e1 24 81 2f db 9a 87 0a bc 43" set threat=Win32-Trojan.ExcelProtected
   if "%filemd5%" == "ac 54 76 ae 5a 15 a0 98 1e 7e 56 f9 51 60 1c 82" set threat=Win32-Trojan.Icefog
   if "%filemd5%" == "9e 28 4c 15 f0 31 ab 67 5b 1a 89 86 4f f3 d0 d5" set threat=Win32-Trojan.KillWin
   if "%filemd5%" == "07 18 75 df 86 3f 4a ea 3c 89 fb e4 1b 52 d1 9c" set threat=Win32-Trojan.Klone
@@ -1235,6 +1241,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "21 56 f6 e4 df 94 16 00 fe 3f 44 d0 71 09 35 4e" set threat=Win32-Trojan.OpenDNS
   if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
   if "%filemd5%" == "01 81 85 02 39 cd 26 b8 fb 8b 72 af b0 e9 5e ac" set threat=Win32-Trojan.Poweliks
+  if "%filemd5%" == "f0 b6 d1 4e b0 b4 e1 24 81 2f db 9a 87 0a bc 43" set threat=Win32-Trojan.Qakbot
   if "%filemd5%" == "77 ad 29 1b 0b 88 a7 31 4c 1d d8 11 d6 69 e0 77" set threat=Win32-Trojan.RandomMusic
   if "%filemd5%" == "de 51 6f bb c0 9f ca dd 95 39 c2 80 9c f4 ff 9b" set threat=Win32-Trojan.Reconyc
   if "%filemd5%" == "33 6e ff e8 44 da ab 0e f3 88 fe 60 02 81 17 de" set threat=Win32-Trojan.Remtasu
@@ -1652,12 +1659,16 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-RAT.Generic
   find /i /c "Failed to inject" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-RAT.Generic
+  find /i /c "XL-FORCE ApS" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-RAT.NetWire
   find /i /c "j.maxmind.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Rootkit.ZeroAccess
   find /i /c "\SnakeKeylogger\" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
   find /i /c "-------- Snake Keylogger --------" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-SnakeKeylogger
+  find /i /c "Amcert LLC" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Spyware.RedLine
   find /i /c "adshield.pro" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Trojan.AdShield
   find /i /c "WOODTALE TECHNOLOGY INC" %file% > NUL
