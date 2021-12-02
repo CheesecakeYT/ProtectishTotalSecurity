@@ -875,6 +875,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ea 7c 80 1a 66 b7 73 0c 67 7a f5 cb 5d f2 05 4b" set threat=Win32-Ransom.HappyNewYear
   if "%filemd5%" == "6e 1e 70 fa 33 4c eb c3 7a 3a 88 48 59 cf 2d d0" set threat=Win32-Ransom.Help50
   if "%filemd5%" == "88 f9 46 0b 8e d5 e6 30 0e ef d0 3e 40 79 0b ef" set threat=Win32-Ransom.Hese
+  if "%filemd5%" == "61 07 5f ab a2 22 f9 7d 33 67 86 67 93 f0 90 7b" set threat=Win32-Ransom.Hermes
   if "%filemd5%" == "d9 d3 38 1b 79 fb 6e 35 ba 99 5b 4a 7a b5 8b 4f" set threat=Win32-Ransom.HiddenTearConficker
   if "%filemd5%" == "43 13 fd 0a 3d 2c be dd 45 70 23 09 31 83 3f e1" set threat=Win32-Ransom.HolyCrypt
   if "%filemd5%" == "4e 25 9c 5a 7a fe 86 eb 08 b4 5e ea d1 2d 4a f3" set threat=Win32-Ransom.Homework
@@ -1030,6 +1031,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "f8 18 93 8b 98 72 36 cd d4 11 95 79 6b 4c 1f b5" set threat=Win32-Ransom.Zeppelin.A
   if "%filemd5%" == "dc ef 20 8f cd ac 33 45 c6 89 9a 47 8d 16 98 0f" set threat=Win32-Ransom.Zeppelin.B
   if "%filemd5%" == "ef 57 2e 2c 7b 1b bd 57 65 4b 36 e8 dc fd c3 7a" set threat=Win32-Ransom.Zeppelin.C
+  if "%filemd5%" == "07 a0 72 28 93 0e 25 8e 85 ff 34 85 f6 da 75 a7" set threat=Win32-Ransom.ZeroRansom
   if "%filemd5%" == "6b e6 53 cd 2f 91 72 54 37 36 e3 f5 3a ef cd 54" set threat=Win32-Ransom.Ziggy
   if "%filemd5%" == "48 0c 56 47 da fb 9e b2 26 f7 40 25 b7 83 17 70" set threat=Win32-RAT.Adwind
   if "%filemd5%" == "db a6 df b2 73 3a a1 c9 2e 7e e7 62 ea 66 66 65" set threat=Win32-RAT.Agent
@@ -1045,6 +1047,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "a8 f0 1f df 7b 09 78 11 f7 c6 40 55 cb 04 1b 88" set threat=Win32-Rogue.AntiVirusGold
   if "%filemd5%" == "1f 13 39 6f a5 9d 38 eb e7 6c cc 58 7c cb 11 bb" set threat=Win32-Rogue.NavaShield
   if "%filemd5%" == "0b f2 ab 80 9f c3 7e 37 6b 11 a2 1a 13 0c 3a d7" set threat=Win32-Rogue.PCKeeper
+  if "%filemd5%" == "cb c1 5c a3 4a 62 d4 09 b9 97 26 b6 a2 c4 7a 93" set threat=Win32-Rogue.Rango
   if "%filemd5%" == "3c 05 5b ec e3 a6 d7 14 5b 51 bb a9 3b 05 ec 8c" set threat=Win32-Rogue.SpyAxe
   if "%filemd5%" == "c8 99 f9 3e 8b 75 3f ed d0 68 ef 3f e2 ed b0 fd" set threat=Win32-Rogue.SpySheriff
   if "%filemd5%" == "7e 56 ea 2b a6 6f 0b a2 db 65 91 c4 28 92 38 72" set threat=Win32-Rogue.SpywareQuake
@@ -1186,6 +1189,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "41 99 08 d5 d0 7c 67 b2 63 4d bf 03 5a 5f 6b 02" set threat=Win32-Trojan.Agent.CI
   if "%filemd5%" == "49 de 2a 62 b0 ae 82 24 85 27 40 58 06 0c 97 c7" set threat=Win32-Trojan.Agent.CJ
   if "%filemd5%" == "aa 92 38 bc 0e 7f 6e d7 58 c8 84 22 7b 44 58 28" set threat=Win32-Trojan.Agent.CK
+  if "%filemd5%" == "41 40 5c 63 c8 58 a9 fb 19 6b e6 85 10 c5 bc 87" set threat=Win32-Trojan.Agent.CL
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1237,6 +1241,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "83 c5 20 4b ac b4 9b 83 af ec ea 31 be af 1f 63" set threat=Win32-Trojan.MrsMajor.B
   if "%filemd5%" == "45 0f 49 42 6b 45 19 ec aa c8 cd 04 81 4c 03 a4" set threat=Win32-Trojan.MrsMajor.C
   if "%filemd5%" == "8f 1b 40 26 4a 0e df 5a 95 88 d4 3a 8d 67 df e7" set threat=Win32-Trojan.MuddyWater
+  if "%filemd5%" == "6b 31 16 58 0d 29 02 0b 9c 25 98 77 ac 18 a7 fd" set threat=Win32-Trojan.Nazar.A
+  if "%filemd5%" == "c1 ab 32 af b0 e2 d7 b7 b1 ca d3 fb 83 1e 93 73" set threat=Win32-Trojan.Nazar.B
   if "%filemd5%" == "9e 98 9e f2 a8 d4 bc 5b a1 42 11 43 aa d5 9a 47" set threat=Win32-Trojan.NetShield
   if "%filemd5%" == "21 56 f6 e4 df 94 16 00 fe 3f 44 d0 71 09 35 4e" set threat=Win32-Trojan.OpenDNS
   if "%filemd5%" == "04 25 1a 49 a2 40 db f6 09 75 ac 26 2f c6 ae b7" set threat=Win32-Trojan.PCToaster
@@ -1301,6 +1307,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "2e 8d a5 a5 58 65 a0 91 86 4a 43 38 ef 4d 2e 44" set threat=Win32-Worm.Conficker.A
   if "%filemd5%" == "57 4c f0 06 29 11 c8 c4 ec a2 15 61 87 b8 20 7d" set threat=Win32-Worm.Conficker.B
   if "%filemd5%" == "55 b1 d7 5a bc 52 55 21 ae 50 fd b4 b3 29 c2 a7" set threat=Win32-Worm.Conficker.C
+  if "%filemd5%" == "ff bf b0 11 0a b6 37 e6 7e 9a b3 8c 8d 0b 9c 41" set threat=Win32-Worm.Daprosy
   if "%filemd5%" == "fd cd a5 5b 16 42 6a 6f ed 53 d9 19 e3 1b 3d 23" set threat=Win32-Worm.Dumaru
   if "%filemd5%" == "2c 36 69 9a bc 71 f6 d2 0c 1c 5f 77 83 9a 23 4a" set threat=Win32-Worm.Duqu
   if "%filemd5%" == "05 5f cc cc ba 60 2b 81 cf 14 49 59 7a 20 74 31" set threat=Win32-Worm.ExploreZip
