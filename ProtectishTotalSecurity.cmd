@@ -1014,6 +1014,14 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "27 2d 02 d9 69 4b 61 08 ce 0c b9 3b e8 af 8f 16" set threat=Win32-Ransom.WannaCryptor.E
   if "%filemd5%" == "c4 f0 bb 8b aa 5f a8 f6 59 05 d1 13 d0 6c 89 15" set threat=Win32-Ransom.WannaCryptor.F
   if "%filemd5%" == "bc 80 1d 8d c0 9e a6 6b 39 fd f8 20 d7 76 23 97" set threat=Win32-Ransom.WannaCryptor.G
+  if "%filemd5%" == "13 c3 de 53 41 b9 cf 48 60 cb fe 2e 7a 4e a7 97" set threat=Win32-Ransom.WannaCryptor.H
+  if "%filemd5%" == "95 2a 32 24 1b 94 1e c5 85 04 67 23 f3 59 30 6a" set threat=Win32-Ransom.WannaCryptor.I
+  if "%filemd5%" == "6b e6 d3 af d3 6d 78 c1 49 55 da 55 4e 12 2c 11" set threat=Win32-Ransom.WannaCryptor.J
+  if "%filemd5%" == "84 c8 28 35 a5 d2 1b bc f7 5a 61 70 6d 8a b5 49" set threat=Win32-Ransom.WannaCryptor.K
+  if "%filemd5%" == "ef a8 cd a6 aa 18 8e f8 56 4c 94 a5 8b 75 63 9f" set threat=Win32-Ransom.WannaCryptor.L
+  if "%filemd5%" == "f5 39 ff 91 1a 60 79 16 45 86 05 4e 03 1e d4 e9" set threat=Win32-Ransom.WannaCryptor.M
+  if "%filemd5%" == "e3 33 60 4e 0d 21 4d 03 32 8a 85 4d f1 30 37 7f" set threat=Win32-Ransom.WannaCryptor.N
+  if "%filemd5%" == "db 34 9b 97 c3 7d 22 f5 ea 1d 18 41 e3 c8 9e b4" set threat=Win32-Ransom.WannaCryptor.O
   if "%filemd5%" == "83 cb 5b 87 a7 86 fb 13 5a 11 bc 13 3f b4 d4 d6" set threat=Win32-Ransom.WannaOof
   if "%filemd5%" == "13 e6 23 cd fb 75 d9 9e a7 e0 4c 61 57 ca 8a e6" set threat=Win32-Ransom.WastedLocker
   if "%filemd5%" == "98 89 2a 91 cb d8 1b cc 99 71 08 49 b5 db c7 d3" set threat=Win32-Ransom.WeAreFriends
@@ -1658,6 +1666,16 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-Ransom.VHD
   find /i /c "araujosantos@protonmail.com" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.VHD
+  find /i /c "www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.WannaCryptor
+  find /i /c "mssecsvc.exe" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.WannaCryptor
+  find /i /c "tasksche.exe" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.WannaCryptor
+  find /i /c "taskdl.exe" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.WannaCryptor
+  find /i /c "WNcry@2ol7" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Ransom.WannaCryptor
   find /i /c "PE hP(" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.Zeppelin
   find /i /c "Injecting into process" %file% > NUL
