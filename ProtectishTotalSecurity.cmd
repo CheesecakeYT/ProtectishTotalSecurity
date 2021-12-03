@@ -623,7 +623,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "57 f2 51 09 b2 55 d0 4c 05 fb 7f da d1 62 b5 ee" set threat=Win32-Adware.DealPly.A
   if "%filemd5%" == "e0 69 fd bd 26 84 a8 fa ef 23 a6 96 05 09 d9 93" set threat=Win32-Adware.DownloadAssistant
   if "%filemd5%" == "07 16 8b d3 7f 9c 1c 19 c9 61 65 b9 eb d5 c6 9c" set threat=Win32-Adware.DownloadHelper
-  if "%filemd5%" == "96 a2 c3 0d 76 3d 41 0c 7c f5 f8 bd a7 7f 29 64" set threat=Win32-Adware.InstallCore
+  if "%filemd5%" == "96 a2 c3 0d 76 3d 41 0c 7c f5 f8 bd a7 7f 29 64" set threat=Win32-Adware.InstallCore.A
+  if "%filemd5%" == "ab 1c 44 a2 f3 49 40 5a 46 9b 9d 3a 1c b5 35 90" set threat=Win32-Adware.InstallCore.B
   if "%filemd5%" == "79 e1 67 48 cc 1c 72 58 25 d5 c5 99 1a 82 fd 89" set threat=Win32-Adware.Machaer
   if "%filemd5%" == "b1 da c6 3a f1 39 bc f3 08 c9 1b e5 b9 dd 7b 0f" set threat=Win32-Adware.Mobogenie
   if "%filemd5%" == "86 b0 fa bb a4 6a 22 7a 96 fc 84 4c b1 02 70 d5" set threat=Win32-Adware.MyWebSearch.A
@@ -690,6 +691,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "01 29 da b7 29 15 cc 20 bf 10 4c 09 08 85 47 c4" set threat=Win32-Ipamor.A
   if "%filemd5%" == "41 dd 2b f0 50 ce 71 95 ad 59 4a eb d3 f3 af c4" set threat=Win32-Ipamor.B
   if "%filemd5%" == "28 a9 3d ff 57 ed 7b 94 ef 51 a3 ad 2f 1a 9a 41" set threat=Win32-Ipamor.C
+  if "%filemd5%" == "36 94 6f af c9 15 38 84 60 0a 6f bb 4e 8e 09 a1" set threat=Win32-Joke.Auge
   if "%filemd5%" == "df d1 74 1b 9d 4c 16 a5 4f 3d 61 04 d4 66 3f c8" set threat=Win32-Joke.Disco
   if "%filemd5%" == "4e 33 66 78 55 87 2e cd a9 5a 11 71 b4 0a ae 9a" set threat=Win32-Klez.A
   if "%filemd5%" == "f9 59 81 82 9c a6 60 e8 4f 1d 33 bd fa 9e 2a 28" set threat=Win32-Klez.B
@@ -797,12 +799,14 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "d4 45 2a df c4 1a 70 75 f5 e5 79 61 72 77 58 98" set threat=Win32-Ransom.AdamLocker
   if "%filemd5%" == "0e 61 e4 96 fc 21 8c 1c 6d c1 f5 64 0a 3a c7 e5" set threat=Win32-Ransom.Agent.A
   if "%filemd5%" == "af 4f d8 23 5d 26 56 40 1c 5a 95 2d ef 4f 99 0c" set threat=Win32-Ransom.Agent.B
+  if "%filemd5%" == "58 a8 51 c3 5a 99 9c 9c f0 f5 77 d7 c5 de 3c 5c" set threat=Win32-Ransom.Agent.C
   if "%filemd5%" == "f7 18 65 97 30 8a db 3a 78 d3 56 e1 59 ce 18 b0" set threat=Win32-Ransom.Ako
   if "%filemd5%" == "98 c0 c4 e5 8a 97 cf 92 f9 c6 99 2e e6 5e 3f 0f" set threat=Win32-Ransom.Amnesia
   if "%filemd5%" == "ca 11 71 33 82 3c 73 bd b4 ad 3f 52 93 72 ea ae" set threat=Win32-Ransom.AnDROid
   if "%filemd5%" == "7a b9 1e 57 a1 e2 75 2c d8 ab ee 3d b1 08 53 c5" set threat=Win32-Ransom.AngryDuck
   if "%filemd5%" == "0f 74 32 87 c9 91 1b 4b 1c 72 6c 7c 7e dc af 7d" set threat=Win32-Ransom.Annabelle
   if "%filemd5%" == "bb ac d7 e5 e7 be 9d e0 18 1e 41 8d e9 c2 6c 5a" set threat=Win32-Ransom.Armage
+  if "%filemd5%" == "ab f0 75 e0 8b 7f 97 02 c7 10 05 ae 30 99 ed 3e" set threat=Win32-Ransom.AvastVirusInfo
   if "%filemd5%" == "24 81 44 f9 24 d4 9b 37 31 2d a1 71 f1 4f 41 31" set threat=Win32-Ransom.AVCrypt
   if "%filemd5%" == "4f 3f 27 3a 71 70 e6 2f 7d 31 17 9c 4a ed 7a ab" set threat=Win32-Ransom.AWT.A
   if "%filemd5%" == "3f aa fd 23 f8 d4 b8 6d fb 35 29 d0 a1 5c 88 d5" set threat=Win32-Ransom.AWT.B
@@ -862,6 +866,12 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "0a 7b 70 ef ba 0a a9 3d 4b c0 85 7b 87 ac 2f cb" set threat=Win32-Ransom.DeriaLock
   if "%filemd5%" == "7e 17 9d 06 4b 2d 20 b4 ea 5e 6d 49 2a bf 8f 2b" set threat=Win32-Ransom.DexLocker
   if "%filemd5%" == "d3 2e 4d 8b 42 38 cf cc 79 3e c3 b3 7c c9 a8 75" set threat=Win32-Ransom.Dharma
+  if "%filemd5%" == "90 9e 45 aa d6 12 10 17 36 7d 4e 1b 32 d4 25 24" set threat=Win32-Ransom.DirtyDecrypt.A
+  if "%filemd5%" == "d3 84 63 0e 47 60 a9 a2 61 b7 e6 0d 58 30 35 63" set threat=Win32-Ransom.DirtyDecrypt.B
+  if "%filemd5%" == "58 48 b2 f7 a6 16 ad 1a 50 51 0c 55 fe 1a d2 be" set threat=Win32-Ransom.DirtyDecrypt.C
+  if "%filemd5%" == "b0 4b e9 f4 97 16 1c 44 df 09 ec f3 cc 99 5a d6" set threat=Win32-Ransom.DirtyDecrypt.D
+  if "%filemd5%" == "a6 0e 18 2d f1 97 6b 83 ad 71 17 d1 60 b3 dd 1d" set threat=Win32-Ransom.DirtyDecrypt.E
+  if "%filemd5%" == "a7 0e 7e 7f aa 72 9c ed a6 28 0c 34 8d e7 17 31" set threat=Win32-Ransom.DirtyDecrypt.F
   if "%filemd5%" == "2f fc d2 d6 2a 57 32 93 c8 67 9b fd 60 66 77 b5" set threat=Win32-Ransom.DiscordNitro
   if "%filemd5%" == "8f 03 15 e9 0a 70 73 f1 5f 1d 56 3e 9b 16 44 80" set threat=Win32-Ransom.Dogge
   if "%filemd5%" == "76 16 57 30 83 eb 07 45 d8 50 f9 9b da 0c fa 5c" set threat=Win32-Ransom.Domino.A
@@ -1018,6 +1028,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "58 6d 9e 5d 8a 90 30 1b 49 4e 83 3d 36 30 23 83" set threat=Win32-Ransom.STOP.B
   if "%filemd5%" == "be 42 07 0f d1 68 10 7d d2 ac 6e d9 12 72 35 72" set threat=Win32-Ransom.SuchSecurity
   if "%filemd5%" == "63 d4 e4 da c5 7b d7 d2 05 95 87 eb a4 16 26 52" set threat=Win32-Ransom.SureRansom.A
+  if "%filemd5%" == "bf e4 d2 62 5d c2 0d ac 51 6c 52 c2 43 54 f1 62" set threat=Win32-Ransom.TeslaWare
   if "%filemd5%" == "8e 5f f6 0b f6 66 5c 57 93 8a b5 66 46 72 6e 1c" set threat=Win32-Ransom.Thanos.A
   if "%filemd5%" == "b0 c6 15 c0 a4 f4 85 b2 03 0d 6e 1a b9 83 75 f0" set threat=Win32-Ransom.Thanos.B
   if "%filemd5%" == "79 db a7 d5 7c 7e 9b aa 79 7e e2 b1 b0 81 68 ad" set threat=Win32-Ransom.TripleM
@@ -1248,6 +1259,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "72 dc fe ec b3 56 6f 9f 86 26 20 eb fd b5 f5 f9" set threat=Win32-Trojan.Cacogen
   if "%filemd5%" == "4f dc 35 aa 37 d4 df 3f 9f 17 d4 4a 33 40 71 38" set threat=Win32-Trojan.Chapak
   if "%filemd5%" == "02 9c e2 e5 32 fe 5c 70 d3 34 2f 97 8f 54 63 d0" set threat=Win32-Trojan.ClipBanker
+  if "%filemd5%" == "ca bf 56 ad b1 c6 3c 09 b2 48 85 62 cf 28 1b 0b" set threat=Win32-Trojan.Coins
   if "%filemd5%" == "bd 76 41 92 e9 51 b5 af d5 68 70 d2 08 4b cc fd" set threat=Win32-Trojan.DarkHydrusScripter.A
   if "%filemd5%" == "95 3a 75 3d d4 94 4c 9a 2b 98 76 b0 90 bf 7c 00" set threat=Win32-Trojan.DarkHydrusScripter.B
   if "%filemd5%" == "84 69 43 dc 3e b9 e8 7e 1b 89 ac 9a 80 cd 82 7a" set threat=Win32-Trojan.DelTree
