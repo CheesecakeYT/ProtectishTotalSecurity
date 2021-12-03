@@ -755,6 +755,31 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "6c 1c fe 55 c4 c2 6f cf b8 3e 2d cb b9 a4 2e 89" set threat=Win32-Parrot.B
   if "%filemd5%" == "37 7c fd 5b 9a ad 24 73 d1 65 9a 5d ba d0 1d 90" set threat=Win32-Phishing.Agent.A
   if "%filemd5%" == "96 5e df d8 ee 48 b6 f7 40 4e 28 5c 36 4a 3b 76" set threat=Win32-Phishing.Agent.B
+  if "%filemd5%" == "38 fa 31 3a f7 1c 68 fa d9 c1 9d 76 de 62 9d 8a" set threat=Win32-Phishing.Agent.C
+  if "%filemd5%" == "aa 6e f4 ce 83 67 5c 8b 50 75 5f a1 7e 20 2e 70" set threat=Win32-Phishing.Agent.D
+  if "%filemd5%" == "88 46 dd 18 f0 36 af 29 5c af 91 39 4e 98 82 10" set threat=Win32-Phishing.Agent.E
+  if "%filemd5%" == "19 5a fd 53 c5 3b b4 69 f1 b4 03 5d 10 d9 72 9e" set threat=Win32-Phishing.Agent.F
+  if "%filemd5%" == "19 be 34 76 08 20 78 ba c6 ef e8 32 e6 d7 fd d3" set threat=Win32-Phishing.Agent.G
+  if "%filemd5%" == "2b d9 5b 73 8a 9a c6 b5 ef 48 23 fd 5f 8a 6a 0d" set threat=Win32-Phishing.Agent.H
+  if "%filemd5%" == "8d ca af 93 83 aa 82 fa 30 1b 9f 01 46 29 01 c6" set threat=Win32-Phishing.Agent.I
+  if "%filemd5%" == "ab 1b 92 e5 a9 39 4e 9a ab 2c a1 07 b7 5a cf 2b" set threat=Win32-Phishing.Agent.J
+  if "%filemd5%" == "f3 0a a9 0e 04 99 8d d3 5a 78 2c a4 05 1b 3d b9" set threat=Win32-Phishing.Agent.K
+  if "%filemd5%" == "c9 99 41 91 3a 3f 64 cf 34 04 4e cb 9c d0 4a 46" set threat=Win32-Phishing.Agent.L
+  if "%filemd5%" == "6c 60 06 d7 46 71 ee 7d f1 55 8b d5 08 ee 32 41" set threat=Win32-Phishing.Agent.M
+  if "%filemd5%" == "56 4b 3e 4a c5 81 0f 34 e5 05 03 cc c1 e1 ee e6" set threat=Win32-Phishing.Agent.N
+  if "%filemd5%" == "bb f3 51 ba 5c 4c 37 6e 8e 4a 68 1b 25 40 18 dc" set threat=Win32-Phishing.Agent.O
+  if "%filemd5%" == "0d e2 52 2f 90 ba b4 b3 d2 41 e3 83 7a de 94 1b" set threat=Win32-Phishing.Agent.P
+  if "%filemd5%" == "2d 8c 68 2a 4f 0c d6 8f ac b8 e8 a9 c6 66 24 44" set threat=Win32-Phishing.Agent.Q
+  if "%filemd5%" == "bd ab 23 98 3c 1b 12 ed e8 fc 14 25 5f b8 f8 02" set threat=Win32-Phishing.Agent.R
+  if "%filemd5%" == "ff 1f 9b 02 ca 43 94 c1 d4 da e9 cd 4b 0a 0a 2d" set threat=Win32-Phishing.Agent.S
+  if "%filemd5%" == "01 b0 47 29 51 cc 40 1f 91 24 6f e4 04 4e e6 44" set threat=Win32-Phishing.Agent.T
+  if "%filemd5%" == "77 a2 e4 de 74 37 05 55 b4 58 62 79 15 1c a1 a0" set threat=Win32-Phishing.Agent.U
+  if "%filemd5%" == "e7 34 ca 81 9d b7 f1 ec 25 b5 9d 5c da 95 23 44" set threat=Win32-Phishing.Agent.V
+  if "%filemd5%" == "8e de 96 d4 0c 66 2d 6b ba 00 ec 4c fe 50 19 8d" set threat=Win32-Phishing.Agent.W
+  if "%filemd5%" == "5f 61 df 28 25 67 13 e4 dc 37 9d e7 aa 40 50 c3" set threat=Win32-Phishing.Agent.X
+  if "%filemd5%" == "36 1a 31 85 13 8d a9 09 8c 39 b9 7f 18 8b 82 56" set threat=Win32-Phishing.Agent.Y
+  if "%filemd5%" == "7d f9 89 f6 1a fe f4 5a e1 e1 2e c5 d4 6d ee c9" set threat=Win32-Phishing.Agent.Z
+  if "%filemd5%" == "fd c9 b4 a6 c5 07 52 54 ed 90 c9 48 7a 4d 5f de" set threat=Win32-Phishing.Agent.AA
   if "%filemd5%" == "1e ad 86 42 7f c0 76 f7 7f 21 cc b7 51 2d c8 b2" set threat=Win32-Picsys.A
   if "%filemd5%" == "06 ec be a1 47 d7 c1 3a b2 5b 9b 65 db 33 01 17" set threat=Win32-Picsys.B
   if "%filemd5%" == "71 56 14 e0 92 61 b3 9d fa 43 9f a1 32 6c 0c ec" set threat=Win32-Pikachu
@@ -1546,6 +1571,20 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=Win32-MyDoom
   find /i /c "! Best regards 2 Tommy Salo. [Nov-2005] yours [Dziadulja Apanas]" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Neshta
+  find /i /c "e-mailer.cf" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "e-mailer.ga" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "nwa-oma2.ml" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "routermanager.ga" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "routermanager.gq" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "routermanagers.ga" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
+  find /i /c "routermanagers.gq" %file% > NUL
+  if %errorlevel% == 0 set threat=Win32-Phishing.Generic
   find /i /c "Visit our web service at caforssztxqzf2nm.onion" %file% > NUL
   if %errorlevel% == 0 set threat=Win32-Ransom.BadRabbit
   find /i /c "encrypter@tuta.io" %file% > NUL
