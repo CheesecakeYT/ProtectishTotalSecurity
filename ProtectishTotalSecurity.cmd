@@ -701,6 +701,16 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "fb 23 aa e4 12 65 0b 84 f6 a3 70 81 e3 9c 68 79" set threat=Win32-Kriz.B
   if "%filemd5%" == "cc a7 de f7 19 45 4d d2 2e c3 51 99 12 97 88 5b" set threat=Win32-Lmir
   if "%filemd5%" == "98 90 34 9f e3 c6 8f 59 23 b2 93 47 bb a0 21 a4" set threat=Win32-Magistr.A
+  if "%filemd5%" == "8b 7c 9a 4c 20 df 8a 4b eb f5 89 a6 d0 d4 f7 18" set threat=Win32-Magistr.B
+  if "%filemd5%" == "ee db 0f 58 db e2 22 53 26 fd f2 4b ff ed e4 32" set threat=Win32-Magistr.C
+  if "%filemd5%" == "c1 e8 72 9b 5e bc cf d2 bc 35 bf 7f a6 01 c0 21" set threat=Win32-Magistr.D
+  if "%filemd5%" == "c1 8a b9 29 d2 aa d5 77 40 73 70 c8 bb d9 55 b1" set threat=Win32-Magistr.E
+  if "%filemd5%" == "97 cb fe 43 c1 80 40 79 3c 33 90 90 4b 7a 4f 70" set threat=Win32-Magistr.F
+  if "%filemd5%" == "39 2d 04 0d 33 bf 55 66 d2 c0 9e 36 bb d9 52 19" set threat=Win32-Magistr.G
+  if "%filemd5%" == "27 0a 18 65 23 24 45 51 41 ef 0a 49 9c 40 03 3c" set threat=Win32-Magistr.H
+  if "%filemd5%" == "ff 34 7a 45 0c 28 20 67 ab bf 92 8f 59 2e 2c 07" set threat=Win32-Magistr.I
+  if "%filemd5%" == "a3 80 4d 2c df dd 2d 44 a6 f3 46 4d 64 57 b9 ca" set threat=Win32-Magistr.J
+  if "%filemd5%" == "74 d5 64 ab 7f d4 4e 7d fc 41 11 24 32 e6 43 14" set threat=Win32-Magistr.Corrupt
   if "%filemd5%" == "47 84 e4 2c 3b 15 d1 a1 41 a5 e0 c8 ab c1 20 5c" set threat=Win32-Melting
   if "%filemd5%" == "01 99 ae 48 b0 97 cf e3 ae 92 4c 60 5a e9 8f 41" set threat=Win32-Microjoin
   if "%filemd5%" == "46 85 ee e7 10 ce 45 e5 34 02 77 87 54 6e 0a 56" set threat=Win32-Mofksys.A
@@ -1113,6 +1123,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "ab e4 33 21 24 b4 37 00 a0 9d d8 68 ac 4d 11 a1" set threat=Win32-Sality.F
   if "%filemd5%" == "a2 ee 24 0d 9a 49 79 e2 ff 9f 64 6c 1f c2 98 9a" set threat=Win32-Sality.G
   if "%filemd5%" == "86 d9 d5 ac 58 b8 a4 80 11 62 80 aa f2 ed d3 d9" set threat=Win32-Sality.H
+  if "%filemd5%" == "a0 19 17 a2 ca f1 34 8a 0b 5b ab f0 a5 e0 ee 2c" set threat=Win32-Sality.I
+  if "%filemd5%" == "f4 37 65 38 ec bb 95 8a a6 71 a9 70 8e b4 af 66" set threat=Win32-Sality.J
   if "%filemd5%" == "a7 3c 16 cc d0 b9 c4 f2 0b c7 84 2e dd 90 fc 20" set threat=Win32-Sasser.A
   if "%filemd5%" == "1a 2c 0e 61 30 85 0f 8f d9 b9 b5 30 94 13 cd 00" set threat=Win32-Sasser.B
   if "%filemd5%" == "0e 97 3c ba 35 97 e3 39 d1 d8 48 1d 9a 35 8b 87" set threat=Win32-Sasser.C
@@ -1234,6 +1246,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "49 de 2a 62 b0 ae 82 24 85 27 40 58 06 0c 97 c7" set threat=Win32-Trojan.Agent.CJ
   if "%filemd5%" == "aa 92 38 bc 0e 7f 6e d7 58 c8 84 22 7b 44 58 28" set threat=Win32-Trojan.Agent.CK
   if "%filemd5%" == "41 40 5c 63 c8 58 a9 fb 19 6b e6 85 10 c5 bc 87" set threat=Win32-Trojan.Agent.CL
+  if "%filemd5%" == "62 35 6a 97 dd ad c7 d8 87 bd 66 de c1 8b 9b 4c" set threat=Win32-Trojan.Agent.CM
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
