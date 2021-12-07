@@ -647,17 +647,20 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "1e d9 8f 81 1f 3e 13 93 ad 17 1c 70 a7 5c c4 27" set threat=Win32-Backdoor.Clampi.B
   if "%filemd5%" == "63 c0 76 ed 73 97 2a 21 c3 54 63 3d 43 b9 38 65" set threat=Win32-Backdoor.Clampi.C
   if "%filemd5%" == "ef 69 4b 89 ad 7a dd b9 a1 6b b6 f2 6f 1e fa f7" set threat=Win32-Backdoor.FakeCCleaner
+  if "%filemd5%" == "0c d4 62 4c 95 bc c1 ff da 1a 63 6e be e4 0b 6b" set threat=Win32-Backdoor.Farfli
   if "%filemd5%" == "db c2 bd 34 6f f8 1a 0c 5f c1 6f a6 83 b2 6a 36" set threat=Win32-Backdoor.FedEx
   if "%filemd5%" == "24 b2 57 3e 59 e4 f1 6c 7b f3 54 48 bd 03 e5 a7" set threat=Win32-Backdoor.Hupigon.A
   if "%filemd5%" == "30 b2 9f d4 75 30 53 10 cd 14 8a cd 0f 17 4c 70" set threat=Win32-Backdoor.Hupigon.B
   if "%filemd5%" == "64 87 6d 5d e7 06 1e 92 5e 29 f6 a0 c8 7c ea 9b" set threat=Win32-Backdoor.Konus
   if "%filemd5%" == "3d af f5 90 29 8e f3 68 8d 43 a2 9b 9d ef 10 9a" set threat=Win32-Backdoor.NanoBot
+  if "%filemd5%" == "6a 49 33 e4 a6 e9 88 81 1b 95 73 c5 43 79 f8 8d" set threat=Win32-Backdoor.NJRat
   if "%filemd5%" == "d4 07 55 9e 9d f5 43 20 e4 14 ff 6d 6c 5d cc b6" set threat=Win32-Backdoor.Prorat.A
   if "%filemd5%" == "27 0b a3 d7 c6 98 6a da e1 e3 da 12 99 39 ba 9d" set threat=Win32-Backdoor.Prorat.B
   if "%filemd5%" == "bf 30 21 3b 41 d8 1b 53 06 13 06 eb af 8c 16 ee" set threat=Win32-Backdoor.Sixer
   if "%filemd5%" == "00 fb 27 df d5 74 71 ab 32 77 01 f4 c2 3e 82 8f" set threat=Win32-Backdoor.Theef.A
   if "%filemd5%" == "d2 b5 5a 2d 03 ba ee fd 9b ac b2 7b 58 25 0b 35" set threat=Win32-Backdoor.Theef.B
   if "%filemd5%" == "ec 40 cc aa d6 3f 88 55 d8 de 31 a4 2b 7c 67 ac" set threat=Win32-Backdoor.Tofsee
+  if "%filemd5%" == "53 5c dc a9 ac f5 2c 1c 46 fb 75 5a 38 5e c3 ec" set threat=Win32-Backdoor.Xtreme
   if "%filemd5%" == "db 19 1b ba 75 d9 ec a8 0f bb f4 fa 02 52 d2 4e" set threat=Win32-Blackbat
   if "%filemd5%" == "15 b8 93 9a 07 1e 23 c9 11 f9 17 d8 76 05 32 e3" set threat=Win32-BlastButton
   if "%filemd5%" == "86 76 21 0e 62 46 94 82 01 aa 01 4d b4 71 de 90" set threat=Win32-Blaster
@@ -1138,7 +1141,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "5d 82 00 d6 99 e5 7e d8 ce 75 ad 22 fe 9f 59 8f" set threat=Win32-SnakeKeylogger
   if "%filemd5%" == "fd b0 57 61 a7 ed a3 f1 82 48 50 3f 2c 97 d6 97" set threat=Win32-Sobig.A
   if "%filemd5%" == "d3 a8 b3 dc de 44 b8 1c 0e 69 cc 2a 8a 36 e8 44" set threat=Win32-Sobig.B
-  if "%filemd5%" == "ca 22 1b 0f e0 3c 1f 0a 75 6a aa dd 55 e1 cc 43" set threat=Win32-SonicGatherBattle
+  if "%filemd5%" == "ca 22 1b 0f e0 3c 1f 0a 75 6a aa dd 55 e1 cc 43" set threat=Win32-SonicGatherBattle.A
+  if "%filemd5%" == "90 34 87 42 41 6a 9c 62 19 57 e6 84 0a 17 c0 8d" set threat=Win32-SonicGatherBattle.B
   if "%filemd5%" == "31 f1 d2 08 ee 74 0e 1f df 96 67 b2 e5 25 f3 d7" set threat=Win32-Spyware.FinSpy.A
   if "%filemd5%" == "49 94 95 20 20 da 28 bb 0a a0 23 d2 36 a6 bf 3b" set threat=Win32-Spyware.FinSpy.B
   if "%filemd5%" == "4c 70 5a 8a 0a 21 e1 32 6f 40 94 7b 62 17 1e 85" set threat=Win32-Spyware.Hakey.A
@@ -1253,6 +1257,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "62 35 6a 97 dd ad c7 d8 87 bd 66 de c1 8b 9b 4c" set threat=Win32-Trojan.Agent.CM
   if "%filemd5%" == "ee 73 6c 4c 68 37 83 0c c6 7e ed 7e ea 57 17 37" set threat=Win32-Trojan.Agent.CN
   if "%filemd5%" == "74 d0 2d b9 10 e9 dc 7c a1 f3 b0 20 65 46 dd 8c" set threat=Win32-Trojan.Agent.CO
+  if "%filemd5%" == "b0 02 b2 4d 91 37 22 2c 1e 76 32 54 2d 6e ef 8f" set threat=Win32-Trojan.Agent.CP
+  if "%filemd5%" == "0d 30 1e c1 07 5f 45 0d 37 ff ad 7e 30 dc ee 4e" set threat=Win32-Trojan.Agent.CQ
+  if "%filemd5%" == "1f c4 4e bc 73 61 a3 22 f5 a1 c3 90 0c f3 0f 94" set threat=Win32-Trojan.Agent.CR
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1586,8 +1593,12 @@ if %errorlevel% equ 1 goto start
   if %errorlevel% == 0 set threat=MaliciousIP
   find /i /c "35.186.238.101" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "120.79.208.189" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
   find /i /c "151.139.128.14" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "winoxior.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
   find /i /c "PROTECTISH-TOTAL-SECURITY-TEST-FILE!-HOORAY!" %file% > NUL
