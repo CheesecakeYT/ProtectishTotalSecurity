@@ -760,6 +760,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "44 6c 1e 5f 0b 5e 9d a0 df 06 b6 a3 49 53 9d 38" set threat=Win32-Neshta.G
   if "%filemd5%" == "5f 45 97 5d 56 43 3a c8 34 b6 53 45 49 12 7e 0d" set threat=Win32-Neshta.H
   if "%filemd5%" == "d5 e6 ad d0 3e ba 06 4b 4f b9 0e a5 82 72 de 32" set threat=Win32-Neshta.I
+  if "%filemd5%" == "42 9b 58 65 69 91 5e d5 21 2a 26 09 4a 7f 60 c1" set threat=Win32-Neshta.J
   if "%filemd5%" == "64 2a 39 3a 5c 65 d2 02 18 0d f5 af 06 f2 9c 5a" set threat=Win32-Nimda.A
   if "%filemd5%" == "08 3d 59 7f 4b 8d e7 c2 a7 88 8d f0 e5 e3 9a 8a" set threat=Win32-Nimda.B
   if "%filemd5%" == "aa 9e ca 49 c7 22 ec 1b ab bc 21 55 f1 a9 10 39" set threat=Win32-Nimda.C
@@ -1608,6 +1609,10 @@ if %errorlevel% equ 1 goto start
   find /i /c "120.79.208.189" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousIP
   find /i /c "151.139.128.14" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "198.181.163.103" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousIP
+  find /i /c "173.232.146.37" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousIP
   find /i /c "winoxior.tk" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
