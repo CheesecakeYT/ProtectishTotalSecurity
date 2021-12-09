@@ -1110,6 +1110,9 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "51 b3 30 e6 b3 04 76 5f 3a b6 17 8a 99 ea 87 f4" set threat=Win32-Rogue.AntivirusBEST
   if "%filemd5%" == "a8 f0 1f df 7b 09 78 11 f7 c6 40 55 cb 04 1b 88" set threat=Win32-Rogue.AntiVirusGold
   if "%filemd5%" == "1f 13 39 6f a5 9d 38 eb e7 6c cc 58 7c cb 11 bb" set threat=Win32-Rogue.NavaShield
+  if "%filemd5%" == "d7 f9 9e 8f 3b d8 a9 1c d7 65 93 ac d9 9f fe 89" set threat=Win32-Rogue.Paladin.A
+  if "%filemd5%" == "d2 cf 8c 85 cd a2 d1 89 ae 31 10 73 e4 2a f6 09" set threat=Win32-Rogue.Paladin.B
+  if "%filemd5%" == "b1 7f bd 42 af cf 74 2f c4 cb 58 51 b9 51 82 67" set threat=Win32-Rogue.Paladin.C
   if "%filemd5%" == "0b f2 ab 80 9f c3 7e 37 6b 11 a2 1a 13 0c 3a d7" set threat=Win32-Rogue.PCKeeper
   if "%filemd5%" == "cb c1 5c a3 4a 62 d4 09 b9 97 26 b6 a2 c4 7a 93" set threat=Win32-Rogue.Rango
   if "%filemd5%" == "3c 05 5b ec e3 a6 d7 14 5b 51 bb a9 3b 05 ec 8c" set threat=Win32-Rogue.SpyAxe
@@ -1123,7 +1126,8 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "e0 33 88 af 3a 89 9c 09 32 23 0d 06 1e 31 af 16" set threat=Win32-Rogue.WindowsPolicePro
   if "%filemd5%" == "49 69 3f a1 51 55 b8 b0 b4 ee 5b b8 13 5f d0 b9" set threat=Win32-Rogue.Winhound
   if "%filemd5%" == "ba 37 11 89 ab 70 09 0c 29 8d 92 d5 02 e1 30 e5" set threat=Win32-Rogue.WolframAntivirus
-  if "%filemd5%" == "3e dd 49 00 66 ea 4a 31 2e 6f a6 dc 42 0a f6 c6" set threat=Win32-Rootkit.TDSS
+  if "%filemd5%" == "3e dd 49 00 66 ea 4a 31 2e 6f a6 dc 42 0a f6 c6" set threat=Win32-Rootkit.TDSS.A
+  if "%filemd5%" == "55 85 c4 da 24 fc f7 24 c8 bc 3e ed e4 a4 d8 13" set threat=Win32-Rootkit.TDSS.B
   if "%filemd5%" == "f6 57 02 65 92 e2 ae 04 54 5f 8a b1 f4 64 1a 97" set threat=Win32-Rootkit.ZeroAccess
   if "%filemd5%" == "ce 69 a4 70 25 27 e0 fc 32 38 73 e0 8f 99 b2 af" set threat=Win32-Sality.A
   if "%filemd5%" == "f3 16 be c0 84 81 f4 5d f9 93 70 2b 64 71 43 de" set threat=Win32-Sality.B
@@ -1140,6 +1144,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "0e 97 3c ba 35 97 e3 39 d1 d8 48 1d 9a 35 8b 87" set threat=Win32-Sasser.C
   if "%filemd5%" == "32 a9 f7 ad 4b ed a3 79 5f 16 40 04 db 3c ff f8" set threat=Win32-Sasser.D
   if "%filemd5%" == "86 bb 42 89 d3 4f 9c 26 c9 32 36 84 f6 9e 49 b1" set threat=Win32-Sasser.E
+  if "%filemd5%" == "14 70 fb c9 9d 7c 75 ce 94 40 ef 89 e1 d9 01 f3" set threat=Win32-Scam.Agent.A
   if "%filemd5%" == "f2 57 a5 f1 9f 61 6f 63 78 50 52 cb 3b 31 69 27" set threat=Win32-Shoerec
   if "%filemd5%" == "5d 82 00 d6 99 e5 7e d8 ce 75 ad 22 fe 9f 59 8f" set threat=Win32-SnakeKeylogger
   if "%filemd5%" == "fd b0 57 61 a7 ed a3 f1 82 48 50 3f 2c 97 d6 97" set threat=Win32-Sobig.A
@@ -1304,6 +1309,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "84 69 43 dc 3e b9 e8 7e 1b 89 ac 9a 80 cd 82 7a" set threat=Win32-Trojan.DelTree
   if "%filemd5%" == "d5 40 ca 29 e9 ea 33 f1 31 e4 ce 46 74 d1 08 5f" set threat=Win32-Trojan.Denes.A
   if "%filemd5%" == "6e db fc c6 44 5a f5 82 63 0f a2 4d a5 f9 03 35" set threat=Win32-Trojan.Denes.B
+  if "%filemd5%" == "bf ad 33 8c f7 bc f5 d8 cb a2 60 d1 66 b1 be 28" set threat=Win32-Trojan.Denes.C
   if "%filemd5%" == "2f 8f 6e 90 ca 21 1d 7e f5 f6 cf 3c 99 5a 40 e7" set threat=Win32-Trojan.DesktopPuzzle
   if "%filemd5%" == "25 84 fd c9 30 66 7c 94 2b 2c d0 31 9d 68 51 07" set threat=Win32-Trojan.DoS.A
   if "%filemd5%" == "26 a7 81 f1 b4 d7 a9 ba 04 1a 4d a1 cf 90 e2 c7" set threat=Win32-Trojan.DoS.B
