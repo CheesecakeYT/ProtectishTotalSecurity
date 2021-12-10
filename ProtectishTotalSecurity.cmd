@@ -838,6 +838,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "8f db b5 54 51 ff b4 4d 0b ce f3 7e 13 23 4f 66" set threat=Win32-Ransom.BitPaymer
   if "%filemd5%" == "94 90 da d9 0c fc 13 6a 0a 30 44 3d f8 33 9e 02" set threat=Win32-Ransom.BlackClaw
   if "%filemd5%" == "50 c4 97 00 03 a8 4c ab 1b f2 63 46 31 fe 39 d7" set threat=Win32-Ransom.BlackMatter
+  if "%filemd5%" == "3e ba b7 1c b7 1c a5 c4 75 20 2f 40 1d e0 08 c8" set threat=Win32-Ransom.BlackSun
   if "%filemd5%" == "75 04 e4 c1 94 81 c1 0a 67 a8 f4 c3 c1 09 ae 47" set threat=Win32-Ransom.BloodJaws.A
   if "%filemd5%" == "b2 dd 12 b7 17 a2 cf cc b2 7a e2 e8 39 df f9 f7" set threat=Win32-Ransom.BloodJaws.B
   if "%filemd5%" == "0f 55 c5 a3 c4 2d 6d 6c cf c2 95 7d 74 ff 6e b2" set threat=Win32-Ransom.BloodJaws.C
