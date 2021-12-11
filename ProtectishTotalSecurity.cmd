@@ -1080,6 +1080,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "13 e6 23 cd fb 75 d9 9e a7 e0 4c 61 57 ca 8a e6" set threat=Win32-Ransom.WastedLocker
   if "%filemd5%" == "98 89 2a 91 cb d8 1b cc 99 71 08 49 b5 db c7 d3" set threat=Win32-Ransom.WeAreFriends
   if "%filemd5%" == "9d e4 34 f0 af ed 54 dc 53 e1 dc b1 1b c6 9f b7" set threat=Win32-Ransom.Wesker
+  if "%filemd5%" == "c5 c5 18 34 c6 f8 d5 f5 3f ec 67 1d ba 61 8a 6e" set threat=Win32-Ransom.Widia
   if "%filemd5%" == "e0 b9 18 8e cd ad 1b 89 13 1f ec ed cd 8e a4 db" set threat=Win32-Ransom.WIN
   if "%filemd5%" == "d6 4b f6 3b 70 47 1f 51 cc 5a 65 7b 67 c3 2f 6c" set threat=Win32-Ransom.XDLocker.A
   if "%filemd5%" == "34 b5 4e d3 e0 66 1b 6b bf ca c3 20 a6 13 dc dc" set threat=Win32-Ransom.XDLocker.B
@@ -1273,6 +1274,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "fb c2 07 43 41 f6 e8 19 e3 cc cd 71 3f 5b 94 a3" set threat=Win32-Trojan.Agent.CS
   if "%filemd5%" == "4a 8b 42 61 85 9c 70 bf bd 8a b1 7b b4 f7 d9 8b" set threat=Win32-Trojan.Agent.CT
   if "%filemd5%" == "e9 59 d9 23 34 d5 4b 44 f7 ab da b3 5f b3 d6 10" set threat=Win32-Trojan.Agent.CU
+  if "%filemd5%" == "f1 00 a2 69 6a a5 52 5e e1 86 99 e4 8c 28 48 ab" set threat=Win32-Trojan.Agent.CV
   if "%filemd5%" == "ce a1 9c 96 db 10 02 0f 0d 6e 5a e5 73 2b 15 cd" set threat=Win32-Trojan.Agent2dmdi
   if "%filemd5%" == "de 90 eb bd 62 0c b9 1d 30 9a 78 3a 3c 8b 8c 32" set threat=Win32-Trojan.Alerta.A
   if "%filemd5%" == "e8 ed 8a af 35 e6 05 9b a2 85 04 c1 9f f5 0b ab" set threat=Win32-Trojan.Alerta.B
@@ -1280,6 +1282,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "97 b7 c8 7d d6 d2 ef 46 54 64 8d 6e 22 1d 50 9a" set threat=Win32-Trojan.Assault
   if "%filemd5%" == "e2 3e 0f 1c b2 9e 46 bf b9 25 ef 8a 8e 5d e6 e2" set threat=Win32-Trojan.Bayrob.A
   if "%filemd5%" == "5f 1a 23 08 e9 77 30 b5 fe d0 76 69 ee 9f bd 11" set threat=Win32-Trojan.Bayrob.B
+  if "%filemd5%" == "c0 3b f4 d4 c2 25 2a f5 ff 99 ee a0 06 35 14 f9" set threat=Win32-Trojan.Berok
   if "%filemd5%" == "a0 83 d5 ff 97 63 47 f1 cd 5b a1 d9 e3 a7 a4 b3" set threat=Win32-Trojan.Bizarro.A
   if "%filemd5%" == "e6 c3 37 d5 04 b2 d7 d8 0d 70 68 99 d9 64 ab 45" set threat=Win32-Trojan.Bizarro.B
   if "%filemd5%" == "da f0 28 dd ae 0e db d3 d7 94 6b b2 6c f0 5f bf" set threat=Win32-Trojan.Bizarro.C
@@ -1635,6 +1638,20 @@ if %errorlevel% equ 1 goto start
   find /i /c "bbs.gokickes.com" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "www.gokickes.com" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "arinas.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "bedrost.com" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "branter.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "bronerg.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "celestyna.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "crusider.tk" %file% > NUL
+  if %errorlevel% == 0 set threat=MaliciousWebsite
+  find /i /c "davilta.tk" %file% > NUL
   if %errorlevel% == 0 set threat=MaliciousWebsite
   find /i /c "EICAR-STANDARD-ANTIVIRUS-TEST-FILE" %file% > NUL
   if %errorlevel% == 0 set threat=NotAVirus-EICAR.Test.File
