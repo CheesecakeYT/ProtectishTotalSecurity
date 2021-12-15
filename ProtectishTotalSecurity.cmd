@@ -1061,6 +1061,7 @@ if %errorlevel% equ 1 goto start
   if "%filemd5%" == "cc c6 02 6a cf 7e ad ad a9 ad ac ca b7 0c a4 d6" set threat=Win32-Ransom.VHD.D
   if "%filemd5%" == "ef d4 a8 7e 7c 5d cb b6 4b 73 13 a1 3b 4b 10 12" set threat=Win32-Ransom.VHD.E
   if "%filemd5%" == "68 2f 91 e3 ce 76 9a 68 65 ec d9 f2 b2 36 e8 3a" set threat=Win32-Ransom.VindowsLocker
+  if "%filemd5%" == "3b 16 8e 96 79 ad 44 50 65 9b 29 2e 99 d1 42 6d" set threat=Win32-Ransom.WannaBitcoin
   if "%filemd5%" == "74 d6 e7 09 98 32 b4 d0 6f 45 39 80 aa 71 5b 05" set threat=Win32-Ransom.WannaCryptor.A
   if "%filemd5%" == "53 d0 74 70 d6 de 22 c7 f2 63 3f bb 84 d1 98 67" set threat=Win32-Ransom.WannaCryptor.B
   if "%filemd5%" == "c8 87 22 ef 42 a6 ee 08 cb ed 91 40 6e a5 c0 e5" set threat=Win32-Ransom.WannaCryptor.C
